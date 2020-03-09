@@ -164,9 +164,11 @@ el primer criterio es verdadero porque la probabilidad es no negativa, el segund
 Una variable aleatoria tiene la \emph{distribución de Bernoulli} con un parámetro $p$ si $P(X=1)=p$ y $P(X=0=1-p)$, cuando $0<p<1$. Se escribe como $X \sim Bern(p)$, el símbolo $\sim$ significa ``distribuido como'' y la probabilidad $p$ es el \emph{parámetro}, que determina qué distribución de Bernoulli específica tenemos.
 
 Supóngase que se realizan $n$ \colorbox{yellow}{procesos/ensayos/pruebas(trials)} Bernoulli independientes, cada uno con probabilidad $p$ de éxito. $X$ sea el número de éxitos, la distribución $X$ se llama \emph{distribución binominal} con parámetros $n$ y $p$; se escribe $X \sim Bin(p,n)$.
-$Bern(p)$ es la misma distribución que $Bin(1,p)$, Bernoulli es un caso especial de binominal y su función de probabilidad de $X$ es
-\begin{equation}P(X=k)=(a \above 0pt b)\end{equation}
-
+$Bern(p)$ es la misma distribución que $Bin(1,p)$. Bernoulli es un caso especial de binominal, si $x \sim Bin(1,p)$, entonces la función de probabilidad de $X$ es
+\begin{equation}
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
+\end{equation}
+para $k=0,1,\ldots,n$ (y por otra parte $P(X=k)=0$).
 
 
 
