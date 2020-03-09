@@ -122,13 +122,13 @@ P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation}
 que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de sus \colorbox{yellow}{odds COMO SE DICE EN ESPAÑOL, ?`cuota?}, las \colorbox{yellow}{odds} de un evento $A$ son
 \begin{equation}
-odds(A)=P(A)\frac{P(A)}{P(A^c)}.
+odds(A)=P(A)\frac{P(A)}{P(A^\text{c})}.
 \end{equation}
-Al tomar la expresión $P(A|B)$ y la dividimos entre la $P(A^c|B)$, ambas de la regla de Bayes llegamos a la \emph{forma de \colorbox{yellow}{odds} de la regla de Bayes} que para cualquier eventos $A$ y $B$ con posibilidades positivas, las \colorbox{yellow}{odds} de $A$ \colorbox{yellow}{after conditioning on} $B$ son
+Al tomar la expresión $P(A|B)$ y la dividimos entre la $P(A^\text{c}|B)$, ambas de la regla de Bayes llegamos a la \emph{forma de \colorbox{yellow}{odds} de la regla de Bayes} que para cualquier eventos $A$ y $B$ con posibilidades positivas, las \colorbox{yellow}{odds} de $A$ \colorbox{yellow}{after conditioning on} $B$ son
 \begin{equation}
-\frac{P(A|B)}{P(A^c|B)}=\frac{P(B|A)}{P(B|A^c)}\frac{P(A)}{P(A^c)}.
+\frac{P(A|B)}{P(A^\text{c}|B)}=\frac{P(B|A)}{P(B|A^\text{c})}\frac{P(A)}{P(A^\text{c})}.
 \end{equation}
-En este caso las \colorbox{yellow}{odds} a posteriori $P(A|B)/P(A^c|B)$ son iguales a las \colorbox{yellow}{odds} a priori $P(A)/P(A^\Bur)$ por el factor $P(B|A)/P(B|A^c)$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
+En este caso las \colorbox{yellow}{odds} a posteriori $P(A|B)/P(A^\text{c}|B)$ son iguales a las \colorbox{yellow}{odds} a priori $P(A)/P(A^\text{c})$ por el factor $P(B|A)/P(B|A^\text{c})$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
 
 La ley de Bayes es usada en ocasiones en conjunto con la \emph{ley de probabilidad total}, que es es esencial para descomponer problemas complicados de probabilidad en problemas partes: Si $A_1,\ldots,A_n$ es una partición de una muestra del espacio $S$, con $P(A_i)>0$ para todo $i$, entonces
 \begin{equation}
