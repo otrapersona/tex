@@ -1,0 +1,184 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\author{author}
+\title{title}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
+%\addbibresource{bibfile.bib}
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+\bibliography{pro}
+\begin{document}
+\section {Marco teórico}
+\subsection {Correlación lineal}
+Cuando se tiene una variable controlada $x$ y una dependiente $y$ tenemos el modelo lineal
+\begin{equation}
+Y=\beta_0+\beta_1x+\epsilon
+\end{equation}
+que implica entonces el modelo para análisis de rendimiento promedio:
+\begin{equation}\label{eq:EQ1}
+E(Y)=\beta_0+\beta_1x.
+\end{equation}
+
+Si la variable $x$ es un valor observado de una variable $X$, al establecerse una relación funcional y al basarse en \eqref{eq:EQ1}
+se implica el modelo
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x
+\end{equation}
+que supone la esperanza condicional de $Y$ para un valor fijo de $X$ en una función lineal del valor $x$. Al suponer que la variable aleatoria vectorial $(X, Y)$ tiene una distribución normal bivariable con $E(X)=\mu_X, E(Y)=\mu_Y, V(X)=\sigma^2_X, V(Y)=\sigma^2_Y$, el coeficiente de correlación $\rho$ puede demostrar que
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
+\end{equation}
+
+
+Si $(X, Y)$ tiene una distribución normal bivariable, entonces la prueba de independencia es equivalente a probar si el coeficiente de correlación $\rho$ es igual a cero. Denotando con $(X_1, Y_1), (X_2, Y_2),\ldots , (X_n, Y_n)$ una muestra de aleatoria de distribución normal bivariante. El estimador de máxima probabilidad de $\rho$ está dado por el coeficiente de correlación muestral:
+\begin{equation}
+r=\frac{\sum_{i=1}^{n}(X_i-\overline{X})(Y_i-\overline{Y})}{\sqrt{\sum_{i=1}^{n}(X_i-\overline{X})^2\ \sum_{i=1}^{n}(Y_i-\overline{Y})^2}}.
+\end{equation}
+
+Puede expresarse $r$ en términos de cantidades conocidas:
+\begin{equation}
+r=\frac{S{xy}}{\sqrt{S{xx}S{yy}}}=\hat{\beta}\sqrt{\frac{S{xx}}{S{yy}}}.
+\end{equation}
+
+Cuando $(X, Y)$ tenga una distribución normal bivariable, se sabe que
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
+\end{equation}
+
+Pruebas en las que los conjuntos de hipótesis que contienen $\beta_1$, por ejemplo, $H_a\colon \beta_1 = 0$ contra $H_a\colon \beta_1 > 0$ $H_a\colon \beta_1 < 0$, así como $H_a\colon \beta_1 > 0$ contra $H_a\colon \beta_1 \neq 0$ pueden estar basadas en el estadístico
+\begin{equation}
+t=\frac{\hat{\beta_1}-0}{S/\sqrt{S{xx}}},
+\end{equation}
+
+Wackerly, Mendenhall III y Scheaffer consideran que \fullcite[``parecería lógico usar $r$ como estadístico de prueba para probar hipótesis más generales acerca de $\rho$, pero la distribución de probabilidad para $r$ es difícil de obtener."][]{wack09} Sin embargo, en muestras moderadamente grandes podemos probar la hipótesis $H_0\colon \rho_1=\rho_0$ con una prueba Z en la que
+\begin{equation}
+Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rho})}{\frac{1}{\sqrt{n-3}}}.
+\end{equation}
+
+
+Si $\alpha$ es la probabilidad deseada de cometer un error tipo I, la forma de la región de rechazo depende de la hipótesis alternativa. Las diversas alternativas de interés más frecuente y correspondientes regiones de rechazo son las siguientes:
+\begin{equation} H_a\colon\rho>\rho0,\quad RR\colon z>z_\alpha \end{equation}
+\begin{equation} H_a\colon\rho<\rho0,\quad RR\colon z<-z_\alpha \end{equation}
+\begin{equation} H_a\colon\rho\neq\rho0,\quad RR\colon | z | >z_\alpha/2 \end{equation}
+
+La suma de los cuadrados del error \emph{SSE}, es es una alternativa para medie la variación en valores que permanecen sin explicación después de usar las $x$ para ajustar el modelo de regresión lineal simple, la razón $SSE/S_{yy}$ la proporción de la variación total en las $y_i$ que este modelo no explica. El coeficiente de determinación se puede escribir como
+\begin{equation}
+r^2=(\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}})^2=(\frac{S_{xy}}{S_{xx}})(\frac{S_{xy}}{S_{yy}})=(\frac{\hat{\beta_1}S_{xy}}{S_{yy}})=\frac{S_{yy}-SEE}{S_{yy}}=1-\frac{SSE}{S_{yy}}.
+\end{equation}
+
+
+
+Podemos interpretar a $r^2$ como la proporción de la variación total en las $y_i$  que es explicada por una variable $x$ en un modelo de regresión lineal simple.
+
+\newpage
+\subsection {Modelo de base de datos relacional}
+
+\begin{center}
+\begin{tabular}{|| m{1.1cm} | m{1.1cm} || m{1.3cm} | m{1.3cm} || m{1.7cm} | m{1.7cm} ||}
+\hline
+\multicolumn{1}{|| c |}{código} & \multicolumn{1}{ c ||}{CHAR} & \multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c ||}{DATE} & \multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c ||}{INTEGER}\\
+\hline
+\hline
+\multicolumn{1}{|| c |}{MX01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+\hline
+\multicolumn{1}{|| c |}{MX02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+\hline
+\multicolumn{1}{|| c |}{MX03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{0} & \multicolumn{1}{ c ||}{\ }\\
+\hline
+\end{tabular}
+\end{center}\cite{date12}
+\newpage
+\subsection {Probabilidad condicional}
+La probabilidad condicional tiene las mismas características que la probabilidad, pero $P(\cdot|B)$ actualiza nuestra incertidumbre acerca de los eventos para reflejar la evidencia observada en $B$.
+
+Si $A$ y $B$ son eventos con $P(B)>0$ entonces la \emph{probabilidad condicional} de $A$ dado $B$ denotado por $P(A|B)$, se define como
+\begin{equation}
+P(A|B)=\frac{P(A\cap B)}{P(B)}.
+\end{equation}
+
+Se denomina probabilidad a priori de $A$ a $P(A)$ y probabilidad a posteriori de $A$ a $P(A|B)$ y es importante mencionar que $P(A|B) \neq P(B|A)$.
+
+La probabilidad condicional es la razón de dos probabilidades y sus consecuencias, la primera de ellas se obtiene moviendo el denominador en la definición al otro lado de la ecuación, para cada evento {A} y {B} con posibilidades positivas,
+\begin{equation}\label{eq:EQ2}
+P(A\cap B)=P(B)P(A|B)=P(A)P(B|A).
+\end{equation}
+se le conoce como teorema de la \emph{probabilidad de la intersección de dos eventos}. Aplicando repetidamente el teorema \eqref{eq:EQ2} aplicado a la intersección de $n$ eventos obtenemos el teorema de \emph{probabilidad de la intersección de $n$ eventos}. Para cualquier evento $A_1,\ldots,A_n$ con probabilidad $P(A_1,A_2,\ldots,A_{n-1})>0$,
+\begin{equation}
+P(A_1,A_2,\ldots,A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1,A_2)\ldots P(A_n|A_1,\ldots,A_{n-1}).
+\end{equation}
+
+Otro teorema que relaciona a $P(A|B)$ con $P(B|A)$ es la regla \emph{regla de Bayes}:
+\begin{equation}
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+\end{equation}
+que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de sus \colorbox{yellow}{odds COMO SE DICE EN ESPAÑOL, ?`cuota?}, las \colorbox{yellow}{odds} de un evento $A$ son
+\begin{equation}
+odds(A)=P(A)\frac{P(A)}{P(A^c)}.
+\end{equation}
+Al tomar la expresión $P(A|B)$ y la dividimos entre la $P(A^c|B)$, ambas de la regla de Bayes llegamos a la \emph{forma de \colorbox{yellow}{odds} de la regla de Bayes} que para cualquier eventos $A$ y $B$ con posibilidades positivas, las \colorbox{yellow}{odds} de $A$ \colorbox{yellow}{after conditioning on} $B$ son
+\begin{equation}
+\frac{P(A|B)}{P(A^c|B)}=\frac{P(B|A)}{P(B|A^c)}\frac{P(A)}{P(A^c)}.
+\end{equation}
+En este caso las \colorbox{yellow}{odds} a posteriori $P(A|B)/P(A^c|B)$ son iguales a las \colorbox{yellow}{odds} a priori $P(A)/P(A^c)$ por el factor $P(B|A)/P(B|A^c)$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
+
+La ley de Bayes es usada en ocasiones en conjunto con la \emph{ley de probabilidad total}, que es es esencial para descomponer problemas complicados de probabilidad en problemas partes: Si $A_1,\ldots,A_n$ es una partición de una muestra del espacio $S$, con $P(A_i)>0$ para todo $i$, entonces
+\begin{equation}
+P(B)=\sum_{i=1}^{n}P(B|A_i)P(A_i).
+\end{equation}
+Prueba: como los $A_i$ forman una partición de $S$, podemos descomponer $B$ como
+\begin{equation}
+B=(B\cap A_1)\cup(B\cap A_2)\cup\ldots\cup(B\cap A_n).
+\end{equation}
+como las partes están disjuntas, podemos agregar sus posibilidades para obtener $P(B)$:
+\begin{equation}
+P(B)=P(B\cap A_1)+P(B\cap A_2)+\ldots+P(B\cap A_n).
+\end{equation}
+Aplicando el teorema \eqref{eq:EQ2} a cada $P(B\cap A_i)$ obtenemos
+\begin{equation}
+P(B)=P(B|A_1)P(A_1)+\ldots+P(B|A_n)P(A_n).
+\end{equation}
+La \emph{ley de probabilidad total} dice que para obtener la probabilidad incondicional de $B$, tenemos que dividir el espacio muestra en cortes disjuntos $A_i$, encontrar la probabilidad condicional de $B$ en cada corte, después tomar la suma pesada de las probabilidades condicionales, donde los pesos son las probabilidades $P(A_i)$.
+\subsection {Variables aleatorias y sus distribuciones}
+Dado un experimento con una muestra en espacio $S$, una \emph{variable aleatoria} es una función del mismo espacio $S$ para los números reales $\mathbb{R}$. Una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
+
+Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el grupo infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
+
+La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+Maybe\cite{blitz19}
+\newpage
+\printbibliography[heading=bibintoc,title={Fuentes}]
+\end{document}
