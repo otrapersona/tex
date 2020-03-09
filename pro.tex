@@ -151,8 +151,10 @@ Dado un experimento con una muestra en espacio $S$, una \emph{variable aleatoria
 
 Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el grupo infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
 
-La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer el siguiente criterio:
-
+La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:\begin{itemize}
+    \item No negativo $p_X (x) > 0$ si $x=x_j$ para algún $j$, y $p_X(x)=0$, de otra forma;
+    \item Suma 1: $\sum_{j=1}^{\infty}p_X(x_j)=1$.
+\end{itemize}
 
 
 
