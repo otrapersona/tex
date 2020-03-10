@@ -1,8 +1,8 @@
 \documentclass[letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\author{Author Author Author}
-\title{Title title title title title title}
+\author{Auxilio socorro}
+\title{No le hagan caso a este formato}
 \date{\today}
 \usepackage{csquotes}
 \usepackage{amsmath}
@@ -21,6 +21,25 @@
 \maketitle	
 \pagebreak
 \tableofcontents
+
+Marco y estado \\
+* Introduction to Probability:\\
+-terminar Expectations\\
+-Continuous rand var\\
+* Linear Models and the Relevant Distributions and Matrix Algebra:\\
+-intervalos confianza, pruebas hipótesis\\
+* checar:\\
+-Bayesian Reasoning and Machine Learning\\
+* falta:\\
+-ML\\
+-NLP\\
+
+Hipótesis y Objetivos\\
+- h\\
+- g\\
+- p\\
+
+Metas científicas
 \pagebreak
 %ya no usé esta tabla $=\big($
 %\begin{center}
@@ -147,15 +166,15 @@ Otro teorema que relaciona a $P(A|B)$ con $P(B|A)$ es la regla \emph{regla de Ba
 \begin{equation}
 P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation}
-que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de sus \colorbox{yellow}{odds ¿cuota?}, las \colorbox{yellow}{odds} de un evento $A$ son
+que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de apuestas (\emph{odds}), las odds de un evento $A$ son
 \begin{equation}
 odds(A)=P(A)\frac{P(A)}{P(A^\text{c})}.
 \end{equation}
-Al tomar la expresión $P(A|B)$ y la dividimos entre la $P(A^\text{c}|B)$, ambas de la regla de Bayes llegamos a la \emph{forma de \colorbox{yellow}{odds} de la regla de Bayes} que para cualquier eventos $A$ y $B$ con posibilidades positivas, las \colorbox{yellow}{odds} de $A$ \colorbox{yellow}{after conditioning on} $B$ son
+Al tomar la expresión $P(A|B)$ y dividirla entre $P(A^\text{c}|B)$, ambos de la regla de Bayes; llegamos al \emph{teorema de Bayes en forma de apuestas}: para cualquier evento $A$ y $B$ con posibilidades positivas, las odds de $A$ \colorbox{yellow}{after conditioning on} $B$ son
 \begin{equation}
 \frac{P(A|B)}{P(A^\text{c}|B)}=\frac{P(B|A)}{P(B|A^\text{c})}\frac{P(A)}{P(A^\text{c})}.
 \end{equation}
-En este caso las \colorbox{yellow}{odds} a posteriori $P(A|B)/P(A^\text{c}|B)$ son iguales a las \colorbox{yellow}{odds} a priori $P(A)/P(A^\text{c})$ por el factor $P(B|A)/P(B|A^\text{c})$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
+En este caso las odds a posteriori $P(A|B)/P(A^\text{c}|B)$ son iguales a las odds a priori $P(A)/P(A^\text{c})$ por el factor $P(B|A)/P(B|A^\text{c})$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
 
 La ley de Bayes es usada en ocasiones en conjunto con la \emph{ley de probabilidad total}, que es es esencial para descomponer problemas complicados de probabilidad en problemas partes: Si $A_1,\ldots,A_n$ es una partición de una muestra del espacio $S$, con $P(A_i)>0$ para todo $i$, entonces
 \begin{equation}
@@ -179,7 +198,7 @@ Una \emph{variable aleatoria} es una función asignando un número real $\mathbb
 
 Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el conjunto infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
 \subsubsection {Función de probabilidad}
-La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
+La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés?)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
 \begin{itemize}
     \item No negativo $p_X (x) > 0$ si $x=x_j$ para un $j$, y $p_X(x)=0$, de otra forma;
     \item Suma 1: $\sum_{j=1}^{\infty}p_X(x_j)=1$.
@@ -215,7 +234,7 @@ Teniendo $C$, un conjunto finito no vacío de números, se elige un número unif
 \begin{equation}
 P(X=x)=\frac{1}{|C|}
 \end{equation}
-para $x \in C$ (y $0$ de lo contrario) ya que la función de probabilidad debe sumar 1.
+para $x \in C$ (de lo contrario $0$) ya que la función de probabilidad debe sumar 1.
 \subsubsection {Función de distribución acumulada}
 Esta función describe la distribución de todas las variables aleatorias (a diferencia de la función de probabilidad que sólo se aplica a las discretas). La \emph{función de distribución acumulada} de una variable aleatoria $X$ es la función $F_X$ dada por $F_X(x)=P(X\leq x)$ y tiene las siguientes propiedades:
 \begin{itemize}
