@@ -1,8 +1,8 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\author{author}
-\title{title}
+\author{Author Author Author}
+\title{Title title title title title title}
 \date{\today}
 \usepackage{csquotes}
 \usepackage{amsmath}
@@ -22,9 +22,32 @@
 \pagebreak
 \tableofcontents
 \pagebreak
+%ya no usé esta tabla $=\big($
+%\begin{center}
+%\begin{tabular}{|| m{1.1cm} | m{1.1cm} || m{1.3cm} | m{1.3cm} || m{1.7cm} %| m{1.7cm} ||}
+%\hline
+%\multicolumn{1}{|| c |}{código} & \multicolumn{1}{ c ||}{CHAR} & %\multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c ||}{DATE} & %\multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c ||}{INTEGER}\\
+%\hline
+%\hline
+%\multicolumn{1}{|| c |}{MX01} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{2020-01-01} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+%\hline
+%\multicolumn{1}{|| c |}{MX02} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{2020-01-02} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+%\hline
+%\multicolumn{1}{|| c |}{MX03} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{2020-01-03} & \multicolumn{1}{ c ||}{\ } & %\multicolumn{1}{ c |}{0} & \multicolumn{1}{ c ||}{\ }\\
+%\hline
+%\end{tabular}
+%\end{center}
 \section {Marco teórico}
 \subsection {Modelo de base de datos relacional}
-Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \fullcite{date12}.
+El modelo relacional de base de datos, según Date \fullcite{date12} consiste en cinco componentes:
+\begin{enumerate}
+    \item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
+    \item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
+    \item Estructuras para definir variables relacionales de los tipos generados.
+    \item Un operador para asignar valores de relación a dichas variables.
+    \item Una colección relacionalmente completa de operadores relacionales genéricos para derivar obtener valores relacionales de otros valores relacionales.
+\end{enumerate}
+Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \cite{date12}.
 
 Cada atributo de cada relación es definido como de un tipo. Los atributos son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una tupla es un par ordenado de atributos.
 El modelo relacional también soporta varios tipos de llaves, que poseen las propiedades de unicidad, ninguna contiene dos tuplas distintas con el mismo valor e irreductibilidad, ningún subconjunto suyo es tiene unicidad. La llave foránea (\emph{FK}) es una combinación o set se atributos FK en una relación $r2$ tal que se requiere que cada valor FK sea igual a algún valor de alguna llave K en alguna relación $r1$ ($r1$ y $r2$ no son necesariamente distintos).
@@ -35,38 +58,7 @@ Una restricción de integridad (\emph{constraint}) es una expresión booleana qu
     \item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
 
-
-El modelo de base de datos relacional consiste en cinco componentes:
-\begin{enumerate}
-    \item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
-    \item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
-    \item Infraestructura \colorbox{yellow}{facilities} para definir variables relacionales de los tipos generados.
-    \item Un operador para asignar valores de relación a dichas variables.
-    \item Una colección relacionalmente completa de operadores relacionales genéricos para derivar \colorbox{yellow}{obtener/inferir facilities} valores relacionales de otros valores relacionales.
-\end{enumerate}
-
-
-
-
-
-
-
-
-\begin{center}
-    \begin{tabular}{|| m{1.1cm} | m{1.1cm} || m{1.3cm} | m{1.3cm} || m{1.7cm} | m{1.7cm} ||}
-        \hline
-        \multicolumn{1}{|| c |}{código} & \multicolumn{1}{ c ||}{CHAR} & \multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c ||}{DATE} & \multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c ||}{INTEGER}\\
-        \hline
-        \hline
-        \multicolumn{1}{|| c |}{MX01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
-        \hline
-        \multicolumn{1}{|| c |}{MX02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
-        \hline
-        \multicolumn{1}{|| c |}{MX03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{0} & \multicolumn{1}{ c ||}{\ }\\
-        \hline
-    \end{tabular}
-\end{center}\cite{date12}
-\newpage
+La manipulación de bases de datos relacionales se basa en el álgebra relacional dando la colección de operadores que pueden aplicarse a las relaciones, por ejemplo diferencia (\emph{MINUS}). El operador de asignación relacional, permite se le asigne valor de alguna expresión regular a alguna relación, por ejemplo $r1$ MINUS $r1$ cuando $r1$ y $r2$ son relaciones.
 \subsection {Correlación lineal}
 Cuando se tiene una variable controlada $x$ y una dependiente $y$ tenemos el modelo lineal
 \begin{equation}
@@ -86,7 +78,6 @@ que supone la esperanza condicional de $Y$ para un valor fijo de $X$ en una func
 \begin{equation}
 E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
 \end{equation}
-
 
 Si $(X, Y)$ tiene una distribución normal bivariable, entonces la prueba de independencia es equivalente a probar si el coeficiente de correlación $\rho$ es igual a cero. Denotando con $(X_1, Y_1), (X_2, Y_2),\ldots , (X_n, Y_n)$ una muestra de aleatoria de distribución normal bivariante. El estimador de máxima probabilidad de $\rho$ está dado por el coeficiente de correlación muestral:
 \begin{equation}
@@ -113,7 +104,6 @@ Wackerly, Mendenhall III y Scheaffer consideran que \fullcite[``parecería lógi
 Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rho})}{\frac{1}{\sqrt{n-3}}}.
 \end{equation}
 
-
 Si $\alpha$ es la probabilidad deseada de cometer un error tipo I, la forma de la región de rechazo depende de la hipótesis alternativa. Las diversas alternativas de interés más frecuente y correspondientes regiones de rechazo son las siguientes:
 \begin{equation}  
 \begin{matrix}
@@ -132,7 +122,6 @@ r^2=(\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}})^2=(\frac{S_{xy}}{S_{xx}})(\frac{S_{xy}}
 
 Podemos interpretar a $r^2$ como la proporción de la variación total en las $y_i$  que es explicada por una variable $x$ en un modelo de regresión lineal simple.
 
-\newpage
 \subsection {Probabilidad condicional}
 La probabilidad condicional tiene las mismas características que la probabilidad, pero $P(\cdot|B)$ actualiza nuestra incertidumbre acerca de los eventos para reflejar la evidencia observada en $B$.
 
@@ -158,7 +147,7 @@ Otro teorema que relaciona a $P(A|B)$ con $P(B|A)$ es la regla \emph{regla de Ba
 \begin{equation}
 P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation}
-que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de sus \colorbox{yellow}{odds COMO SE DICE EN ESPAÑOL, ?`cuota?}, las \colorbox{yellow}{odds} de un evento $A$ son
+que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de sus \colorbox{yellow}{odds ¿cuota?}, las \colorbox{yellow}{odds} de un evento $A$ son
 \begin{equation}
 odds(A)=P(A)\frac{P(A)}{P(A^\text{c})}.
 \end{equation}
@@ -202,7 +191,7 @@ el primer criterio es verdadero porque la probabilidad es no negativa, el segund
 \subsubsection {Distribución de Bernoulli y binominal}
 Una variable aleatoria tiene la \emph{distribución de Bernoulli} con un parámetro $p$ si $P(X=1)=p$ y $P(X=0=1-p)$, cuando $0<p<1$. Se escribe como $X \sim Bern(p)$, el símbolo $\sim$ significa ``distribuido como'' y la probabilidad $p$ es el \emph{parámetro}, que determina qué distribución de Bernoulli específica tenemos.
 
-Supóngase que se realizan $n$ \colorbox{yellow}{procesos/ensayos/pruebas(trials)} Bernoulli independientes, cada uno con probabilidad $p$ de éxito. $X$ sea el número de éxitos, la distribución $X$ se llama \emph{distribución binominal} con parámetros $n$ y $p$; se escribe $X \sim Bin(p,n)$.
+Supóngase que se realizan $n$ ensayos Bernoulli independientes, cada uno con probabilidad $p$ de éxito. $X$ sea el número de éxitos, la distribución $X$ se llama \emph{distribución binominal} con parámetros $n$ y $p$; se escribe $X \sim Bin(p,n)$.
 $Bern(p)$ es la misma distribución que $Bin(1,p)$. Bernoulli es un caso especial de binominal, si $x \sim Bin(1,p)$, entonces la función de probabilidad de $X$ es
 \begin{equation}
 P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
@@ -270,27 +259,6 @@ E(cX)=cE(X).
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \newpage
-Maybe\cite{blitz19}
-\newpage
-\printbibliography[heading=bibintoc,title={Fuentes}]
+\printbibliography[heading=bibintoc]
 \end{document}
