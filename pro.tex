@@ -1,8 +1,8 @@
 \documentclass[letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\author{Auxilio socorro}
-\title{No le hagan caso a este formato}
+\author{Dreieck}
+\title{Titel}
 \date{\today}
 \usepackage{csquotes}
 \usepackage{amsmath}
@@ -13,15 +13,48 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{newtxmath}
 %\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} %\addbibresource{bibfile.bib}
 \usepackage[backend=bibtex,style=alphabetic]{biblatex}
 \bibliography{pro}
-\usepackage{newtxmath}
+\usepackage{tikz} %PARA EL TRIÁNGULO, QUITAR
 \begin{document}
-\maketitle	
+\maketitle
+\begin{abstract}
+  \begin{center}%PARA EL TRIÁNGULO, QUITAR
+    \vspace{1cm}
+    \begin{tikzpicture}[scale=1, line join=bevel]
+    
+    \pgfmathsetmacro{\a}{2.5}
+    \pgfmathsetmacro{\b}{0.9}
+    
+    \tikzset{%
+        apply style/.code     = {\tikzset{#1}},
+        triangle_edges/.style = {thick,draw=black}
+    }
+    
+    \foreach \theta/\facestyle in {%
+        0/{triangle_edges, fill = gray!50},
+        120/{triangle_edges, fill = gray!25},
+        240/{triangle_edges, fill = gray!90}%
+    }{
+        \begin{scope}[rotate=\theta]
+        \draw[apply style/.expand once=\facestyle]
+        ({-sqrt(3)/2*\a},{-0.5*\a})                     --
+        ++(-\b,0)                                       --
+        ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point	
+        ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point
+        ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point
+        ({0.5*\b},{\a+sqrt(3)/2*\b})                  --
+        cycle;
+        \end{scope}
+    }	
+    \end{tikzpicture}
+\end{center}%PARA EL TRIÁNGULO, QUITAR
+\end{abstract}
 \pagebreak
 \tableofcontents
-\section {pendiente}
+\section {incompleto}
 
 \subsubsection{Marco y estado}
 
@@ -37,19 +70,17 @@
 
 * Bayesian Reasoning and Machine Learning:
 
-- checar
-
-\subsubsection{falta}
-
-*ML, NLP
-
-\quad Definición, Tipos\\
+- checar\\
 
 *Hipótesis y Objetivos
 
-\quad hipo, gral, part\\
+\quad hipo, gral, part***
 
-*Metas científicas
+\subsubsection{por comenzar}
+
+*ML, NLP
+
+\quad Definición, Tipos
 \pagebreak
 %ya no usé esta tabla $=\big($
 %\begin{center}
