@@ -23,6 +23,40 @@
 \tableofcontents
 \pagebreak
 \section {Marco teórico}
+\subsection {Modelo de base de datos relacional}
+Las relaciones se definen sobre tipos, estos son en esencia un 
+
+El modelo de base de datos relacional consiste en cinco componentes:
+\begin{enumerate}
+    \item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
+    \item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
+    \item Infraestructura \colorbox{yellow}{facilities} para definir variables relacionales de los tipos generados.
+    \item Un operador para asignar valores de relación a dichas variables.
+    \item Una colección relacionalmente completa de operadores relacionales genéricos para derivar \colorbox{yellow}{obtener/inferir facilities} valores relacionales de otros valores relacionales.
+\end{enumerate}
+
+
+
+
+
+
+
+
+\begin{center}
+    \begin{tabular}{|| m{1.1cm} | m{1.1cm} || m{1.3cm} | m{1.3cm} || m{1.7cm} | m{1.7cm} ||}
+        \hline
+        \multicolumn{1}{|| c |}{código} & \multicolumn{1}{ c ||}{CHAR} & \multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c ||}{DATE} & \multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c ||}{INTEGER}\\
+        \hline
+        \hline
+        \multicolumn{1}{|| c |}{MX01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+        \hline
+        \multicolumn{1}{|| c |}{MX02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
+        \hline
+        \multicolumn{1}{|| c |}{MX03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{0} & \multicolumn{1}{ c ||}{\ }\\
+        \hline
+    \end{tabular}
+\end{center}\cite{date12}
+\newpage
 \subsection {Correlación lineal}
 Cuando se tiene una variable controlada $x$ y una dependiente $y$ tenemos el modelo lineal
 \begin{equation}
@@ -89,23 +123,6 @@ r^2=(\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}})^2=(\frac{S_{xy}}{S_{xx}})(\frac{S_{xy}}
 Podemos interpretar a $r^2$ como la proporción de la variación total en las $y_i$  que es explicada por una variable $x$ en un modelo de regresión lineal simple.
 
 \newpage
-\subsection {Modelo de base de datos relacional}
-
-\begin{center}
-\begin{tabular}{|| m{1.1cm} | m{1.1cm} || m{1.3cm} | m{1.3cm} || m{1.7cm} | m{1.7cm} ||}
-\hline
-\multicolumn{1}{|| c |}{código} & \multicolumn{1}{ c ||}{CHAR} & \multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c ||}{DATE} & \multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c ||}{INTEGER}\\
-\hline
-\hline
-\multicolumn{1}{|| c |}{MX01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-01} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
-\hline
-\multicolumn{1}{|| c |}{MX02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-02} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{1} & \multicolumn{1}{ c ||}{\ }\\
-\hline
-\multicolumn{1}{|| c |}{MX03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{2020-01-03} & \multicolumn{1}{ c ||}{\ } & \multicolumn{1}{ c |}{0} & \multicolumn{1}{ c ||}{\ }\\
-\hline
-\end{tabular}
-\end{center}\cite{date12}
-\newpage
 \subsection {Probabilidad condicional}
 La probabilidad condicional tiene las mismas características que la probabilidad, pero $P(\cdot|B)$ actualiza nuestra incertidumbre acerca de los eventos para reflejar la evidencia observada en $B$.
 
@@ -161,7 +178,7 @@ La \emph{ley de probabilidad total} dice que para obtener la probabilidad incond
 \subsection {Variables aleatorias y sus distribuciones}
 Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
 
-Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el grupo infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
+Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el conjunto infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
 \subsubsection {Función de probabilidad}
 La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19} \colorbox{yellow}{(PMF, por sus siglas en inglés)} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
 \begin{itemize}
