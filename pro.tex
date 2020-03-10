@@ -66,9 +66,13 @@ Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rh
 
 
 Si $\alpha$ es la probabilidad deseada de cometer un error tipo I, la forma de la región de rechazo depende de la hipótesis alternativa. Las diversas alternativas de interés más frecuente y correspondientes regiones de rechazo son las siguientes:
-\begin{equation} H_a\colon\rho>\rho0,\quad RR\colon z>z_\alpha \end{equation}
-\begin{equation} H_a\colon\rho<\rho0,\quad RR\colon z<-z_\alpha \end{equation}
-\begin{equation} H_a\colon\rho\neq\rho0,\quad RR\colon | z | >z_\alpha/2 \end{equation}
+\begin{equation}  
+\begin{matrix}
+H_a\colon\rho>\rho0, &RR\colon z>z_\alpha\ \ \ \ \ \ \\
+H_a\colon\rho<\rho0, &RR\colon z<-z_\alpha\ \ \ \ \\
+H_a\colon\rho\neq\rho0, &RR\colon | z | >z_\alpha/2
+\end{matrix}
+\end{equation}
 
 La suma de los cuadrados del error \emph{SSE}, es es una alternativa para medie la variación en valores que permanecen sin explicación después de usar las $x$ para ajustar el modelo de regresión lineal simple, la razón $SSE/S_{yy}$ la proporción de la variación total en las $y_i$ que este modelo no explica. El coeficiente de determinación se puede escribir como
 \begin{equation}
@@ -113,7 +117,9 @@ P(A\cap B)=P(B)P(A|B)=P(A)P(B|A).
 \end{equation}
 se le conoce como teorema de la \emph{probabilidad de la intersección de dos eventos}. Aplicando repetidamente el teorema \eqref{eq:EQ2} aplicado a la intersección de $n$ eventos obtenemos el teorema de \emph{probabilidad de la intersección de $n$ eventos}. Para cualquier evento $A_1,\ldots,A_n$ con probabilidad $P(A_1,A_2,\ldots,A_{n-1})>0$,
 \begin{equation}
-P(A_1,A_2,\ldots,A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1,A_2)\ldots P(A_n|A_1,\ldots,A_{n-1}).
+\begin{matrix}
+P(A_1,A_2,\ldots,A_n)=P(A_1)P(A_2|A_1) \qquad \qquad \qquad \qquad \qquad \\
+\qquad  \qquad \qquad \qquad \qquad P(A_3|A_1,A_2)\ldots P(A_n|A_1,\ldots,A_{n-1}).\end{matrix}
 \end{equation}
 
 Otro teorema que relaciona a $P(A|B)$ con $P(B|A)$ es la regla \emph{regla de Bayes}:
@@ -221,10 +227,15 @@ si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndo
 \begin{equation}
 E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
 \end{equation}
-
-Para cada variable aleatoria $X$ discreta, el valor $E(X)$ es un \emph{número} (si es que existe)
-
-
+\subsubsection {Linealidad del valor esperado}
+El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
+\begin{equation}
+\begin{matrix}
+E(X+Y)=E(X)+E(Y),\\
+E(cX)=cE(X).
+\end{matrix}
+\end{equation}
+\fbox{p153}
 
 
 
