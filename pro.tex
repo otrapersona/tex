@@ -171,7 +171,17 @@ P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
 para $k=0,1,\ldots,n$ (y por otra parte $P(X=k)=0$).
 \subsubsection {Distribución de hipergeométrica}
 Si $X \sim HGeom(w,b,n)$, entonces la función de probabilidad de X es
-
+\begin{equation}
+P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}},
+\end{equation}
+para enteros $k$ satisfaciendo $0\leq k\leq w$ y $0\leq n-k\leq b$, y $P(X=k)=0$. La estructura esencial de la distribución hipergeométrica se basa en que objetos en su población están clasificados usando dos tipos de etiquetas, al menos una de estas siendo asignada al azar.
+Las distribuciones $HGeom(w,b,n)$ y $HGeom(n,w+b-n,1)$ son idénticas si $X$ y $Y$ tienen la misma distribución, podemos demostrarlo algebráicamente:
+\begin{equation}
+P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}
+\end{equation}
+\begin{equation}
+P(X=k)=\frac{\binom{n}{k}\binom{w+b-n}{w-k}}{\binom{w+b}{w}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}.
+\end{equation}
 
 
 
