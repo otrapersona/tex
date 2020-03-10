@@ -146,7 +146,7 @@ Aplicando el teorema \eqref{eq:EQ2} a cada $P(B\cap A_i)$ obtenemos
 \begin{equation}
 P(B)=P(B|A_1)P(A_1)+\ldots+P(B|A_n)P(A_n).
 \end{equation}
-La \emph{ley de probabilidad total} dice que para obtener la probabilidad incondicional de $B$, tenemos que dividir el espacio muestra en cortes disjuntos $A_i$, encontrar la probabilidad condicional de $B$ en cada corte, después tomar la suma pesada de las probabilidades condicionales, donde los pesos son las probabilidades $P(A_i)$.
+La \emph{ley de probabilidad total} dice que para obtener la probabilidad incondicional de $B$, tenemos que dividir el espacio muestra en cortes disjuntos $A_i$, encontrar la probabilidad condicional de $B$ en cada corte, después tomar la suma ponderada de las probabilidades condicionales, donde los pesos son las probabilidades $P(A_i)$.
 \subsection {Variables aleatorias y sus distribuciones}
 Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
 
@@ -202,9 +202,16 @@ Esta función describe la distribución de todas las variables aleatorias (a dif
     \lim_{x\to \infty}F(x)=0\ \ \text{y}\ \lim_{x\to \infty}F(x)=1.
     \end{equation}
 \end{itemize}
-\subsection {Esperanza/valor esperado/(Expectation)}
-
-
+\subsection {Valor esperado}
+Mientras que las distribuciones anteriores nos han dado toda la información acerca de la probabilidad de las variables aleatorias, cuando sólo se requiere un número que extraiga su valor, podemos utilizar la \emph{media}, también conocida como \emph{valor esperado}. Dada una lista de números $x_1,x_2.\ldots,x_n$, se suman y dividen entre $n$ para obtener la \emph{media aritmética}
+\begin{equation}
+\bar{x}=\frac{1}{n}\sum_{j=1}^{n}x_j,
+\end{equation}
+la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene
+\begin{equation}
+\text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
+\end{equation}
+donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
 
 
 
