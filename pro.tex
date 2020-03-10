@@ -175,13 +175,21 @@ Si $X \sim HGeom(w,b,n)$, entonces la función de probabilidad de X es
 P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}},
 \end{equation}
 para enteros $k$ satisfaciendo $0\leq k\leq w$ y $0\leq n-k\leq b$, y $P(X=k)=0$. La estructura esencial de la distribución hipergeométrica se basa en que objetos en su población están clasificados usando dos tipos de etiquetas, al menos una de estas siendo asignada al azar.
-Las distribuciones $HGeom(w,b,n)$ y $HGeom(n,w+b-n,1)$ son idénticas si $X$ y $Y$ tienen la misma distribución, podemos demostrarlo algebráicamente:
+Las distribuciones $HGeom(w,b,n)$ y $HGeom(n,w+b-n,1)$ son idénticas si $X$ y $Y$ tienen la misma distribución, podemos demostrarlo algebraicamente:
 \begin{equation}
 P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}
 \end{equation}
 \begin{equation}
 P(X=k)=\frac{\binom{n}{k}\binom{w+b-n}{w-k}}{\binom{w+b}{w}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}.
+\end{equation}%if intro for bernolli and hyper neede, 3.4.6 has a bit a few useful lines
+\subsubsection {Distribución uniforme discreta}
+Teniendo $C$, un conjunto finito no vacío de números, se elige un número uniformemente al azar (o sea que todos los números tienen la misma posibilidad de ser elegidos), llámese $X$. Entonces se dice que $X$ una \emph{distribución uniforme discreta} con el parámetro $C$. Se dice entonces que la función de probabilidad de $X \sim DUNif(C)$ (la distribución uniforme discreta de $X$) es
+\begin{equation}
+P(X=x)=\frac{1}{|C|}
 \end{equation}
+para $x \in C$ (y $0$ de lo contrario) ya que la función de probabilidad debe sumar 1.
+\subsubsection {Función de distribución acumulada}
+Esta función describe la distribución de todas las variables aleatorias (a diferencia de la función de probabilidad que sólo se aplica a las discretas). La \emph{función de distribución acumulada} de ima variable aleatoria $X$ es la función $F_X$ dada por $F_X(x)=P(X\leq x)$.
 
 
 
