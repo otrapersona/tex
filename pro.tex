@@ -24,7 +24,17 @@
 \pagebreak
 \section {Marco teórico}
 \subsection {Modelo de base de datos relacional}
-Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)''. \fullcite{date12}
+Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \fullcite{date12}.
+
+Cada atributo de cada relación es definido como de un tipo. Los atributos son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una tupla es un par ordenado de atributos.
+El modelo relacional también soporta varios tipos de llaves, que poseen las propiedades de unicidad, ninguna contiene dos tuplas distintas con el mismo valor e irreductibilidad, ningún subconjunto suyo es tiene unicidad. La llave foránea (\emph{FK}) es una combinación o set se atributos FK en una relación $r2$ tal que se requiere que cada valor FK sea igual a algún valor de alguna llave K en alguna relación $r1$ ($r1$ y $r2$ no son necesariamente distintos).
+
+Una restricción de integridad (\emph{constraint}) es una expresión booleana que debe evaluarse como verdadera. Los constraints de tipo definen los valores que constituyen un tipo dado, mientras que los constraints de base de datos limitan los valores que pueden aparecer en cierta base de datos. Las bases de datos suelen tener múltiples constraints específicos, expresados en términos de sus relaciones, sin embargo, el modelo relacional incluye dos constraints genéricos, que aplican a cada base de datos:
+\begin{itemize}
+    \item Regla de integridad de identidad: Las llaves primarias no pueden ser nulas (\emph{null}).
+    \item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
+\end{itemize}
+
 
 El modelo de base de datos relacional consiste en cinco componentes:
 \begin{enumerate}
