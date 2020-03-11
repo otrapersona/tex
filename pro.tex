@@ -334,7 +334,15 @@ Primera esperanza de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X
 E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
 \end{equation}
 
-Las \emph{distribuciones binominales negativas} generalizan la distribución geométrica en lugar de esperar por un éxito, podemos esperar por cualquier número predeterminado $r$ de éxitos.
+Las \emph{distribuciones binominales negativas} generalizan la distribución geométrica en lugar de esperar por un éxito, podemos esperar por cualquier número predeterminado $r$ de éxitos. En una secuencia de ensayos independientes Bernoulli con probabilidad de éxito $p$, si $X$ es el número de \emph{fallas} antes del éxito número $r$, entonces se dice que $X$tiene una distribución binominal negativa con parámetros $r$ y $p$, denotado $X\sim NBin(r,p)$.
+
+La distribución binominal cuenta el número de éxitos en un número fijo de ensayos, mientras que la binominal negativa cuenta el número de fallas hasta alcanzar cierto número de éxitos. Si $X\sim NBin(r,p)$, entonces la función de probabilidad de $X$ es
+\begin{equation}
+P(X=n)=\binom{n+r-1}{r-1}p^rq^n
+\end{equation}
+para $n=0,1,2\ldots,$ donde $q=1=p$.
+
+
 438 p160
 
 
