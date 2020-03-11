@@ -117,7 +117,7 @@ se implica el modelo
 \begin{equation}
 E(Y|X=x)=\beta_0+\beta_1x
 \end{equation}
-que supone la esperanza condicional de $Y$ para un valor fijo de $X$ en una función lineal del valor $x$. Al suponer que la variable aleatoria vectorial $(X, Y)$ tiene una distribución normal bivariable con $E(X)=\mu_X, E(Y)=\mu_Y, V(X)=\sigma^2_X, V(Y)=\sigma^2_Y$, el coeficiente de correlación $\rho$ puede demostrar que
+que supone el valor esperado condicional de $Y$ para un valor fijo de $X$ en una función lineal del valor $x$. Al suponer que la variable aleatoria vectorial $(X, Y)$ tiene una distribución normal bivariable con $E(X)=\mu_X, E(Y)=\mu_Y, V(X)=\sigma^2_X, V(Y)=\sigma^2_Y$, el coeficiente de correlación $\rho$ puede demostrar que
 \begin{equation}
 E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
 \end{equation}
@@ -329,7 +329,7 @@ finalmente multiplicamos ambos lados por $pq$, recuperando la suma original que 
 \begin{equation}
 E(X)=\sum_{k=0}^{\infty}kq^kp=pq\sum_{k=0}^{\infty}kq^{k-1}=pq\frac{1}{{(1-q)}^2}=\frac{q}{p}.
 \end{equation}
-Primera esperanza de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X+1$ donde $X\sim Geom(p)$, por lo que tenemos
+Primer valor esperado de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X+1$ donde $X\sim Geom(p)$, por lo que tenemos
 \begin{equation}
 E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
 \end{equation}
@@ -343,36 +343,15 @@ P(X=n)=\binom{n+r-1}{r-1}p^rq^n
 para $n=0,1,2\ldots,$ donde $q=1=p$.
 \subsubsection{LOTUS}
 La \emph{ley del estadista inconsciente} (\emph{LOTUS}, por sus siglas en inglés) permite calcular $E(g(X))$ directamente usando la distribución de $X$, sin tener que encontrar la distribución de $g(X)$ primero: si $X$ es una variable discreta y $g$ es una función de $\mathbb{R}$ a $\mathbb{R}$, entonces
-
-
-438 p160
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{equation}
+E(g(X))=\sum_{x}g(x)P(X=x),
+\end{equation}
+donde la suma se toma de todos los valores posibles de $X$. El valor esperado de $g(X)$ puede ser escrito en forma no agrupado como
+\begin{equation}
+E(g(X))=\sum_{s}g(X(s))p(\{s\}).
+\end{equation}
+\subsubsection{Varianza}
+Pág 171, 4.6
 \section {Objetivos}
 Comenzar desde cero cada proyecto es ineficiente. (esto es temporal)
 \subsection {General}
