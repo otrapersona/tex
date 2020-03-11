@@ -318,8 +318,21 @@ El valor esperado geométrico de $X\sim Geom(p)$ es
 \begin{equation}
 E(X)=\sum_{k=0}^{\infty}kq^kp,
 \end{equation}
-cuando $q=1-p$.
-
+cuando $q=1-p$. Aunque esta no es una serie geométrica, podemos llegar a ello
+\begin{equation}\begin{matrix}
+\sum_{k=0}^{\infty}q^k=\frac{1}{1-q}\\
+\\
+\sum_{k=0}^{\infty}kq^{k-1}=\frac{1}{{1-q}^2},
+\end{matrix}
+\end{equation}
+finalmente multiplicamos ambos lados por $pq$, recuperando la suma original que queríamos encontrar
+\begin{equation}
+E(X)=\sum_{k=0}^{\infty}kq^kp=pq\sum_{k=0}^{\infty}kq^{k-1}=pq\frac{1}{{(1-q)}^2}=\frac{q}{p}.
+\end{equation}
+Primera esperanza de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X+1$ donde $X\sim Geom(p)$, por lo que tenemos
+\begin{equation}
+E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
+\end{equation}
 
 
 
