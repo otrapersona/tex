@@ -26,8 +26,11 @@
 \usepackage{graphicx} % insertar
 \usepackage{float} % ubicación flotante
 %>>> Imágenes
+%>>> Clickable hypers
 \usepackage{hyperref}
 \hypersetup{
+    hyperindex=true,
+    linktocpage=false,
     colorlinks=false,
     anchorcolor=false,
     citecolor=false,
@@ -42,14 +45,16 @@
     menubordercolor={1 1 1},
     urlbordercolor={1 1 1},
 }
+%<<< Clickable hypers
 \begin{document}
 \maketitle
 \begin{abstract}
     Computer = good.
 Observe la figura \ref{fig:1}.
-\begin{figure}[H]\centering
-    \includegraphics[width=.25\textwidth]{computer}
-\end{figure}\label{fig:1}
+\begin{figure}[h]\centering
+    \caption{A computer}\label{fig:1}
+    \includegraphics[width=2cm]{computer}
+\end{figure}
 \end{abstract}
 \pagebreak
 \tableofcontents
@@ -339,15 +344,15 @@ La distribución binominal cuenta el número de éxitos en un número fijo de en
 P(X=n)=\binom{n+r-1}{r-1}p^rq^n
 \end{equation}
 para $n=0,1,2\ldots,$ donde $q=1=p$.
-\subsubsection{LOTUS}
-La \emph{ley del estadista inconsciente} (\emph{LOTUS}, por sus siglas en inglés) permite calcular $E(g(X))$ directamente usando la distribución de $X$, sin tener que encontrar la distribución de $g(X)$ primero: si $X$ es una variable discreta y $g$ es una función de $\mathbb{R}$ a $\mathbb{R}$, entonces
-\begin{equation}
-E(g(X))=\sum_{x}g(x)P(X=x),
-\end{equation}
-donde la suma se toma de todos los valores posibles de $X$. El valor esperado de $g(X)$ puede ser escrito en forma no agrupado como
-\begin{equation}
-E(g(X))=\sum_{s}g(X(s))p(\{s\}).
-\end{equation}
+%\subsubsection{LOTUS}
+%La \emph{ley del estadista inconsciente} (\emph{LOTUS}, por sus siglas en inglés) permite calcular $E(g(X))$ directamente usando la distribución de $X$, sin tener que encontrar la distribución de $g(X)$ primero: si $X$ es una variable discreta y $g$ es una función de $\mathbb{R}$ a $\mathbb{R}$, entonces
+%\begin{equation}
+%E(g(X))=\sum_{x}g(x)P(X=x),
+%\end{equation}
+%donde la suma se toma de todos los valores posibles de $X$. El valor esperado de $g(X)$ puede ser escrito en forma no agrupado como
+%\begin{equation}
+%E(g(X))=\sum_{s}g(X(s))p(\{s\}).
+%\end{equation}
 \subsubsection{Varianza}
 Pág 171, 4.6
 \section {Objetivos}
@@ -380,7 +385,7 @@ Contribuir por medio del diseño y desarrollo de la\\
 que será utilizable en variedad de casos reales /con características similares./
 \section {Metodologías}
 \newpage
-\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos, \includegraphics[width=1em]{shrug})} %cambiaelnombre
+\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos)} %cambiaelnombre
 \listoffigures
 \renewcommand{\listtablename}{Índice de cuadros (plots, gráficas, charts)} %cambiaelnombre
 \listoftables
