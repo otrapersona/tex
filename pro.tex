@@ -14,44 +14,20 @@
 \usepackage{tabularx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{newtxmath}
-%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} %\addbibresource{bibfile.bib}
-\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} %\addbibresource{bibfile.bib} %OVERLEAF
+\usepackage[backend=bibtex,style=alphabetic]{biblatex} % TODOLATEX
 \bibliography{pro}
-\usepackage{tikz} %PARA EL TRIÁNGULO, QUITAR
+\usepackage{graphicx} % insertar imágenes
 \begin{document}
 \maketitle
 \begin{abstract}
-  \begin{center}%PARA EL TRIÁNGULO, QUITAR
-Ignoren el formato, también el triángulo.\\
-    \vspace{1cm}
-    \begin{tikzpicture}[scale=1, line join=bevel]
+    Computer = good... or is it?
+    \begin{figure}
+        \includegraphics[width=\linewidth]{boat.jpg}
+        \caption{A boat.}
+        \label{fig:boat1}
+    \end{figure}
     
-    \pgfmathsetmacro{\a}{2.5}
-    \pgfmathsetmacro{\b}{0.9}
-    
-    \tikzset{%
-        apply style/.code     = {\tikzset{#1}},
-        triangle_edges/.style = {thick,draw=black}
-    }
-    
-    \foreach \theta/\facestyle in {%
-        0/{triangle_edges, fill = gray!50},
-        120/{triangle_edges, fill = gray!25},
-        240/{triangle_edges, fill = gray!90}%
-    }{
-        \begin{scope}[rotate=\theta]
-        \draw[apply style/.expand once=\facestyle]
-        ({-sqrt(3)/2*\a},{-0.5*\a})                     --
-        ++(-\b,0)                                       --
-        ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point	
-        ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point
-        ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point
-        ({0.5*\b},{\a+sqrt(3)/2*\b})                  --
-        cycle;
-        \end{scope}
-    }	
-    \end{tikzpicture}
-\end{center}%PARA EL TRIÁNGULO, QUITAR
 \end{abstract}
 \pagebreak
 \tableofcontents
