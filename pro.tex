@@ -4,21 +4,28 @@
 \author{Victor Matus}
 \title{Protocolo}
 \date{\today}
+%>>> Mate, símbolos
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathtools}
-\usepackage{newtxmath}
+\usepackage{newtxmath} % fuente?
 \usepackage{array}
 \usepackage{multirow} % tablas
 \usepackage{tabularx} % tablas
+%<<< Mate, símbolos
 \usepackage[dvipsnames]{xcolor} % marcatextos, se puede ir al final?
-%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} %\addbibresource{bibfile.bib} %OVERLEAF
-\usepackage[backend=bibtex,style=alphabetic]{biblatex} % TODOLATEX
-\usepackage{graphicx} % insertar imágenes
-\usepackage{float} % ubicación flotante imágenes
+%>>> Bibliografía
 \usepackage{csquotes} % citar
-\bibliography{pro}
+%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} % OVERLEAF
+%\addbibresource{bibfile.bib} % OVERLEAF
+\usepackage[backend=bibtex,style=alphabetic]{biblatex} % genérico no-overleaf
+\bibliography{pro} % genérico no-overleaf
+%>>>  Bibliografía
+%>>> Imágenes
+\usepackage{graphicx} % insertar
+\usepackage{float} % ubicación flotante
+%>>> Imágenes
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -33,6 +40,9 @@ Observe \ref{fig:1}
 \end{abstract}
 \pagebreak
 \tableofcontents
+\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos, \includegraphics[width=1em]{shrug})}
+\listoffigures{AKA imágenes}
+\listoftables{AKA plots, gráficas, charts}
 \section {incompleto}\ \\
 * Introduction to Probability:\\
 -terminar Expectations\\
