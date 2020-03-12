@@ -285,6 +285,12 @@ si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndo
 \begin{equation}
 E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
 \end{equation}
+***********nuevo * Varianza
+\begin{equation}
+Var(X)=E{(X-EX)}^2=E(X^2)-{(EX)}^2
+\end{equation}
+***********nuevo
+
 
 El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
 \begin{equation}
@@ -354,9 +360,13 @@ Varianza de la geométrica (lo mismo)
 Var(X)=E(X^2)-{(EX)}^2=(n(n-1)p^2+np)-(np)^2=np(1-p).
 \end{equation}
 
-Una variable aleatoria $X$ tiene la \emph{distribución de Poisson} con el parámetro $\lambda$, cuando $\lambda > 0$ si la PMF de $x$ es
+Una variable aleatoria $X$ tiene \emph{distribución de Poisson} (denotada $X\sim Pois(\lambda)$) con el parámetro $\lambda$, cuando $\lambda > 0$ si la PMF de $x$ es
 \begin{equation}
 P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}, k=0,1,2,\ldots.
+\end{equation}
+Varianza de la distribución de Poisson es
+\begin{equation}
+Var(X)=E(X^2)-{(EX)}^2=\lambda(1+\lambda)-\lambda^2=\lambda
 \end{equation}
 \section {Objetivos}
 Comenzar desde cero cada proyecto es ineficiente. (esto es temporal)
