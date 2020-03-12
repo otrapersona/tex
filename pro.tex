@@ -36,24 +36,20 @@
     pdftitle={Protocolo},
     pdfauthor={Victor Matus},
     bookmarks=true,
-    pdfpagemode=FullScreen,
     citebordercolor={1 1 1},
     filebordercolor={1 1 1},
     linkbordercolor={1 1 1},
     menubordercolor={1 1 1},
     urlbordercolor={1 1 1},
 }
-\urlstyle{same}
 \begin{document}
 \maketitle
 \begin{abstract}
     Computer = good.
-    \begin{figure}[h]
-        \centering\includegraphics[width=.0625\textwidth]{computer}
-        \caption{Una computadora}
-        \label{fig:1}
-    \end{figure}
-Observe la figura \ref{fig:1} en página \pageref{fig:1}
+Observe la figura \ref{fig:1}.
+\begin{figure}[H]\centering
+    \includegraphics[width=.25\textwidth]{computer}
+\end{figure}\label{fig:1}
 \end{abstract}
 \pagebreak
 \tableofcontents
@@ -84,7 +80,7 @@ Observe la figura \ref{fig:1} en página \pageref{fig:1}
 %\end{center}
 \section {Marco teórico}
 \subsection {Modelo de base de datos relacional}
-El modelo relacional de base de datos, según Date \fullcite{date12} consiste en cinco componentes:
+El modelo relacional de base de datos, según Date \cite{date12} consiste en cinco componentes:
 \begin{enumerate}
     \item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
     \item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
@@ -144,7 +140,7 @@ Pruebas en las que los conjuntos de hipótesis que contienen $\beta_1$, por ejem
 t=\frac{\hat{\beta_1}-0}{S/\sqrt{S{xx}}},
 \end{equation}
 
-Wackerly, Mendenhall III y Scheaffer consideran que \fullcite[``parecería lógico usar $r$ como estadístico de prueba para probar hipótesis más generales acerca de $\rho$, pero la distribución de probabilidad para $r$ es difícil de obtener."][]{wack09} Sin embargo, en muestras moderadamente grandes podemos probar la hipótesis $H_0\colon \rho_1=\rho_0$ con una prueba Z en la que
+Wackerly, Mendenhall III y Scheaffer consideran que \cite[``parecería lógico usar $r$ como estadístico de prueba para probar hipótesis más generales acerca de $\rho$, pero la distribución de probabilidad para $r$ es difícil de obtener."][]{wack09} Sin embargo, en muestras moderadamente grandes podemos probar la hipótesis $H_0\colon \rho_1=\rho_0$ con una prueba Z en la que
 \begin{equation}
 Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rho})}{\frac{1}{\sqrt{n-3}}}.
 \end{equation}
