@@ -377,7 +377,7 @@ La distribución logística se obtiene
 \begin{equation}
 F(x)=\frac{e^x}{1+e^x}, x\in\Re
 \end{equation}
-La esperanza de la continua función de distribución acumulada $f$ es
+El valor esperado de la continua función de distribución acumulada $f$ es
 \begin{equation}
 E(X)=\int_{-\infty}^{\infty}xf(x)dx
 \end{equation}
@@ -400,7 +400,19 @@ La distribución normal ($X \sim N(\mu,\sigma^2)$)cuando $\mathbb{Z} \sim N(0,1)
 \begin{equation}
 X=\mu+\sigma\mathbb{Z}
 \end{equation}
-Por lo tanto obtendremos mean (ya se me olvidó) de $\mu$ y varianza de $\sigma^2$
+Por lo tanto obtendremos el valor esperado de $\mu$ y varianza de $\sigma^2$
+\begin{equation}
+X=(\mu+\sigma\mathbb{Z})=E(\mu)+\sigma E(\mathbb{Z})=\mu
+\end{equation}
+\begin{equation}
+Var=(\mu+\sigma\mathbb{Z})=Var(\sigma\mathbb{Z})=\sigma^2Var(\mathbb{Z})=\sigma^2.
+\end{equation}
+
+La \emph{distribución exponencial} de $X$ con un parámetro $\lambda$, cuando $\lambda>0$ si su función de densidad de probabilidad es $f(x)=\lambda e^{-\lambda x} , x>0$; denotada como $X \sim Expo(\lambda)$ es la siguiente
+\begin{equation}
+F(x)=1-e^{-\lambda x}, x>0
+\end{equation}
+resumen?
 
 
 
