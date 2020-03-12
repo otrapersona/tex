@@ -26,23 +26,37 @@
 \usepackage{graphicx} % insertar
 \usepackage{float} % ubicación flotante
 %>>> Imágenes
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    anchorcolor=false,
+    citecolor=false,
+    filecolor=false,
+    urlcolor=false,
+    pdftitle={Protocolo},
+    pdfauthor={Victor Matus},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+    citebordercolor={1 1 1},
+    filebordercolor={1 1 1},
+    linkbordercolor={1 1 1},
+    menubordercolor={1 1 1},
+    urlbordercolor={1 1 1},
+}
+\urlstyle{same}
 \begin{document}
 \maketitle
 \begin{abstract}
-    Computer
+    Computer = good.
     \begin{figure}[h]
-        \centering\includegraphics[width=.125\textwidth]{computer}
+        \centering\includegraphics[width=.0625\textwidth]{computer}
         \caption{Una computadora}
         \label{fig:1}
     \end{figure}
-
-Observe \ref{fig:1}
+Observe la figura \ref{fig:1} en página \pageref{fig:1}
 \end{abstract}
 \pagebreak
 \tableofcontents
-\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos, \includegraphics[width=1em]{shrug})}
-\listoffigures{AKA imágenes}
-\listoftables{AKA plots, gráficas, charts}
 \section {incompleto}\ \\
 * Introduction to Probability:\\
 -terminar Expectations\\
@@ -369,7 +383,11 @@ Contribuir por medio del diseño y desarrollo de la\\
 /plataforma/framework/ de ML para NLP\\
 que será utilizable en variedad de casos reales /con características similares./
 \section {Metodologías}
-
+\newpage
+\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos, \includegraphics[width=1em]{shrug})} %cambiaelnombre
+\listoffigures
+\renewcommand{\listtablename}{Índice de cuadros (plots, gráficas, charts)} %cambiaelnombre
+\listoftables
 \newpage
 \section {Referencias}
 \printbibliography[heading=none]
