@@ -4,24 +4,32 @@
 \author{Victor Matus}
 \title{Protocolo}
 \date{\today}
-\usepackage{csquotes}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathtools}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{newtxmath}
+\usepackage{array}
+\usepackage{multirow} % tablas
+\usepackage{tabularx} % tablas
+\usepackage[dvipsnames]{xcolor} % marcatextos, se puede ir al final?
 %\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} %\addbibresource{bibfile.bib} %OVERLEAF
 \usepackage[backend=bibtex,style=alphabetic]{biblatex} % TODOLATEX
-\bibliography{pro}
 \usepackage{graphicx} % insertar imágenes
+\usepackage{float} % ubicación flotante imágenes
+\usepackage{csquotes} % citar
+\bibliography{pro}
 \begin{document}
 \maketitle
 \begin{abstract}
     Computer
+    \begin{figure}[h]
+        \centering\includegraphics[width=.125\textwidth]{computer}
+        \caption{Una computadora}
+        \label{fig:1}
+    \end{figure}
+
+Observe \ref{fig:1}
 \end{abstract}
 \pagebreak
 \tableofcontents
