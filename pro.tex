@@ -369,7 +369,25 @@ Varianza de la distribución de Poisson es
 Var(X)=E(X^2)-{(EX)}^2=\lambda(1+\lambda)-\lambda^2=\lambda
 \end{equation}
 \subsubsection{r.v. continuas}
-A diferencia de las variables discretas, las \emph{variables aleatorias continuas} pueden tomar cualquier valor real en un intervalo y tienen una \emph{distribución continua} 
+A diferencia de las variables discretas, las \emph{variables aleatorias continuas} pueden tomar cualquier valor real en un intervalo y tienen una \emph{distribución continua}. Para obtener la probabilidad deseadaWHOMST, se debe integrar la función de densidad de probabilidad sobre el rango apropiado
+\begin{equation}
+P(X\in A)=\int_{A}f(x)dx
+\end{equation}
+La distribución logística se obtiene
+\begin{equation}
+F(x)=\frac{e^x}{1+e^x}, x\in\Re
+\end{equation}
+La esperanza de la continua función de distribución acumulada $f$ es
+\begin{equation}
+E(X)=\int_{-\infty}^{\infty}xf(x)dx
+\end{equation}
+la continua $U$ tiene dist unif en el intervalo $(a,b)$ si su función de distribución acumulada es
+\begin{equation}
+f(x)=\begin{cases}
+1-q^{\lfloor x\rfloor+1}, \text{ si } x\geq 0;\\
+0, \text{ si }x < 0,
+\end{cases}
+\end{equation}
 
 
 
