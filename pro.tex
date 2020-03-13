@@ -1,111 +1,29 @@
-\documentclass[letterpaper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\author{Victor Matus}
-\title{Protocolo}
-\date{\today}
-%>>> Mate, símbolos
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{mathtools}
-\usepackage{newtxmath} % fuente?
-\usepackage{array}
-\usepackage{multirow} % tablas
-\usepackage{tabularx} % tablas
-%<<< Mate, símbolos
-\usepackage[dvipsnames]{xcolor} % marcatextos, se puede ir al final?
-%>>> Bibliografía
-\usepackage{csquotes} % citar
-%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} % OVERLEAF
-%\addbibresource{bibfile.bib} % OVERLEAF
-\usepackage[backend=bibtex,style=alphabetic]{biblatex} % genérico no-overleaf
-\bibliography{pro} % genérico no-overleaf
-%>>>  Bibliografía
-%>>> Imágenes
-\usepackage{graphicx} % insertar
-\usepackage{float} % ubicación flotante
-%>>> Imágenes
-%>>> Clickable hypers
-\usepackage{hyperref}
-\hypersetup{
-    hyperindex=true,
-    linktocpage=false,
-    colorlinks=true,
-    allcolors=black,
-    bookmarksnumbered=true,
-    unicode=true,
-}
-%<<< Clickable hypers
+\documentclass[12pt,letterpaper]{article}
+\include{packages}
+\includeonly{packages,valesp}
 \begin{document}
 \maketitle
-%\begin{abstract}
-%    Computer = good.
-%Observe la figura \ref{fig:1}.
-%\begin{figure}[h]\centering
-%    \caption{A computer}\label{fig:1}
-%    \includegraphics[width=2cm]{computer}
-%\end{figure}
-%\end{abstract}
-%\pagebreak
+\input{abstract}
 \tableofcontents
-\subsubsection{to-do}\label{ch:to-do}
-\input{to-do}
-\section {Marco teórico}
+\include{to-do}
+\section {Marco teórico}\label{ch:marcot}
 \subsection {Álgebra relacional}\label{ch:algebra}
 \input{algebra}
-\subsection {Modelo de base de datos relacional}
+\subsection {Modelo de base de datos relacional}\label{ch:rdb}
 \input{rdb}
-\subsection {Procesamiento de lenguaje natural}
+\subsection {Procesamiento de lenguaje natural}\label{ch:nlp}
 \input{nlp}
-\subsection {Correlación lineal}
-\input{correlacion}
-\subsection {Probabilidad condicional}
-\input{probcond}
-\subsection {Variables aleatorias y sus distribuciones}
+\subsection {Correlación lineal}\label{ch:corrl}
+\input{corrl}
+\subsection {Probabilidad condicional}\label{ch:pcond}
+\input{pcond}
+\subsection {Variables aleatorias y sus distribuciones}\label{ch:vayd}
 \input{vayd}
-\subsection {Valor esperado}
+\subsection {Valor esperado}\label{ch:valesp}
 \input{valesp}
-
-
-
-
-
-\section {Objetivos}
-Comenzar desde cero cada proyecto es ineficiente. (esto es temporal)
-\subsection {General}
-Diseñar y desarrollar una\\
-plataforma/framework de ML para NLP\\
-reutilizable y/o de uso general/ ¿para casos de uso similares?
-\subsection {Particulares}
-Revisé algunas tesis para darme la idea, necesito saber un poco más del tema para desarrollar esta parte, creo que sería algo así:
-\begin{enumerate}
-    \item Investigación
-    \item Análisis info
-    \item Diseño/desarrollo
-    \item Comprobación
-\end{enumerate}
-\subsection {Hipótesis}
-Al integrar\\
-/tecnologías/técnicas/modelos/librerías/frameworks/\\
-de RDB, ML, NLP, ¿transfer learning?, ¿deep learning?,...\\
-se de puede /diseñar/desarrollar/, ¿e implementar? una\\
-/plataforma/framework/\\
-/genérica/normalizada/universal/reutilizable/estandarizada/compatible\\
-/con/en/para/ /casos de uso similares/diversos casos de uso/\\
-(/reduciendo tiempo/ahorrando recursos/.) estas oración se sale del scope
-
-\section {Metas}
-Contribuir por medio del diseño y desarrollo de la\\
-/plataforma/framework/ de ML para NLP\\
-que será utilizable en variedad de casos reales /con características similares./
-\section {Metodologías}
-%\newpage
-%\renewcommand{\listfigurename}{Índice de figuras (imágenes, fotos)} %cambiaelnombre
-%\listoffigures
-%\renewcommand{\listtablename}{Índice de cuadros (plots, gráficas, charts)} %cambiaelnombre
-%\listoftables
-\newpage
-\section {Referencias}
+\section {Objetivos}\label{ch:objetivos}
+\input{objetivos}
+\section {Metodologías}\label{ch:metod}
+\section {Referencias}\label{ch:refs}
 \printbibliography[heading=none]
 \end{document}
