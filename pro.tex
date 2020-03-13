@@ -1,29 +1,20 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[12pt,draft,letterpaper]{article}
 \include{packages}
-\includeonly{packages,valesp}
+\bibliography{pro} % genérico no-overleaf
 \begin{document}
-\maketitle
-\input{abstract}
+%\maketitle
+%\input{abstract}
 \tableofcontents
-\include{to-do}
-\section {Marco teórico}\label{ch:marcot}
-\subsection {Álgebra relacional}\label{ch:algebra}
-\input{algebra}
-\subsection {Modelo de base de datos relacional}\label{ch:rdb}
-\input{rdb}
-\subsection {Procesamiento de lenguaje natural}\label{ch:nlp}
-\input{nlp}
-\subsection {Correlación lineal}\label{ch:corrl}
-\input{corrl}
-\subsection {Probabilidad condicional}\label{ch:pcond}
-\input{pcond}
-\subsection {Variables aleatorias y sus distribuciones}\label{ch:vayd}
-\input{vayd}
-\subsection {Valor esperado}\label{ch:valesp}
-\input{valesp}
-\section {Objetivos}\label{ch:objetivos}
-\input{objetivos}
-\section {Metodologías}\label{ch:metod}
-\section {Referencias}\label{ch:refs}
-\printbibliography[heading=none]
+\pagebreak
+\section {Marco teórico}\label{sec:marcot}
+\subsection {Álgebra relacional}\label{subsec:algebra}\input{algebra}
+\subsection {Modelo de base de datos relacional}\label{subsch:rdb}\input{rdb}
+\subsection {Procesamiento de lenguaje natural}\label{subsec:nlp}\input{nlp}
+\subsection {Correlación lineal}\label{subsec:corrl}\input{corrl}
+\subsection {Probabilidad condicional}\label{subsec:pcond}\input{pcond}
+\subsection {Variables aleatorias y sus distribuciones}\label{subsec:vayd}\input{vayd}
+\subsection {Valor esperado}\label{subsec:valesp}\input{valesp}
+\section {Objetivos}\label{sec:objetivos}\input{objetivos}
+%\section {Metodologías}\label{sec:metod}
+%\section {Referencias}\label{sec:refs}\printbibliography[heading=none]
 \end{document}
