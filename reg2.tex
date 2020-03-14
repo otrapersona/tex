@@ -1,8 +1,13 @@
+La varianza de una variable aleatoria
 La \emph{correlación} de dos variables cuyos valores esperados existen y son positivos $x$ y $y$ se denota $corr(x,y)$ y se define como\notadhi{necesitamos covar y var}
 \begin{equation}
-\frac{cov(x,y)}{\sqrt{var(x)}\sqrt{var(y)}}
+p(X,Y)=\frac{cov(X,Y)}{\sqrt{var(X)}\sqrt{var(Y)}}
 \end{equation}
-Donde $cov(x,y)$ es la covarianza de las variables $x$ y $y$, obtenida por medio de
+La covarianza mide qué tanto o tan poco las dos variables cuyos valores esperados existen y son positivos varían entre ellas, escrita $cov(X,Y)$ la covarianza de $X$ y $Y$ es definida como
 \begin{equation}
-cov(x,y)=E(xy)-E(x)E(y)
+cov(X,Y)=E[(X-EX)(Y-EY)]
+\end{equation}
+Cuando se desconoce una referencia para la covarianza, tiene sentido escalar la covarianza de acuerdo a la desviación estándar de las variables
+\begin{equation}
+p(X,Y)=\frac{cov(X,Y)}{\sqrt{var(X)}\sqrt{var(Y)}}
 \end{equation}
