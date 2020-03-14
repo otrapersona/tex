@@ -1,0 +1,51 @@
+La probabilidad condicional tiene las mismas características que la probabilidad, pero $P(\cdot|B)$ actualiza nuestra incertidumbre acerca de los eventos para reflejar la evidencia observada en $B$.
+
+Si $A$ y $B$ son eventos con $P(B)>0$ entonces la \emph{probabilidad condicional} de $A$ dado $B$ denotado por $P(A|B)$, se define como
+\begin{equation}
+P(A|B)=\frac{P(A\cap B)}{P(B)}.
+\end{equation}
+
+Se denomina probabilidad a priori de $A$ a $P(A)$ y probabilidad a posteriori de $A$ a $P(A|B)$ y es importante mencionar que $P(A|B) \neq P(B|A)$.
+
+La probabilidad condicional es la razón de dos probabilidades y sus consecuencias, la primera de ellas se obtiene moviendo el denominador en la definición al otro lado de la ecuación, para cada evento {A} y {B} con posibilidades positivas,
+\begin{equation}\label{eq:EQ2}
+P(A\cap B)=P(B)P(A|B)=P(A)P(B|A).
+\end{equation}
+se le conoce como teorema de la \emph{probabilidad de la intersección de dos eventos}. Aplicando repetidamente el teorema \eqref{eq:EQ2} aplicado a la intersección de $n$ eventos obtenemos el teorema de \emph{probabilidad de la intersección de $n$ eventos}. Para cualquier evento $A_1,\ldots,A_n$ con probabilidad $P(A_1,A_2,\ldots,A_{n-1})>0$,
+\begin{equation}
+\begin{matrix}
+P(A_1,A_2,\ldots,A_n)=P(A_1)P(A_2|A_1) \qquad \qquad \qquad \qquad \qquad \\
+\qquad  \qquad \qquad \qquad \qquad P(A_3|A_1,A_2)\ldots P(A_n|A_1,\ldots,A_{n-1}).\end{matrix}
+\end{equation}
+
+Otro teorema que relaciona a $P(A|B)$ con $P(B|A)$ es la regla \emph{regla de Bayes}:
+\begin{equation}
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+\end{equation}
+que se origina directamente del teorema \eqref{eq:EQ2} y a su vez se origina directamente de la definición de probabilidad condicional, sin embargo, la regla de Bayes tiene importantes aplicaciones e implicaciones en probabilidad y estadística, ya que en ocasiones es más fácil encontrar $P(B|A)$ que $P(A|B)$ o viceversa. Otra forma de escribir la regla, es en términos de apuestas (\emph{odds}), las odds de un evento $A$ son
+\begin{equation}
+odds(A)=P(A)\frac{P(A)}{P(A^\text{c})}.
+\end{equation}
+Al tomar la expresión $P(A|B)$ y dividirla entre $P(A^\text{c}|B)$, ambos de la regla de Bayes; llegamos al \emph{teorema de Bayes en forma de apuestas}: para cualquier evento $A$ y $B$ con posibilidades positivas, las odds de $A$ \colorbox{yellow}{after conditioning on} $B$ son
+\begin{equation}
+\frac{P(A|B)}{P(A^\text{c}|B)}=\frac{P(B|A)}{P(B|A^\text{c})}\frac{P(A)}{P(A^\text{c})}.
+\end{equation}
+En este caso las odds a posteriori $P(A|B)/P(A^\text{c}|B)$ son iguales a las odds a priori $P(A)/P(A^\text{c})$ por el factor $P(B|A)/P(B|A^\text{c})$ lo que se le conoce en estadística como \emph{función de verosimilitud}.
+
+La ley de Bayes es usada en ocasiones en conjunto con la \emph{ley de probabilidad total}, que es es esencial para descomponer problemas complicados de probabilidad en problemas partes: Si $A_1,\ldots,A_n$ es una partición de una muestra del espacio $S$, con $P(A_i)>0$ para todo $i$, entonces
+\begin{equation}
+P(B)=\sum_{i=1}^{n}P(B|A_i)P(A_i).
+\end{equation}
+Prueba: como los $A_i$ forman una partición de $S$, podemos descomponer $B$ como
+\begin{equation}
+B=(B\cap A_1)\cup(B\cap A_2)\cup\ldots\cup(B\cap A_n).
+\end{equation}
+como las partes están disjuntas, podemos agregar sus posibilidades para obtener $P(B)$:
+\begin{equation}
+P(B)=P(B\cap A_1)+P(B\cap A_2)+\ldots+P(B\cap A_n).
+\end{equation}
+Aplicando el teorema \eqref{eq:EQ2} a cada $P(B\cap A_i)$ obtenemos
+\begin{equation}
+P(B)=P(B|A_1)P(A_1)+\ldots+P(B|A_n)P(A_n).
+\end{equation}
+La \emph{ley de probabilidad total} dice que para obtener la probabilidad incondicional de $B$, tenemos que dividir el espacio muestra en cortes disjuntos $A_i$, encontrar la probabilidad condicional de $B$ en cada corte, después tomar la suma ponderada de las probabilidades condicionales, donde los pesos son las probabilidades $P(A_i)$.

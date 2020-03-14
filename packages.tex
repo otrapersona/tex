@@ -1,0 +1,50 @@
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\author{Victor Matus}
+\title{Protocolo}
+\date{\today}
+%>>> Mate, símbolos
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{newtxmath} % fuente?
+\usepackage{array}
+\usepackage{multirow} % tablas
+\usepackage{tabularx} % tablas
+%<<< Mate, símbolos
+\usepackage[dvipsnames]{xcolor} % marcatextos, se puede ir al final?
+%>>> Bibliografía
+\usepackage{csquotes} % citar
+%\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex} % OVERLEAF
+%\addbibresource{bibfile.bib} % OVERLEAF
+\usepackage[backend=bibtex,style=alphabetic]{biblatex} % genérico no-overleaf
+\bibliography{pro} % genérico no-overleaf
+%>>>  Bibliografía
+%>>> Imágenes
+\usepackage{graphicx} % insertar
+\usepackage{float} % ubicación flotante
+%>>> Imágenes
+%>>> Clickable hypers
+\usepackage{hyperref}
+\hypersetup{
+    hyperindex=true,
+    linktocpage=false,
+    colorlinks=true,
+    allcolors=black,
+    bookmarksnumbered=true,
+    unicode=true,
+}
+%<<< Clickable hypers
+%>>> notas verticales QUITAR AL FINAL
+%\usepackage{marginnote}
+\usepackage{geometry}
+\geometry{marginparwidth=.45cm,marginparsep=.45cm} %NO TOCAR EL PRIMER .45, constante
+\newcommand{\notad}[1]{\normalmarginpar\marginpar{\rotatebox{90}{$\uparrow$ #1}}}
+%
+\newcommand{\notai}[1]{\reversemarginpar\marginpar{\rotatebox{90}{$\downarrow$ #1}}}
+%
+\newcommand{\notadhi}[1]{\normalmarginpar\marginpar{\rotatebox{270}{$\downarrow$ #1}}}
+%
+\newcommand{\notaihi}[1]{\reversemarginpar\marginpar{\rotatebox{270}{$\uparrow$ #1}}}
+%<<< notas verticales QUITAR AL FINAL

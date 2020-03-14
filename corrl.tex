@@ -1,0 +1,59 @@
+Cuando se tiene una variable controlada $x$ y una dependiente $y$ tenemos el modelo lineal
+\begin{equation}
+Y=\beta_0+\beta_1x+\epsilon
+\end{equation}
+que implica entonces el modelo para análisis de rendimiento promedio:
+\begin{equation}\label{eq:EQ1}
+E(Y)=\beta_0+\beta_1x.
+\end{equation}
+
+Si la variable $x$ es un valor observado de una variable $X$, al establecerse una relación funcional y al basarse en \eqref{eq:EQ1}
+se implica el modelo
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x
+\end{equation}
+que supone el valor esperado condicional de $Y$ para un valor fijo de $X$ en una función lineal del valor $x$. Al suponer que la variable aleatoria vectorial $(X, Y)$ tiene una distribución normal bivariable con $E(X)=\mu_X, E(Y)=\mu_Y, V(X)=\sigma^2_X, V(Y)=\sigma^2_Y$, el coeficiente de correlación $\rho$ puede demostrar que
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
+\end{equation}
+
+Si $(X, Y)$ tiene una distribución normal bivariable, entonces la prueba de independencia es equivalente a probar si el coeficiente de correlación $\rho$ es igual a cero. Denotando con $(X_1, Y_1), (X_2, Y_2),\ldots , (X_n, Y_n)$ una muestra de aleatoria de distribución normal bivariante. El estimador de máxima probabilidad de $\rho$ está dado por el coeficiente de correlación muestral:
+\begin{equation}
+r=\frac{\sum_{i=1}^{n}(X_i-\overline{X})(Y_i-\overline{Y})}{\sqrt{\sum_{i=1}^{n}(X_i-\overline{X})^2\ \sum_{i=1}^{n}(Y_i-\overline{Y})^2}}.
+\end{equation}
+
+Puede expresarse $r$ en términos de cantidades conocidas:
+\begin{equation}
+r=\frac{S{xy}}{\sqrt{S{xx}S{yy}}}=\hat{\beta}\sqrt{\frac{S{xx}}{S{yy}}}.
+\end{equation}
+
+Cuando $(X, Y)$ tenga una distribución normal bivariable, se sabe que
+\begin{equation}
+E(Y|X=x)=\beta_0+\beta_1x,\qquad donde\ \beta_1=\frac{\sigma_Y}{\sigma_X}\rho.
+\end{equation}
+
+Pruebas en las que los conjuntos de hipótesis que contienen $\beta_1$, por ejemplo, $H_a\colon \beta_1 = 0$ contra $H_a\colon \beta_1 > 0$ $H_a\colon \beta_1 < 0$, así como $H_a\colon \beta_1 > 0$ contra $H_a\colon \beta_1 \neq 0$ pueden estar basadas en el estadístico
+\begin{equation}
+t=\frac{\hat{\beta_1}-0}{S/\sqrt{S{xx}}},
+\end{equation}
+
+Wackerly, Mendenhall III y Scheaffer consideran que \cite[``parecería lógico usar $r$ como estadístico de prueba para probar hipótesis más generales acerca de $\rho$, pero la distribución de probabilidad para $r$ es difícil de obtener."][]{wack09} Sin embargo, en muestras moderadamente grandes podemos probar la hipótesis $H_0\colon \rho_1=\rho_0$ con una prueba Z en la que
+\begin{equation}
+Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rho})}{\frac{1}{\sqrt{n-3}}}.
+\end{equation}
+
+Si $\alpha$ es la probabilidad deseada de cometer un error tipo I, la forma de la región de rechazo depende de la hipótesis alternativa. Las diversas alternativas de interés más frecuente y correspondientes regiones de rechazo son las siguientes:
+\begin{equation}  
+\begin{matrix}
+H_a\colon\rho>\rho0, &RR\colon z>z_\alpha\ \ \ \ \ \ \\
+H_a\colon\rho<\rho0, &RR\colon z<-z_\alpha\ \ \ \ \\
+H_a\colon\rho\neq\rho0, &RR\colon | z | >z_\alpha/2
+\end{matrix}
+\end{equation}
+
+La suma de los cuadrados del error \emph{SSE}, es es una alternativa para medie la variación en valores que permanecen sin explicación después de usar las $x$ para ajustar el modelo de regresión lineal simple, la razón $SSE/S_{yy}$ la proporción de la variación total en las $y_i$ que este modelo no explica. El coeficiente de determinación se puede escribir como
+\begin{equation}
+r^2=(\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}})^2=(\frac{S_{xy}}{S_{xx}})(\frac{S_{xy}}{S_{yy}})=(\frac{\hat{\beta_1}S_{xy}}{S_{yy}})=\frac{S_{yy}-SEE}{S_{yy}}=1-\frac{SSE}{S_{yy}}.
+\end{equation}
+
+Podemos interpretar a $r^2$ como la proporción de la variación total en las $y_i$  que es explicada por una variable $x$ en un modelo de regresión lineal simple.

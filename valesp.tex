@@ -1,0 +1,149 @@
+Mientras que las distribuciones anteriores nos han dado toda la información acerca de la probabilidad de las variables aleatorias, cuando sólo se requiere un número que extraiga su valor, podemos utilizar la \emph{media}, también conocida como \emph{valor esperado}. Dada una lista de números $x_1,x_2.\ldots,x_n$, para obtener la \emph{media aritmética}, estos se suman y dividen entre $n$:
+\begin{equation}
+\bar{x}=\frac{1}{n}\sum_{j=1}^{n}x_j,
+\end{equation}
+la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene de la siguiente forma:
+\begin{equation}
+\text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
+\end{equation}
+donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
+
+El valor esperado o media de una variable aleatoria discreta $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots$ es definida por
+\begin{equation}
+E(X)=\sum_{j=1}^{\infty}x_jP(X=xj),
+\end{equation}
+si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndose de la siguiente forma:
+\begin{equation}
+E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
+\end{equation}
+***********nuevo * Varianza
+\begin{equation}
+Var(X)=E{(X-EX)}^2=E(X^2)-{(EX)}^2
+\end{equation}
+***********nuevo
+
+
+El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
+\begin{equation}
+\begin{matrix}
+E(X+Y)=E(X)+E(Y),\\
+E(cX)=cE(X).
+\end{matrix}
+\end{equation}
+\subsubsection {Binominal geométrica y negativa}
+Distribución geométrica: Se tiene una secuencia de ensayos independientes Bernoulli, cada uno con la misma probabilidad de éxito $p\in(0,1)$, con ensayos realizados hasta que se alcanza el éxito. $X$ es el número de \emph{fallas} antes de la primera prueba exitosa por lo que $X$ tiene una \emph{distribución geométrica} con un parámetro $p$; denotado $X\sim Geom(p)$. Con esto podemos llegar a los teoremas de \emph{distribución geométrica de la función de probabilidad}, cuando $X\sim Geom(p)$, entonces la función de probabilidad de $X$ será
+\begin{equation}
+P(X=k)=q^kp
+\end{equation}
+para $k=1,2,\ldots,$ cuando $q=1-p$; y el teoremas de \emph{distribución geométrica de la función de distribución acumulativa}, cuando $X\sim Geom(p)$, entonces la función de distribución acumulativa de $X$ será
+    \begin{equation}
+    F(x)=
+    \begin{cases}
+    1-q^{\lfloor x\rfloor+1}, \text{ si } x\geq 0;\\
+    0, \text{ si }x < 0,
+    \end{cases}
+    \end{equation}
+cuando $q=1-q$ y $\lfloor x\rfloor$ es el mayor entero y menor o igual a $x$.
+
+El valor esperado geométrico de $X\sim Geom(p)$ es
+\begin{equation}
+E(X)=\sum_{k=0}^{\infty}kq^kp,
+\end{equation}
+cuando $q=1-p$. Aunque esta no es una serie geométrica, podemos llegar a ello
+\begin{equation}\begin{matrix}
+\sum_{k=0}^{\infty}q^k=\frac{1}{1-q}\\
+\\
+\sum_{k=0}^{\infty}kq^{k-1}=\frac{1}{{1-q}^2},
+\end{matrix}
+\end{equation}
+finalmente multiplicamos ambos lados por $pq$, recuperando la suma original que queríamos encontrar
+\begin{equation}
+E(X)=\sum_{k=0}^{\infty}kq^kp=pq\sum_{k=0}^{\infty}kq^{k-1}=pq\frac{1}{{(1-q)}^2}=\frac{q}{p}.
+\end{equation}
+Primer valor esperado de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X+1$ donde $X\sim Geom(p)$, por lo que tenemos
+\begin{equation}
+E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
+\end{equation}
+
+Las \emph{distribuciones binominales negativas} generalizan la distribución geométrica en lugar de esperar por un éxito, podemos esperar por cualquier número predeterminado $r$ de éxitos. En una secuencia de ensayos independientes Bernoulli con probabilidad de éxito $p$, si $X$ es el número de \emph{fallas} antes del éxito número $r$, entonces se dice que $X$tiene una distribución binominal negativa con parámetros $r$ y $p$, denotado $X\sim NBin(r,p)$.
+
+La distribución binominal cuenta el número de éxitos en un número fijo de ensayos, mientras que la binominal negativa cuenta el número de fallas hasta alcanzar cierto número de éxitos. Si $X\sim NBin(r,p)$, entonces la función de probabilidad de $X$ es
+\begin{equation}
+P(X=n)=\binom{n+r-1}{r-1}p^rq^n
+\end{equation}
+para $n=0,1,2\ldots,$ donde $q=1=p$.
+%\subsubsection{LOTUS}
+%La \emph{ley del estadista inconsciente} (\emph{LOTUS}, por sus siglas en inglés) permite calcular $E(g(X))$ directamente usando la distribución de $X$, sin tener que encontrar la distribución de $g(X)$ primero: si $X$ es una variable discreta y $g$ es una función de $\mathbb{R}$ a $\mathbb{R}$, entonces
+%\begin{equation}
+%E(g(X))=\sum_{x}g(x)P(X=x),
+%\end{equation}
+%donde la suma se toma de todos los valores posibles de $X$. El valor esperado de $g(X)$ puede ser escrito en forma no agrupado como
+%\begin{equation}
+%E(g(X))=\sum_{s}g(X(s))p(\{s\}).
+%\end{equation}
+\subsubsection{Varianza, agregarlas a la secc que pertenecen}
+Varianza de la geométrica (agregarla a la geom después de editar todo y hacerlo más breve)
+\begin{equation}
+Var(X)=E(X^2)-{(EX)}^2=\frac{q(1+q)}{p^2}-{(\frac{q}{p})}^2=\frac{q}{p^2}
+\end{equation}
+Varianza de la geométrica (lo mismo)
+\begin{equation}
+Var(X)=E(X^2)-{(EX)}^2=(n(n-1)p^2+np)-(np)^2=np(1-p).
+\end{equation}
+
+Una variable aleatoria $X$ tiene \emph{distribución de Poisson} (denotada $X\sim Pois(\lambda)$) con el parámetro $\lambda$, cuando $\lambda > 0$ si la PMF de $x$ es
+\begin{equation}
+P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}, k=0,1,2,\ldots.
+\end{equation}
+Varianza de la distribución de Poisson es
+\begin{equation}
+Var(X)=E(X^2)-{(EX)}^2=\lambda(1+\lambda)-\lambda^2=\lambda
+\end{equation}
+\subsubsection{r.v. continuas}
+A diferencia de las variables discretas, las \emph{variables aleatorias continuas} pueden tomar cualquier valor real en un intervalo y tienen una \emph{distribución continua}. Para obtener la probabilidad deseadaWHOMST, se debe integrar la función de densidad de probabilidad sobre el rango apropiado
+\begin{equation}
+P(X\in A)=\int_{A}f(x)dx
+\end{equation}
+La distribución logística se obtiene
+\begin{equation}
+F(x)=\frac{e^x}{1+e^x}, x\in\Re
+\end{equation}
+El valor esperado de la continua función de distribución acumulada $f$ es
+\begin{equation}
+E(X)=\int_{-\infty}^{\infty}xf(x)dx
+\end{equation}
+la continua $U$ tiene dist unif en el intervalo $(a,b)$, denotada $U \sim Unif(a,b)$ si el área acumulada bajo la función de densidad de probabilidad es
+\begin{equation}
+f(x)=\begin{cases}
+\frac{1}{b-a},\text{ si }a<x<b;\\
+\text{de lo contrario, }0
+\end{cases}
+\end{equation}
+$U \sim Unif(a,b)$ de una variable aleatoria es
+\begin{equation}
+\tilde{U}=a+(b-a)U
+\end{equation}
+Su varianza es
+\begin{equation}
+Var(U)=\frac{{(b-a)}^2}{12}
+\end{equation}
+La distribución normal ($X \sim N(\mu,\sigma^2)$)cuando $\mathbb{Z} \sim N(0,1)$ es
+\begin{equation}
+X=\mu+\sigma\mathbb{Z}
+\end{equation}
+Por lo tanto obtendremos el valor esperado de $\mu$ y varianza de $\sigma^2$
+\begin{equation}
+X=(\mu+\sigma\mathbb{Z})=E(\mu)+\sigma E(\mathbb{Z})=\mu
+\end{equation}
+\begin{equation}
+Var=(\mu+\sigma\mathbb{Z})=Var(\sigma\mathbb{Z})=\sigma^2Var(\mathbb{Z})=\sigma^2.
+\end{equation}
+
+La \emph{distribución exponencial} de $X$ con un parámetro $\lambda$, cuando $\lambda>0$ si su función de densidad de probabilidad es $f(x)=\lambda e^{-\lambda x} , x>0$; denotada como $X \sim Expo(\lambda)$ es la siguiente
+\begin{equation}
+F(x)=1-e^{-\lambda x}, x>0
+\end{equation}
+\begin{figure}[H]\centering
+\includegraphics[width=.9\textwidth]{resdis.png}
+\caption{tal vez me sirva para resumir, imagen no es para producto final}
+\end{figure}
