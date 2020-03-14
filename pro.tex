@@ -1,8 +1,10 @@
 \documentclass[12pt,letterpaper]{article}
 \include{packages}
 \usepackage{marginnote}
-\newcommand{\margen}[1]{\marginpar{#1} \rotatebox{90}{#1}}
-\begin{document}
+\usepackage{geometry}
+\geometry{marginparwidth=1in}
+\newcommand{\margen}[1]{\marginpar{\rotatebox{90}{#1}}}
+\begin{document}  
 %\maketitle
 %\input{abstract}
 \tableofcontents
