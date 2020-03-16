@@ -1,9 +1,9 @@
 # estas sí las quiero
 !img_distributions/*.*
-!img_distributions/graphs_bala/*.*
-!img_distributions/graphs_bala/evensmoler/*.*
-!img_distributions/graphs_bala/smols/*.*
-!img_distributions/graphs_bala/imgp/*.*
+!img_distributions/graphs_bala/*.pdf
+!img_distributions/graphs_bala/evensmoler/*.png
+!img_distributions/graphs_bala/smols/*.png
+!img_distributions/graphs_bala/imgp/*.jpeg
 
 # pictures
 *.png
