@@ -12,9 +12,11 @@ Si pensamos en las relaciones como una tabla, SELECT es utilizado para elegir fi
 \end{equation}
 donde $\pi$ es el denota el operador PROJECT y la lista de atributos es la sublista deseada de atributos de los atributos de la relación $R$.
 
-Las operaciones con dos relaciones reciben el nombre de \emph{operaciones binarias}. Podemos definir cada operación binaria para las relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ de tipo compatible (si tienen el mismo grado $n$ y si $dom(A_i)=dom(B_i)$ para $1\leq i\leq n$)
+Las operaciones con dos relaciones reciben el nombre de \emph{operaciones binarias}. Si se tiene $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ de tipo compatible (si tienen el mismo grado $n$ y si $dom(A_i)=dom(B_i)$ para $1\leq i\leq n$)
 \begin{itemize}
 \item UNION: El resultado de esta operación se denota $R \cup S$, es una relación que incluye todas las tuplas que están en $R$, $S$ o ambos, se eliminan duplicados.
 \item INTERSECTION: El resultado de esta operación se denota $R \cap S$, es una relación que incluye todas las tuplas que están en ambos $R$ y $S$.
 \item SET DIFFERENCE: El resultado de esta operación se denota $R - S$, es una relación que incluye todas las tuplas que están en ambos $R$ pero no en $S$.
 \end{itemize}
+
+EL PRODUCTO CARTESIANO CARNAL
