@@ -1,9 +1,9 @@
 Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos. Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notad{``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} y \emph{CARTESIAN PRODUCT} (también llamado \emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para pases de batos relacionales: \emph{SELECT}, \emph{PROJECT} y \emph{JOIN}.
 
-Se les puede clasificar también como operaciones \emph{unarias} o \emph{binarias} si estas operan en una o dos relaciones, respectivamente.
-
-SELECT es una operación unaria denotada como
+SELECT es una \emph{operación unaria} (opera en una sola relación) utilizada para elegir un subconjunto de tuplas de una relación que satisface su condición de selección
 \begin{equation}
 \sigma_\text{\textless condición de selección\textgreater}{\text{(R)}}
 \end{equation}
 Donde $\sigma$ denota el operador SELECT, y la condición de selección es una expresión booleana especificada en los atributos de la relación $R$.
+
+PROJECT
