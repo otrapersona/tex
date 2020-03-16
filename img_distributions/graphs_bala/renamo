@@ -1,5 +1,0 @@
-#!/bin/bash
-find . -name "*$1*$2" | while read FILE ; do
-    newfile="$(echo ${FILE} |sed -e 's/\\$1/safe/')" ;
-    mv "${FILE}" "$3$2" ;
-done
