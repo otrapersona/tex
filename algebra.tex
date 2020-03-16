@@ -19,10 +19,10 @@ Las operaciones con dos relaciones reciben el nombre de \emph{operaciones binari
 \item SET DIFFERENCE: El resultado de esta operación se denota $R - S$, es una relación que incluye todas las tuplas que están en ambos $R$ pero no en $S$.
 \end{itemize}
 
-El operador CARTESIAN PRODUCT denotado por $R \times S$ es la operación binaria que no requiere compatibilidad de unión y produce un nuevo elemento al combinar cada miembro (tupla) de cada relación conjunto) con cada otro miembro de la otra relación. El resultado de $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ es una relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden) de grado $n+m$. El resultado $Q$ tiene una tupla por cada combinación de tuplas. Si $R$ tiene $n_R$ y $S$ tiene $n_S$ tuplas, $Q$ tendrá $n_R * n_S$
+El operador CARTESIAN PRODUCT, denotado $R \times S$ es la operación binaria que no requiere compatibilidad de unión y produce un nuevo elemento al combinar cada miembro (tupla) de cada relación conjunto) con cada otro miembro de la otra relación. El resultado de $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ es una relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden) de grado $n+m$. El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$.
 
 JOIN $\Join$, es el operador utilizado para combinar tuplas relacionadas de dos relaciones en una sola tupla. Pertinente para procesar relaciones entre relaciones. Si tenemos dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ podemos escribir la operación JOIN como
 \begin{equation}
 R\Join_\text{\textless condiciones de unión\textgreater}S
 \end{equation}
-el resultado de la unión es la relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden). El resultado $Q$ tiene una tupla por cada combinación de tuplas pero a diferencia del CARTESIAN PRODUCT, esto será sólo cuando se satisfaga la condición de unión.
+el resultado de la unión es la relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden). El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$ que satisfacen las condiciones de unión.
