@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 576 432" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<title>WignerS distribution CDF</title>
+<desc>Produced by GNUPLOT 4.6 patchlevel 1 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="576" height="432" fill="none"/>
+<defs>
+
+	<circle id="gpDot" r="0.5" stroke-width="0.5"/>
+	<path id="gpPt0" stroke-width="0.299" stroke="currentColor" d="M-1,0 h2 M0,-1 v2"/>
+	<path id="gpPt1" stroke-width="0.299" stroke="currentColor" d="M-1,-1 L1,1 M1,-1 L-1,1"/>
+	<path id="gpPt2" stroke-width="0.299" stroke="currentColor" d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1"/>
+	<rect id="gpPt3" stroke-width="0.299" stroke="currentColor" x="-1" y="-1" width="2" height="2"/>
+	<rect id="gpPt4" stroke-width="0.299" stroke="currentColor" fill="currentColor" x="-1" y="-1" width="2" height="2"/>
+	<circle id="gpPt5" stroke-width="0.299" stroke="currentColor" cx="0" cy="0" r="1"/>
+	<use xlink:href="#gpPt5" id="gpPt6" fill="currentColor" stroke="none"/>
+	<path id="gpPt7" stroke-width="0.299" stroke="currentColor" d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z"/>
+	<use xlink:href="#gpPt7" id="gpPt8" fill="currentColor" stroke="none"/>
+	<use xlink:href="#gpPt7" id="gpPt9" stroke="currentColor" transform="rotate(180)"/>
+	<use xlink:href="#gpPt9" id="gpPt10" fill="currentColor" stroke="none"/>
+	<use xlink:href="#gpPt3" id="gpPt11" stroke="currentColor" transform="rotate(45)"/>
+	<use xlink:href="#gpPt11" id="gpPt12" fill="currentColor" stroke="none"/>
+</defs>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:0.50; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:0.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<path d="M34.6,389.2 L43.9,389.2 M557.0,389.2 L547.7,389.2  h0.01"/>	<g transform="translate(28.3,392.6)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>0</tspan></text>
+	</g>
+	<path d="M34.6,374.1 L39.2,374.1 M557.0,374.1 L552.4,374.1 M34.6,359.1 L39.2,359.1 M557.0,359.1 L552.4,359.1    M34.6,344.0 L39.2,344.0 M557.0,344.0 L552.4,344.0 M34.6,329.0 L39.2,329.0 M557.0,329.0 L552.4,329.0    M34.6,313.9 L43.9,313.9 M557.0,313.9 L547.7,313.9  h0.01"/>	<g transform="translate(28.3,317.3)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>0.2</tspan></text>
+	</g>
+	<path d="M34.6,298.8 L39.2,298.8 M557.0,298.8 L552.4,298.8 M34.6,283.8 L39.2,283.8 M557.0,283.8 L552.4,283.8    M34.6,268.7 L39.2,268.7 M557.0,268.7 L552.4,268.7 M34.6,253.7 L39.2,253.7 M557.0,253.7 L552.4,253.7    M34.6,238.6 L43.9,238.6 M557.0,238.6 L547.7,238.6  h0.01"/>	<g transform="translate(28.3,242.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>0.4</tspan></text>
+	</g>
+	<path d="M34.6,223.5 L39.2,223.5 M557.0,223.5 L552.4,223.5 M34.6,208.5 L39.2,208.5 M557.0,208.5 L552.4,208.5    M34.6,193.4 L39.2,193.4 M557.0,193.4 L552.4,193.4 M34.6,178.4 L39.2,178.4 M557.0,178.4 L552.4,178.4    M34.6,163.3 L43.9,163.3 M557.0,163.3 L547.7,163.3  h0.01"/>	<g transform="translate(28.3,166.7)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>0.6</tspan></text>
+	</g>
+	<path d="M34.6,148.2 L39.2,148.2 M557.0,148.2 L552.4,148.2 M34.6,133.2 L39.2,133.2 M557.0,133.2 L552.4,133.2    M34.6,118.1 L39.2,118.1 M557.0,118.1 L552.4,118.1 M34.6,103.1 L39.2,103.1 M557.0,103.1 L552.4,103.1    M34.6,88.0 L43.9,88.0 M557.0,88.0 L547.7,88.0  h0.01"/>	<g transform="translate(28.3,91.4)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>0.8</tspan></text>
+	</g>
+	<path d="M34.6,72.9 L39.2,72.9 M557.0,72.9 L552.4,72.9 M34.6,57.9 L39.2,57.9 M557.0,57.9 L552.4,57.9    M34.6,42.8 L39.2,42.8 M557.0,42.8 L552.4,42.8 M34.6,27.8 L39.2,27.8 M557.0,27.8 L552.4,27.8    M34.6,12.7 L43.9,12.7 M557.0,12.7 L547.7,12.7  h0.01"/>	<g transform="translate(28.3,16.1)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>1</tspan></text>
+	</g>
+	<path d="M34.6,389.2 L34.6,379.9 M34.6,12.7 L34.6,22.0  h0.01"/>	<g transform="translate(34.6,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>-3</tspan></text>
+	</g>
+	<path d="M52.0,389.2 L52.0,384.6 M52.0,12.7 L52.0,17.3 M69.4,389.2 L69.4,384.6 M69.4,12.7 L69.4,17.3    M86.8,389.2 L86.8,384.6 M86.8,12.7 L86.8,17.3 M104.3,389.2 L104.3,384.6 M104.3,12.7 L104.3,17.3    M121.7,389.2 L121.7,379.9 M121.7,12.7 L121.7,22.0  h0.01"/>	<g transform="translate(121.7,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>-2</tspan></text>
+	</g>
+	<path d="M139.1,389.2 L139.1,384.6 M139.1,12.7 L139.1,17.3 M156.5,389.2 L156.5,384.6 M156.5,12.7 L156.5,17.3    M173.9,389.2 L173.9,384.6 M173.9,12.7 L173.9,17.3 M191.3,389.2 L191.3,384.6 M191.3,12.7 L191.3,17.3    M208.7,389.2 L208.7,379.9 M208.7,12.7 L208.7,22.0  h0.01"/>	<g transform="translate(208.7,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>-1</tspan></text>
+	</g>
+	<path d="M226.1,389.2 L226.1,384.6 M226.1,12.7 L226.1,17.3 M243.6,389.2 L243.6,384.6 M243.6,12.7 L243.6,17.3    M261.0,389.2 L261.0,384.6 M261.0,12.7 L261.0,17.3 M278.4,389.2 L278.4,384.6 M278.4,12.7 L278.4,17.3    M295.8,389.2 L295.8,379.9 M295.8,12.7 L295.8,22.0  h0.01"/>	<g transform="translate(295.8,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>0</tspan></text>
+	</g>
+	<path d="M313.2,389.2 L313.2,384.6 M313.2,12.7 L313.2,17.3 M330.6,389.2 L330.6,384.6 M330.6,12.7 L330.6,17.3    M348.0,389.2 L348.0,384.6 M348.0,12.7 L348.0,17.3 M365.5,389.2 L365.5,384.6 M365.5,12.7 L365.5,17.3    M382.9,389.2 L382.9,379.9 M382.9,12.7 L382.9,22.0  h0.01"/>	<g transform="translate(382.9,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>1</tspan></text>
+	</g>
+	<path d="M400.3,389.2 L400.3,384.6 M400.3,12.7 L400.3,17.3 M417.7,389.2 L417.7,384.6 M417.7,12.7 L417.7,17.3    M435.1,389.2 L435.1,384.6 M435.1,12.7 L435.1,17.3 M452.5,389.2 L452.5,384.6 M452.5,12.7 L452.5,17.3    M469.9,389.2 L469.9,379.9 M469.9,12.7 L469.9,22.0  h0.01"/>	<g transform="translate(469.9,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>2</tspan></text>
+	</g>
+	<path d="M487.3,389.2 L487.3,384.6 M487.3,12.7 L487.3,17.3 M504.8,389.2 L504.8,384.6 M504.8,12.7 L504.8,17.3    M522.2,389.2 L522.2,384.6 M522.2,12.7 L522.2,17.3 M539.6,389.2 L539.6,384.6 M539.6,12.7 L539.6,17.3    M557.0,389.2 L557.0,379.9 M557.0,12.7 L557.0,22.0  h0.01"/>	<g transform="translate(557.0,406.0)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>3</tspan></text>
+	</g>
+	<path d="M34.6,12.7 L34.6,389.2 L557.0,389.2 L557.0,12.7 L34.6,12.7 Z  h0.01"/>	<g transform="translate(295.8,426.1)" style="stroke:none; fill:rgb(0,0,0); font-family:{}; font-size:12.00pt; text-anchor:middle">
+		<text><tspan>x</tspan></text>
+	</g>
+</g>
+	<g id="gnuplot_plot_1a"><title>gnuplot_plot_1a</title>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(506.2,325.6)" style="stroke:none; fill:black; font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>R=0.25</tspan></text>
+	</g>
+	<path stroke="rgb(  0,   0, 255)" d="M512.5,322.2 L544.4,322.2 M34.6,389.2 L39.9,389.2 L45.2,389.2 L50.4,389.2 L55.7,389.2 L61.0,389.2    L66.3,389.2 L71.5,389.2 L76.8,389.2 L82.1,389.2 L87.4,389.2 L92.6,389.2 L97.9,389.2 L103.2,389.2    L108.5,389.2 L113.8,389.2 L119.0,389.2 L124.3,389.2 L129.6,389.2 L134.9,389.2 L140.1,389.2 L145.4,389.2    L150.7,389.2 L156.0,389.2 L161.2,389.2 L166.5,389.2 L171.8,389.2 L177.1,389.2 L182.3,389.2 L187.6,389.2    L192.9,389.2 L198.2,389.2 L203.5,389.2 L208.7,389.2 L214.0,389.2 L219.3,389.2 L224.6,389.2 L229.8,389.2    L235.1,389.2 L240.4,389.2 L245.7,389.2 L250.9,389.2 L256.2,389.2 L261.5,389.2 L266.8,389.2 L272.1,389.2    L277.3,376.2 L282.6,336.8 L287.9,286.1 L293.2,229.9 L298.4,172.0 L303.7,115.8 L309.0,65.1 L314.3,25.7    L319.5,12.7 L324.8,12.7 L330.1,12.7 L335.4,12.7 L340.7,12.7 L345.9,12.7 L351.2,12.7 L356.5,12.7    L361.8,12.7 L367.0,12.7 L372.3,12.7 L377.6,12.7 L382.9,12.7 L388.1,12.7 L393.4,12.7 L398.7,12.7    L404.0,12.7 L409.3,12.7 L414.5,12.7 L419.8,12.7 L425.1,12.7 L430.4,12.7 L435.6,12.7 L440.9,12.7    L446.2,12.7 L451.5,12.7 L456.7,12.7 L462.0,12.7 L467.3,12.7 L472.6,12.7 L477.8,12.7 L483.1,12.7    L488.4,12.7 L493.7,12.7 L499.0,12.7 L504.2,12.7 L509.5,12.7 L514.8,12.7 L520.1,12.7 L525.3,12.7    L530.6,12.7 L535.9,12.7 L541.2,12.7 L546.4,12.7 L551.7,12.7 L557.0,12.7  h0.01"/></g>
+	</g>
+	<g id="gnuplot_plot_2a"><title>gnuplot_plot_2a</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(506.2,339.0)" style="stroke:none; fill:black; font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>R=0.5</tspan></text>
+	</g>
+	<path stroke="rgb(  0, 128,   0)" d="M512.5,335.6 L544.4,335.6 M34.6,389.2 L39.9,389.2 L45.2,389.2 L50.4,389.2 L55.7,389.2 L61.0,389.2    L66.3,389.2 L71.5,389.2 L76.8,389.2 L82.1,389.2 L87.4,389.2 L92.6,389.2 L97.9,389.2 L103.2,389.2    L108.5,389.2 L113.8,389.2 L119.0,389.2 L124.3,389.2 L129.6,389.2 L134.9,389.2 L140.1,389.2 L145.4,389.2    L150.7,389.2 L156.0,389.2 L161.2,389.2 L166.5,389.2 L171.8,389.2 L177.1,389.2 L182.3,389.2 L187.6,389.2    L192.9,389.2 L198.2,389.2 L203.5,389.2 L208.7,389.2 L214.0,389.2 L219.3,389.2 L224.6,389.2 L229.8,389.2    L235.1,389.2 L240.4,389.2 L245.7,389.2 L250.9,389.2 L256.2,383.1 L261.5,367.8 L266.8,348.0 L272.1,324.9    L277.3,299.5 L282.6,272.5 L287.9,244.3 L293.2,215.5 L298.4,186.4 L303.7,157.6 L309.0,129.4 L314.3,102.4    L319.5,77.0 L324.8,53.9 L330.1,34.1 L335.4,18.8 L340.7,12.7 L345.9,12.7 L351.2,12.7 L356.5,12.7    L361.8,12.7 L367.0,12.7 L372.3,12.7 L377.6,12.7 L382.9,12.7 L388.1,12.7 L393.4,12.7 L398.7,12.7    L404.0,12.7 L409.3,12.7 L414.5,12.7 L419.8,12.7 L425.1,12.7 L430.4,12.7 L435.6,12.7 L440.9,12.7    L446.2,12.7 L451.5,12.7 L456.7,12.7 L462.0,12.7 L467.3,12.7 L472.6,12.7 L477.8,12.7 L483.1,12.7    L488.4,12.7 L493.7,12.7 L499.0,12.7 L504.2,12.7 L509.5,12.7 L514.8,12.7 L520.1,12.7 L525.3,12.7    L530.6,12.7 L535.9,12.7 L541.2,12.7 L546.4,12.7 L551.7,12.7 L557.0,12.7  h0.01"/></g>
+	</g>
+	<g id="gnuplot_plot_3a"><title>gnuplot_plot_3a</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(506.2,352.4)" style="stroke:none; fill:black; font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>R=1.0</tspan></text>
+	</g>
+	<path stroke="rgb(255,   0,   0)" d="M512.5,349.0 L544.4,349.0 M34.6,389.2 L39.9,389.2 L45.2,389.2 L50.4,389.2 L55.7,389.2 L61.0,389.2    L66.3,389.2 L71.5,389.2 L76.8,389.2 L82.1,389.2 L87.4,389.2 L92.6,389.2 L97.9,389.2 L103.2,389.2    L108.5,389.2 L113.8,389.2 L119.0,389.2 L124.3,389.2 L129.6,389.2 L134.9,389.2 L140.1,389.2 L145.4,389.2    L150.7,389.2 L156.0,389.2 L161.2,389.2 L166.5,389.2 L171.8,389.2 L177.1,389.2 L182.3,389.2 L187.6,389.2    L192.9,389.2 L198.2,389.2 L203.5,389.2 L208.7,389.2 L214.0,385.9 L219.3,379.8 L224.6,372.2 L229.8,363.2    L235.1,353.3 L240.4,342.4 L245.7,330.9 L250.9,318.7 L256.2,306.0 L261.5,292.9 L266.8,279.3 L272.1,265.5    L277.3,251.4 L282.6,237.1 L287.9,222.7 L293.2,208.2 L298.4,193.7 L303.7,179.2 L309.0,164.8 L314.3,150.5    L319.5,136.4 L324.8,122.6 L330.1,109.0 L335.4,95.9 L340.7,83.2 L345.9,71.0 L351.2,59.5 L356.5,48.6    L361.8,38.7 L367.0,29.7 L372.3,22.1 L377.6,16.0 L382.9,12.7 L388.1,12.7 L393.4,12.7 L398.7,12.7    L404.0,12.7 L409.3,12.7 L414.5,12.7 L419.8,12.7 L425.1,12.7 L430.4,12.7 L435.6,12.7 L440.9,12.7    L446.2,12.7 L451.5,12.7 L456.7,12.7 L462.0,12.7 L467.3,12.7 L472.6,12.7 L477.8,12.7 L483.1,12.7    L488.4,12.7 L493.7,12.7 L499.0,12.7 L504.2,12.7 L509.5,12.7 L514.8,12.7 L520.1,12.7 L525.3,12.7    L530.6,12.7 L535.9,12.7 L541.2,12.7 L546.4,12.7 L551.7,12.7 L557.0,12.7  h0.01"/></g>
+	</g>
+	<g id="gnuplot_plot_4a"><title>gnuplot_plot_4a</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(506.2,365.8)" style="stroke:none; fill:black; font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>R=2.0</tspan></text>
+	</g>
+	<path stroke="rgb(  0, 191, 191)" d="M512.5,362.4 L544.4,362.4 M34.6,389.2 L39.9,389.2 L45.2,389.2 L50.4,389.2 L55.7,389.2 L61.0,389.2    L66.3,389.2 L71.5,389.2 L76.8,389.2 L82.1,389.2 L87.4,389.2 L92.6,389.2 L97.9,389.2 L103.2,389.2    L108.5,389.2 L113.8,389.2 L119.0,389.2 L124.3,388.8 L129.6,387.0 L134.9,384.5 L140.1,381.5 L145.4,378.1    L150.7,374.2 L156.0,370.0 L161.2,365.6 L166.5,360.8 L171.8,355.8 L177.1,350.6 L182.3,345.2 L187.6,339.6    L192.9,333.8 L198.2,327.9 L203.5,321.8 L208.7,315.6 L214.0,309.2 L219.3,302.8 L224.6,296.2 L229.8,289.5    L235.1,282.8 L240.4,275.9 L245.7,269.0 L250.9,262.0 L256.2,255.0 L261.5,247.9 L266.8,240.7 L272.1,233.5    L277.3,226.3 L282.6,219.1 L287.9,211.8 L293.2,204.6 L298.4,197.3 L303.7,190.1 L309.0,182.8 L314.3,175.6    L319.5,168.4 L324.8,161.2 L330.1,154.0 L335.4,146.9 L340.7,139.9 L345.9,132.9 L351.2,126.0 L356.5,119.1    L361.8,112.4 L367.0,105.7 L372.3,99.1 L377.6,92.7 L382.9,86.3 L388.1,80.1 L393.4,74.0 L398.7,68.1    L404.0,62.3 L409.3,56.7 L414.5,51.3 L419.8,46.1 L425.1,41.1 L430.4,36.3 L435.6,31.9 L440.9,27.7    L446.2,23.8 L451.5,20.4 L456.7,17.4 L462.0,14.9 L467.3,13.1 L472.6,12.7 L477.8,12.7 L483.1,12.7    L488.4,12.7 L493.7,12.7 L499.0,12.7 L504.2,12.7 L509.5,12.7 L514.8,12.7 L520.1,12.7 L525.3,12.7    L530.6,12.7 L535.9,12.7 L541.2,12.7 L546.4,12.7 L551.7,12.7 L557.0,12.7  h0.01"/></g>
+	</g>
+	<g id="gnuplot_plot_5a"><title>gnuplot_plot_5a</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.50; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(506.2,379.2)" style="stroke:none; fill:black; font-family:{}; font-size:12.00pt; text-anchor:end">
+		<text><tspan>R=3.0</tspan></text>
+	</g>
+	<path stroke="rgb(191,   0, 191)" d="M512.5,375.8 L544.4,375.8 M34.6,389.2 L39.9,388.6 L45.2,387.4 L50.4,385.9 L55.7,384.1 L61.0,382.1    L66.3,379.8 L71.5,377.4 L76.8,374.9 L82.1,372.2 L87.4,369.3 L92.6,366.3 L97.9,363.2 L103.2,360.0    L108.5,356.7 L113.8,353.3 L119.0,349.7 L124.3,346.1 L129.6,342.4 L134.9,338.7 L140.1,334.8 L145.4,330.9    L150.7,326.9 L156.0,322.8 L161.2,318.7 L166.5,314.5 L171.8,310.3 L177.1,306.0 L182.3,301.7 L187.6,297.3    L192.9,292.9 L198.2,288.4 L203.5,283.9 L208.7,279.3 L214.0,274.8 L219.3,270.1 L224.6,265.5 L229.8,260.8    L235.1,256.1 L240.4,251.4 L245.7,246.7 L250.9,241.9 L256.2,237.1 L261.5,232.3 L266.8,227.5 L272.1,222.7    L277.3,217.9 L282.6,213.1 L287.9,208.2 L293.2,203.4 L298.4,198.5 L303.7,193.7 L309.0,188.8 L314.3,184.0    L319.5,179.2 L324.8,174.4 L330.1,169.6 L335.4,164.8 L340.7,160.0 L345.9,155.2 L351.2,150.5 L356.5,145.8    L361.8,141.1 L367.0,136.4 L372.3,131.8 L377.6,127.1 L382.9,122.6 L388.1,118.0 L393.4,113.5 L398.7,109.0    L404.0,104.6 L409.3,100.2 L414.5,95.9 L419.8,91.6 L425.1,87.4 L430.4,83.2 L435.6,79.1 L440.9,75.0    L446.2,71.0 L451.5,67.1 L456.7,63.2 L462.0,59.5 L467.3,55.8 L472.6,52.2 L477.8,48.6 L483.1,45.2    L488.4,41.9 L493.7,38.7 L499.0,35.6 L504.2,32.6 L509.5,29.7 L514.8,27.0 L520.1,24.5 L525.3,22.1    L530.6,19.8 L535.9,17.8 L541.2,16.0 L546.4,14.5 L551.7,13.3 L557.0,12.7  h0.01"/></g>
+	</g>
+<g style="fill:none; color:white; stroke:rgb(191,   0, 191); stroke-width:0.50; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:0.50; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+</g>
+</svg>

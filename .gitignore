@@ -287,6 +287,7 @@ TSWLatexianTemp*
 
 # estas sí las quiero
 !img_distributions/
+!img_distributions/*.*
 !img_distributions/graphs_bala
 !img_distributions/graphs_bala/*.pdf
 !img_distributions/graphs_bala/evensmoler
