@@ -1,4 +1,4 @@
-Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos. Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notad{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} y \emph{CARTESIAN PRODUCT} (también llamado \emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
+Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos. Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notad{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} (\emph{MINUS}) y \emph{CARTESIAN PRODUCT} (\emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
 SELECT es utilizada para elegir un subconjunto de tuplas de una relación que satisfacen sus condiciones
 \begin{equation}
@@ -12,4 +12,9 @@ Si pensamos en las relaciones como una tabla, SELECT es utilizado para elegir fi
 \end{equation}
 donde $\pi$ es el denota el operador PROJECT y la lista de atributos es la sublista deseada de atributos de los atributos de la relación $R$.
 
-Las operaciones que se realizan en dos relaciones reciben el nombre de \emph{operaciones binarias}. Cuando se tiene dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ de tipo compatible (si tienen el mismo grado y si dominio de $(A_i)$ es igual al dominio de $(B_i)$ para $1\leqi\leqn$
+Las operaciones que se realizan en dos relaciones reciben el nombre de \emph{operaciones binarias}. Podemos definir cad operación binaria para las relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ de tipo compatible (si tienen el mismo grado $n$ y si $dom(A_i)=dom(B_i)$ para $1\leq i\leq n$)
+\begin{itemize}
+\item UNION:
+\item INTERSECTION:
+\item SET DIFFERENCE:
+\end{itemize}
