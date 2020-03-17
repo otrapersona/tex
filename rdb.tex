@@ -16,26 +16,14 @@ Una restricción de integridad (\emph{constraint}) es una expresión booleana qu
     \item Regla de integridad de identidad: Las llaves primarias no pueden ser nulas (\emph{null}).
     \item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
-%{\rowcolors{1}{lightgray}{white}
-\begin{center}\begin{tabular}{l |c c|c c|c c|}
+\begin{center}\begin{tabular}{rcc|cc|cc|l}\caption{es una tupla}\label{fig:tupla}
 \cline{2-7}
-\multicolumn{1}{ l }{Atributos $\{$}&\multicolumn{1}{| c |}{código} & \multicolumn{1}{ c |}{\footnotesize (CHAR)} & \multicolumn{1}{ c |}{fecha} & \multicolumn{1}{ c |}{\footnotesize (DATE)} & \multicolumn{1}{ c |}{estado} & \multicolumn{1}{ c |}{\footnotesize (INT)} \\
+\multicolumn{1}{r}{$Atributos\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{\footnotesize CHAR}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{\footnotesize DATE}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{c|}{\footnotesize INT}&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-\multicolumn{1}{ l }{}&\multicolumn{1}{| c }{MX01}& & 31-07-99 & & 0 &\multicolumn{1}{ r |}{}\\
+\multirow{3}{*}{$Tuplas\begin{cases}\\ \\ \\ \end{cases}$}&\multicolumn{1}{| c }{MX01}& & 31-07-99 & & 0 &\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-\multicolumn{1}{ l }{}&\multicolumn{1}{| c }{MX02}&&30-07-99&&0&\multicolumn{1}{ r |}{}\\
+&\multicolumn{1}{| c }{MX02}&&30-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-\multicolumn{1}{ l }{}&\multicolumn{1}{| c }{MX03}&&31-07-99&&0&\multicolumn{1}{ r |}{}\\
-\cline{2-7}
-\end{tabular}\end{center}
-\begin{center}\begin{tabular}{rcc|cc|cc|l}
-\cline{2-7}
-\multicolumn{1}{r}{$Atributos\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{\footnotesize CHAR}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{\footnotesize DATE}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{c|}{\footnotesize INT}&\multicolumn{1}{| l }{}\\
-\cline{2-7}
-\multirow{3}{*}{$\begin{cases}\\ \\ \\ \end{cases}$}&\multicolumn{1}{| c }{MX01}& & 31-07-99 & & 0 &\multicolumn{1}{ r |}{}&\multicolumn{1}{| l }{}\\
-\cline{2-7}
-&\multicolumn{1}{| c }{MX02}&&30-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{| l }{}\\
-\cline{2-7}
-&\multicolumn{1}{| c }{MX03}&&31-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{| l }{}\\
+&\multicolumn{1}{| c }{MX03}&&31-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
 \cline{2-7}
 \end{tabular}\end{center}
