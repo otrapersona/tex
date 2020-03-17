@@ -16,14 +16,14 @@ Una restricción de integridad (\emph{constraint}) es una expresión booleana qu
     \item Regla de integridad de identidad: Las llaves primarias no pueden ser nulas (\emph{null}).
     \item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
-\begin{table}[H]\begin{tabular}{rcc|cc|cc|l}
+\begin{table}[H]\begin{tabular}{rc|c|c|l}
 \cline{2-7}
-\multicolumn{1}{r}{$Atributos\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{\footnotesize CHAR}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{\footnotesize DATE}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{c|}{\footnotesize INT}&\multicolumn{1}{ l }{}\\
+\multicolumn{1}{r}{$Atributos\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-\multirow{3}{*}{$Tuplas\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{| c }{MX01}& & 31-07-99 & & 0 &\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
+\multirow{3}{*}{$Tuplas\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{| c }{MX01}& 29-07-99 &0&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-&\multicolumn{1}{| c }{MX02}&&30-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
+&\multicolumn{1}{| c }{MX02}&30-07-99&0&\multicolumn{1}{ l }{}\\
 \cline{2-7}
-&\multicolumn{1}{| c }{MX03}&&31-07-99&&0&\multicolumn{1}{ r |}{}&\multicolumn{1}{ l }{}\\
+&\multicolumn{1}{| c }{MX03}&31-07-99&0&\multicolumn{1}{ l }{}\\
 \cline{2-7}
 \end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra las combinaciones de atributo-nombre/tipo-nombre para algunos atributos en la tabla y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
