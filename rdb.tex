@@ -8,7 +8,8 @@ El \emph{modelo relacional de base de datos}, consiste en cinco componentes:
 	\item Un operador para asignar valores de relación a dichas variables.
 	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos.
 \end{enumerate}
-Aunque tersa esta lista es útil para delimitar lo que el modelo relacional es y no es.\\
+Aunque tersa esta lista es útil para delimitar lo que el modelo relacional es y no es.
+
 Se debe comenzar definiendo los \emph{tipos}, ya que las relaciones se definen sobre ellos, son ``en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica(...)''\cite{date12}.
 
 Los \emph{atributos} son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una \emph{tupla} es un par ordenado de atributos.
@@ -30,8 +31,9 @@ La \emph{restricción de integridad} (\emph{constraint}) es una expresión boole
 	\item Regla de integridad de identidad: Las \emph{llaves primarias} (\emph{PK}) deben ser no nulas.
 	\item Regla de integridad de referencia: Las \emph{llaves foráneas} (\emph{FK}) deben tener relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
+Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}.
 
-Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}, las operaciones primitivas del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNIÓN}, \emph{INTERSECCIÓN}, \emph{DIFERENCIA} y \emph{PRODUCTO CARTESIANO} (\emph{PRODUCTO CRUZADO}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JUNTAR}, \emph{SELECCIONAR} y \emph{PROYECTAR}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
+Utilizando operaciones primitivas del álgebra se producen nuevas relaciones que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones se pueden clasificar en dos grupos, \emph{operaciones de conjuntos} de la teoría de conjuntos matemáticos, refieren a la operaciones \emph{UNIÓN}, \emph{INTERSECCIÓN}, \emph{DIFERENCIA} y \emph{PRODUCTO CARTESIANO} (\emph{PRODUCTO CRUZADO}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JUNTAR}, \emph{SELECCIONAR} y \emph{PROYECTAR}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
 SELECCIONAR elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
 \begin{equation}
