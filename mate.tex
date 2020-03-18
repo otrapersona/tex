@@ -125,15 +125,17 @@ Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma proba
 	\end{subfigure}\ \ \ \ 
 \begin{subfigure}[t]{.5\textwidth}
 		\includegraphics[width=.95\linewidth]{hyperg.png}\caption{Hipergeométrica $h(n;a,b)$}
-		Muestra aleatoria tamaño $n$ de ``bolas blancas'' no reemplazada de un contenedor con $a$ blancas y $b$ negras.
+		Muestra aleatoria tamaño $n$ de elementos tipo $a$ no reemplazada de un universo con elementos tipo $a$ y $b$.
 		\begin{equation}
 		\begin{matrix}
 		f(x)=P(X=x)=\frac{\binom{a}{x}\binom{b}{n-x}}{\binom{a+b}{n}};\\
 		E(X)=n\cdot\frac{a}{a+b},\\
-		Var(X)=n\cdot\frac{a}{a+\b}\cdot\frac{b}{a+b}
+		Var(X)=n\cdot\frac{a}{a+b}\cdot\frac{b}{a+b}\cdot(1-\frac{n-1}{a+b-1})
 \end{matrix}
 		\end{equation}
-	\end{subfigure}	
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
 	\begin{subfigure}[t]{.5\textwidth}
 		\includegraphics[width=.95\linewidth]{gama.png}
 		\caption{$\Gamma$}
