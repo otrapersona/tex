@@ -17,7 +17,7 @@ f(x)=0\text{ para cada }x \notin R_x\text{;}\\
 f(x)=P(X=x)\text{ para } x\in R_x
 \end{matrix}\label{eq:FP}
 \end{equation}
-en caso de una v.a.c. $X$ será una función no negativa real $f:\mathbb{R}\mapsto[0,\infty)$, tal que
+para una v.a.c. $X$ será una función no negativa real $f:\mathbb{R}\mapsto[0,\infty)$, es decir
 \begin{equation}
 P(X\in A)=\int_{A}f(x)dx
 \end{equation}
@@ -57,7 +57,8 @@ El \emph{valor esperado} de una v.a.d. $X$ con una función de probabilidad (\re
 \mu=E(X)=\sum_{x\in R_x}^{\infty}xf(x)\text{,}
 \end{equation}
 siempre y cuando la serie converja absolutamente y es también llamado \emph{media} de $X$, utilizada, similar a la media aritmética en estadísticas, para obtener el valor promedio entre observaciones.
-El valor esperado las v.a.c. $X$ se define como
+
+Para una v.a.c. $X$ se define como
 \begin{equation}
 \mu=E(X)=\int_{-\infty}^{\infty}xf(x)dx
 \end{equation}
@@ -80,7 +81,10 @@ Continuando con estadística, la \emph{varianza} de una v.a.d. $X$ indica la var
 Var(X)=E(X^2)-{[E(X)]}^2
 \end{matrix}
 \end{equation}
-
+en una v.a.c. $X$ se utiliza
+\begin{equation}
+\sigma^2=Var(X)=[{(X-\mu)}^2]
+\end{equation}
 La covarianza de dos v.a.d.s $X$ y $Y$ cuyos valores esperados existen y son positivos, mide qué tanta o tan poca dependencia lineal tienen, denotada $cov(X,Y)$ es definida como
 \begin{equation}
 cov(X,Y)=E[(X-EX)(Y-EY)]
