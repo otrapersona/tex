@@ -47,14 +47,14 @@ f(x)=P(X=x)\text{ para } x\in R_x
 %	\lim_{x\to \infty}F(x)=0\ \ \text{y}\ \lim_{x\to \infty}F(x)=1.
 %	\end{equation}
 %\end{itemize}
-El \emph{valor esperado} de una v.a.d. $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots $ es definida como
+El \emph{valor esperado} de una v.a.d. $X$ (también llamado media) con una función de probabilidad sdsd es definida como
 \begin{equation}
-E(X)=\sum_{j=1}^{\infty}x_jP(X=xj),
+\mu=E(X)=\sum_{x\in R_x}^{\infty}xf(x)
 \end{equation}
-si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndose de la siguiente forma:
-\begin{equation}
-E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
-\end{equation}
+%si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndose de la siguiente forma:
+%\begin{equation}
+%E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
+%\end{equation}
 El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
 \begin{equation}
 \begin{matrix}
