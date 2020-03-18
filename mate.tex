@@ -16,7 +16,6 @@ f(x)=0\text{ para cada }x \notin R_x\text{;}\\
 f(x)=P(X=x)\text{ para } x\in R_x
 \end{matrix}
 \end{equation}
-
 %El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
 %\begin{itemize}
 %	\item No negativo $p_X (x) > 0$ si $x=x_j$ para un $j$, y $p_X(x)=0$, de otra forma;
@@ -30,26 +29,25 @@ f(x)=P(X=x)\text{ para } x\in R_x
 %\begin{equation}
 %\bar{x}=\frac{1}{n}\sum_{j=1}^{n}x_j,
 %\end{equation}
-la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene de la siguiente forma:
-\begin{equation}
-\text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
-\end{equation}
-donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
-\subsubsection {Función de distribución acumulada}
-Esta función describe la distribución de todas las variables aleatorias (a diferencia de la función de probabilidad que sólo se aplica a las discretas). La \emph{función de distribución acumulada} de una variable aleatoria $X$ es la función $F_X$ dada por $F_X(x)=P(X\leq x)$ y tiene las siguientes propiedades:
-\begin{itemize}
-	\item Incrementos: Si $x_1\leq x_2$, then $F(x_1)\leq F(x_2)$.
-	\item Continua por la derecha: Es continua por la posibilidad de tener saltos. Cuando hay saltos es continua por la derecha, es decir, por cada $a$ se tiene
-	\begin{equation}
-	F(a)=\lim_{c\to a^+}F(x).
-	\end{equation}
-	\item Convergencia de $0$ y $1$ en los límites
-	\begin{equation}
-	\lim_{x\to \infty}F(x)=0\ \ \text{y}\ \lim_{x\to \infty}F(x)=1.
-	\end{equation}
-\end{itemize}
-\subsubsection {Valor esperado}
-El valor esperado o media de una variable aleatoria discreta $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots $ es definida por
+%la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene de la siguiente forma:
+%\begin{equation}
+%\text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
+%\end{equation}
+%donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
+%\subsubsection {Función de distribución acumulada}
+%Esta función describe la distribución de todas las variables aleatorias (a diferencia de la función de probabilidad que sólo se aplica a las discretas). La \emph{función de distribución acumulada} de una variable aleatoria $X$ es la función $F_X$ dada por $F_X(x)=P(X\leq x)$ y tiene las siguientes propiedades:
+%\begin{itemize}
+%	\item Incrementos: Si $x_1\leq x_2$, then $F(x_1)\leq F(x_2)$.
+%	\item Continua por la derecha: Es continua por la posibilidad de tener saltos. Cuando hay saltos es continua por la derecha, es decir, por cada $a$ se tiene
+%	\begin{equation}
+%	F(a)=\lim_{c\to a^+}F(x).
+%	\end{equation}
+%	\item Convergencia de $0$ y $1$ en los límites
+%	\begin{equation}
+%	\lim_{x\to \infty}F(x)=0\ \ \text{y}\ \lim_{x\to \infty}F(x)=1.
+%	\end{equation}
+%\end{itemize}
+El \emph{valor esperado} de una v.a.d. $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots $ es definida como
 \begin{equation}
 E(X)=\sum_{j=1}^{\infty}x_jP(X=xj),
 \end{equation}
