@@ -14,7 +14,7 @@ La forma más natural de expresar la distribución de v.a.d.s es la \emph{funci�
 \begin{matrix}
 f(x)=0\text{ para cada }x \notin R_x\text{;}\\
 f(x)=P(X=x)\text{ para } x\in R_x
-\end{matrix}
+\end{matrix}\label{eq:FP}
 \end{equation}
 %El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
 %\begin{itemize}
@@ -47,10 +47,11 @@ f(x)=P(X=x)\text{ para } x\in R_x
 %	\lim_{x\to \infty}F(x)=0\ \ \text{y}\ \lim_{x\to \infty}F(x)=1.
 %	\end{equation}
 %\end{itemize}
-El \emph{valor esperado} de una v.a.d. $X$ (también llamado media) con una función de probabilidad sdsd es definida como
+El \emph{valor esperado} de una v.a.d. $X$ con una función de probabilidad (\ref{eq:FP}) es definida como
 \begin{equation}
-\mu=E(X)=\sum_{x\in R_x}^{\infty}xf(x)
+\mu=E(X)=\sum_{x\in R_x}^{\infty}xf(x)\text{,}
 \end{equation}
+siempre y cuando la seie converja absolutamente y es también llamado \emph{media} de $X$.
 %si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndose de la siguiente forma:
 %\begin{equation}
 %E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
