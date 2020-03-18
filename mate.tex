@@ -21,7 +21,7 @@ la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene de la siguiente for
 \text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
 \end{equation}
 donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
-
+\subsubsection {Valor esperado}
 El valor esperado o media de una variable aleatoria discreta $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots $ es definida por
 \begin{equation}
 E(X)=\sum_{j=1}^{\infty}x_jP(X=xj),
@@ -30,7 +30,6 @@ si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndo
 \begin{equation}
 E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
 \end{equation}
-
 El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
 \begin{equation}
 \begin{matrix}
@@ -38,3 +37,4 @@ E(X+Y)=E(X)+E(Y),\\
 E(cX)=cE(X).
 \end{matrix}
 \end{equation}
+\subsubsection{varianza de discreta}
