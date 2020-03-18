@@ -30,11 +30,7 @@ Una restricción de integridad (\emph{constraint}) es una expresión booleana qu
 		\cline{2-4}
 	\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
 
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\\
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\\
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\\
-
-\subsection {Modelo de base de datos relacional}\label{subsch:algebra}
+\subsection {Álgebra relacional}\label{subsch:algebra}
 Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notadhi{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} (\emph{MINUS}) y \emph{CARTESIAN PRODUCT} (\emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
 SELECT elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
