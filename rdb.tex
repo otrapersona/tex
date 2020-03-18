@@ -31,30 +31,30 @@ La \emph{restricción de integridad} (\emph{constraint}) es una expresión boole
 	\item Regla de integridad de referencia: Las \emph{llaves foráneas} (\emph{FK}) deben tener relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
 
-Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}, las operaciones primitivas del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notadhi{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} (\emph{MINUS}) y \emph{CARTESIAN PRODUCT} (\emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
+Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}, las operaciones primitivas del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNIÓN}, \emph{INTERSECCIÓN}, \emph{DIFERENCIA} y \emph{PRODUCTO CARTESIANO} (\emph{PRODUCTO CRUZADO}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JUNTAR}, \emph{SELECCIONAR} y \emph{PROYECTAR}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
-SELECT elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
+SELECCIONAR elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
 \begin{equation}
 \sigma_\text{\textless condición de selección\textgreater}{\text{(R)}}
 \end{equation}
-donde $\sigma$ denota el operador SELECT, y la condición de selección es una expresión booleana especificada en los atributos de la relación $R$.
+donde $\sigma$ denota el operador SELECCIONAR, y la condición de selección es una expresión booleana especificada en los atributos de la relación $R$.
 
-PROJECT produce una nueva relación de atributos y tuplas*\notaihi{se explican hasta modelo rel, en los libros se explica primero} duplicadas
+PROYECTAR produce una nueva relación de atributos y tuplas*\notaihi{se explican hasta modelo rel, en los libros se explica primero} duplicadas
 \begin{equation}
 \pi_\text{\textless lista de atributos\textgreater}{\text{(R)}}
 \end{equation}
-donde $\pi$ es el denota el operador PROJECT y la lista de atributos es la sublista de atributos deseados de la relación $R$.
+donde $\pi$ es el denota el operador PROYECTAR y la lista de atributos es la sublista de atributos deseados de la relación $R$.
 
 Las operaciones con dos relaciones reciben el nombre de \emph{operaciones binarias}. Si las relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ son compatibles de unión (tienen el mismo grado $n$ y $dom(A_i)=dom(B_i)$ para $1\leq i\leq n$) podemos usarlas para definir las siguientes operaciones binarias:
 \begin{itemize}
-	\item UNION: El resultado de esta operación se denota $R \cup S$, es una relación que incluye todas las tuplas que están en $R$, $S$ o ambos, se eliminan duplicados.
-	\item INTERSECTION: El resultado de esta operación se denota $R \cap S$, es una relación que incluye todas las tuplas que están en ambos $R$ y $S$.
-	\item SET DIFFERENCE: El resultado de esta operación se denota $R - S$, es una relación que incluye todas las tuplas que están en ambos $R$ pero no en $S$.
+	\item UNIÓN: El resultado de esta operación se denota $R \cup S$, es una relación que incluye todas las tuplas que están en $R$, $S$ o ambos, se eliminan duplicados.
+	\item INTERSECCIÓN: El resultado de esta operación se denota $R \cap S$, es una relación que incluye todas las tuplas que están en ambos $R$ y $S$.
+	\item DIFERENCIA: El resultado de esta operación se denota $R - S$, es una relación que incluye todas las tuplas que están en ambos $R$ pero no en $S$.
 \end{itemize}
 
-El operador CARTESIAN PRODUCT, denotado $R \times S$ es la operación binaria que no requiere compatibilidad de unión y produce un nuevo elemento al combinar cada miembro (tupla) de cada relación conjunto) con cada otro miembro de la otra relación. El resultado de $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ es una relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden) de grado $n+m$. El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$.
+El operador PRODUCTO CARTESIANO, denotado $R \times S$ es la operación binaria que no requiere compatibilidad de unión y produce un nuevo elemento al combinar cada miembro (tupla) de cada relación conjunto) con cada otro miembro de la otra relación. El resultado de $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ es una relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden) de grado $n+m$. El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$.
 
-JOIN $\Join$, es el operador utilizado para combinar tuplas relacionadas de dos relaciones en una sola tupla. Pertinente para procesar relaciones entre relaciones. Si tenemos dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ podemos escribir la operación JOIN como
+JUNTAR $\Join$, es el operador utilizado para combinar tuplas relacionadas de dos relaciones en una sola tupla. Pertinente para procesar relaciones entre relaciones. Si tenemos dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ podemos escribir la operación JUNTAR como
 \begin{equation}
 R\Join_\text{\textless condiciones de unión\textgreater}S
 \end{equation}
