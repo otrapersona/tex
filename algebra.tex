@@ -6,7 +6,7 @@ El modelo relacional de base de datos, según Date \cite{date12} consiste en cin
 	\item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
 	\item Estructuras para definir variables relacionales de los tipos generados.
 	\item Un operador para asignar valores de relación a dichas variables.
-	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos (Álgebra relacional \ref{subsec:algebra}).
+	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos.
 \end{enumerate}
 Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \cite{date12}.
 
@@ -30,7 +30,7 @@ Una restricción de integridad (\emph{constraint}) es una expresión booleana qu
 		\cline{2-4}
 	\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
 
-\subsection {Álgebra relacional}\label{subsch:algebra}
+\subsubsection {Álgebra relacional}\label{subsch:algebra}
 Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notadhi{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} (\emph{MINUS}) y \emph{CARTESIAN PRODUCT} (\emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
 SELECT elige un subconjunto de tuplas de una relación que satisfacen la condición de selección

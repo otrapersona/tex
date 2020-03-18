@@ -39,17 +39,6 @@
 		\caption{Uniforme}
 	\end{subfigure}
 \end{figure}
-
-\subsubsection {Función de probabilidad}
-La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19}*\notad{PMF, por sus siglas en inglés?} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
-\begin{itemize}
-    \item No negativo $p_X (x) > 0$ si $x=x_j$ para un $j$, y $p_X(x)=0$, de otra forma;
-    \item Suma 1: $\sum_{j=1}^{\infty}p_X(x_j)=1$.
-\end{itemize}
-el primer criterio es verdadero porque la probabilidad es no negativa, el segundo es verdadero ya que $X$ debe tomar \emph{algún} valor, y los eventos ${X=xj}$ están disjuntos, entonces
-\begin{equation}
-\sum_{j=1}^{\infty}P(X=x_j)=P\bigg(\bigcup_{j=1}^{\infty}\{X=x_j\}\bigg)=P(X=x_1\ \text{ó}\ X=x_2\ \text{ó}\ \ldots)=1.
-\end{equation}
 \subsubsection {Distribución de Bernoulli y binominal}
 Una variable aleatoria tiene la \emph{distribución de Bernoulli} con un parámetro $p$ si $P(X=1)=p$ y $P(X=0=1-p)$, cuando $0<p<1$. Se escribe como $X \sim Bern(p)$, el símbolo $\sim$ significa ``distribuido como'' y la probabilidad $p$ es el \emph{parámetro}, que determina qué distribución de Bernoulli específica tenemos.
 

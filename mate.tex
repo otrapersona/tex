@@ -1,4 +1,40 @@
-\subsection {Fundamentos matemáticos}\label{sec:mate}
+\subsection {Variable aleatoria}
 Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
 
 Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el conjunto infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
+\subsubsection {Función de probabilidad}
+La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19}*\notad{PMF, por sus siglas en inglés?} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
+\begin{itemize}
+	\item No negativo $p_X (x) > 0$ si $x=x_j$ para un $j$, y $p_X(x)=0$, de otra forma;
+	\item Suma 1: $\sum_{j=1}^{\infty}p_X(x_j)=1$.
+\end{itemize}
+el primer criterio es verdadero porque la probabilidad es no negativa, el segundo es verdadero ya que $X$ debe tomar \emph{algún} valor, y los eventos ${X=xj}$ están disjuntos, entonces
+\begin{equation}
+\sum_{j=1}^{\infty}P(X=x_j)=P\bigg(\bigcup_{j=1}^{\infty}\{X=x_j\}\bigg)=P(X=x_1\ \text{ó}\ X=x_2\ \text{ó}\ \ldots)=1.
+\end{equation}
+Mientras que las distribuciones anteriores nos han dado toda la información acerca de la probabilidad de las variables aleatorias, cuando sólo se requiere un número que extraiga su valor, podemos utilizar la \emph{media}, también conocida como \emph{valor esperado}. Dada una lista de números $x_1,x_2.\ldots,x_n$, para obtener la \emph{media aritmética}, estos se suman y dividen entre $n$:
+\begin{equation}
+\bar{x}=\frac{1}{n}\sum_{j=1}^{n}x_j,
+\end{equation}
+la \emph{media ponderada} de $x_1,x_2.\ldots,x_n$ se obtiene de la siguiente forma:
+\begin{equation}
+\text{media ponderada}(x)=\frac{1}{n}\sum_{j=1}^{n}x_jP_j,
+\end{equation}
+donde los pesos $p_1,p_2.\ldots,p_n$ son números no negativos previamente especificados que suman a $1$.
+
+El valor esperado o media de una variable aleatoria discreta $X$ cuyos posibles valores distintos son $x_1,x_2.\ldots $ es definida por
+\begin{equation}
+E(X)=\sum_{j=1}^{\infty}x_jP(X=xj),
+\end{equation}
+si el soporte es finito, entonces se reemplaza por una suma finita, escribiéndose de la siguiente forma:
+\begin{equation}
+E(X)=\sum_{x}\underbrace{x}_\text{valor}\underbrace{P(X=x)}_{\begin{matrix}^\text{Función de}\\^\text{probabilidad}\\^\text{en $x$}\end{matrix}}.
+\end{equation}
+
+El valor esperado de una suma de variables aleatorias es la suma de sus valores esperados individuales, este es el teorema de la \emph{linealidad del valor esperado}, donde para cada variable aleatoria $X,Y$ y cada constante $c$,
+\begin{equation}
+\begin{matrix}
+E(X+Y)=E(X)+E(Y),\\
+E(cX)=cE(X).
+\end{matrix}
+\end{equation}
