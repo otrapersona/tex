@@ -1,57 +1,16 @@
-\subsection {Variable aleatoria DISCRETA}
-Una \emph{variable aleatoria} es una función real $X: \Omega\mapsto\mathbb{R}$ tal que el conjunto $\{\omega\in\Omega:X(\omega)\in I\}$ es un evento de $\Omega$ para cada $I\subset\mathbb{R}$, en un espacio hipotético $\Omega$. Se consideran variables aleatorias discretas cuando su rango de valores $R_x$ es finito o contablemente infinito, las variables aleatorias continuas pueden tomar cualquier valor real en un intervalo.
+\subsection {Variable aleatoria}
+Una \emph{variable aleatoria} es una función real $X: \Omega\mapsto\mathbb{R}$ tal que el conjunto $\{\omega\in\Omega:X(\omega)\in I\}$ es un evento de $\Omega$ para cada $I\subset\mathbb{R}$, en un espacio $\Omega$ hipotético. Se consideran variables aleatorias discretas cuando su rango de valores $R_x$ es finito o contablemente infinito, las variables aleatorias continuas pueden tomar cualquier valor real en un intervalo.
 
-Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
+%Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
 
-Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el conjunto infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
+%Se dice que una variable $X$ es discreta cuando si hay una lista finita de valores $a_,a_2,\ldots,a_n$ o un una lista infinita de valores $a_,a_2,\ldots$ de tal forma que $P(X=a_j$ para algún $j)=1$. Si $X$ es una variable aleatoria discreta, entonces el conjunto infinito o contable de valores $x$ tal que $P(X=x)$ se llama \emph{soporte} de $X$. En contraste una variable aleatoria continua puede tomar cualquier valor real en un intervalo.
 
-OOOO
+%\subsubsection{Variable aleatoria comtinua)}
+%A diferencia de las variables discretas, las \emph{variables aleatorias continuas} pueden tomar cualquier valor real en un intervalo y tienen una \emph{distribución continua}. Para obtener la probabilidad deseadaWHOMST, se debe integrar la función de densidad de probabilidad sobre el rango apropiado
+%\begin{equation}
+%P(X\in A)=\int_{A}f(x)dx
+%\end{equation}
 
-
-\subsubsection{Variable aleatoria comtinua)}
-A diferencia de las variables discretas, las \emph{variables aleatorias continuas} pueden tomar cualquier valor real en un intervalo y tienen una \emph{distribución continua}. Para obtener la probabilidad deseadaWHOMST, se debe integrar la función de densidad de probabilidad sobre el rango apropiado
-\begin{equation}
-P(X\in A)=\int_{A}f(x)dx
-\end{equation}
-La distribución logística se obtiene
-\begin{equation}
-F(x)=\frac{e^x}{1+e^x}, x\in\Re
-\end{equation}
-El valor esperado de la continua función de distribución acumulada $f$ es
-\begin{equation}
-E(X)=\int_{-\infty}^{\infty}xf(x)dx
-\end{equation}
-la continua $U$ tiene dist unif en el intervalo $(a,b)$, denotada $U \sim Unif(a,b)$ si el área acumulada bajo la función de densidad de probabilidad es
-\begin{equation}
-f(x)=\begin{cases}
-\frac{1}{b-a},\text{ si }a<x<b;\\
-\text{de lo contrario, }0
-\end{cases}
-\end{equation}
-$U \sim Unif(a,b)$ de una variable aleatoria es
-\begin{equation}
-\tilde{U}=a+(b-a)U
-\end{equation}
-Su varianza es
-\begin{equation}
-Var(U)=\frac{{(b-a)}^2}{12}
-\end{equation}
-La distribución normal ($X \sim N(\mu,\sigma^2)$)cuando $\mathbb{Z} \sim N(0,1)$ es
-\begin{equation}
-X=\mu+\sigma\mathbb{Z}
-\end{equation}
-Por lo tanto obtendremos el valor esperado de $\mu$ y varianza de $\sigma^2$
-\begin{equation}
-X=(\mu+\sigma\mathbb{Z})=E(\mu)+\sigma E(\mathbb{Z})=\mu
-\end{equation}
-\begin{equation}
-Var=(\mu+\sigma\mathbb{Z})=Var(\sigma\mathbb{Z})=\sigma^2Var(\mathbb{Z})=\sigma^2.
-\end{equation}
-
-La \emph{distribución exponencial} de $X$ con un parámetro $\lambda$, cuando $\lambda>0$ si su función de densidad de probabilidad es $f(x)=\lambda e^{-\lambda x} , x>0$; denotada como $X \sim Expo(\lambda)$ es la siguiente
-\begin{equation}
-F(x)=1-e^{-\lambda x}, x>0
-\end{equation}
 \subsubsection {Función de probabilidad}
 La forma más natural de expresar la distribución de variables aleatorias discretas es la \emph{función de probabilidad}\cite{blitz19}*\notad{PMF, por sus siglas en inglés?} que, para una $X$ discreta, es la función $p_X$ dada por $p_X(x)=P(X=x)$. El teorema de \emph{funciones de probabilidad válidas} dice que cuando $X$ es una variable aleatoria con soporte $x1,x2,\ldots$, la función de probabilidad $p_X$ de $x$ debe satisfacer los siguiente criterios:
 \begin{itemize}
