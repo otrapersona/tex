@@ -1,6 +1,6 @@
 \section {Marco teórico}\label{sec:marco}
 \subsection {Modelo de base de datos relacional}\label{subsec:rdb}
-El modelo relacional de base de datos, según Date \cite{date12} consiste en cinco componentes:
+El modelo relacional de base de datos, consiste en cinco componentes:
 \begin{enumerate}
 	\item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
 	\item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
@@ -8,7 +8,7 @@ El modelo relacional de base de datos, según Date \cite{date12} consiste en cin
 	\item Un operador para asignar valores de relación a dichas variables.
 	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos.
 \end{enumerate}
-Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \cite{date12}.
+Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, los tipos son ``en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \cite{date12}.
 
 Cada atributo de cada relación es definido como de un tipo. Los atributos son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una tupla es un par ordenado de atributos.
 El modelo relacional también soporta varios tipos de llaves, que poseen las propiedades de unicidad, ninguna contiene dos tuplas distintas con el mismo valor e irreductibilidad, ningún subconjunto suyo es tiene unicidad. La llave foránea (\emph{FK}) es una combinación o set se atributos FK en una relación $r2$ tal que se requiere que cada valor FK sea igual a algún valor de alguna llave K en alguna relación $r1$ ($r1$ y $r2$ no son necesariamente distintos).
