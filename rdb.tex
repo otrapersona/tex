@@ -1,10 +1,12 @@
+\section {Marco teórico}\label{sec:marco}
+\subsection {Modelo de base de datos relacional}\label{subsec:rdb}
 El modelo relacional de base de datos, según Date \cite{date12} consiste en cinco componentes:
 \begin{enumerate}
-    \item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
-    \item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
-    \item Estructuras para definir variables relacionales de los tipos generados.
-    \item Un operador para asignar valores de relación a dichas variables.
-    \item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos (Álgebra relacional \ref{subsec:algebra}).
+	\item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
+	\item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
+	\item Estructuras para definir variables relacionales de los tipos generados.
+	\item Un operador para asignar valores de relación a dichas variables.
+	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos.
 \end{enumerate}
 Es importante comenzar definiendo los tipos, ya que las relaciones se definen sobre ellos, según Date, los tipos son ``en esencia un conjunto finito de valores nombrado-todos los valores posibles de alguna categoría específica, por ejemplo, todos los números enteros posibles, todos los caracteres string posibles, todos los teléfonos de proveedores posibles, todos los documentos XML posibles, todas las relaciones con cierta cabecera posibles(y así sucesivamente)'' \cite{date12}.
 
@@ -13,17 +15,47 @@ El modelo relacional también soporta varios tipos de llaves, que poseen las pro
 
 Una restricción de integridad (\emph{constraint}) es una expresión booleana que debe evaluarse como verdadera. Los constraints de tipo definen los valores que constituyen un tipo dado, mientras que los constraints de base de datos limitan los valores que pueden aparecer en cierta base de datos. Las bases de datos suelen tener múltiples constraints específicos, expresados en términos de sus relaciones, sin embargo, el modelo relacional incluye dos constraints genéricos, que aplican a cada base de datos:
 \begin{itemize}
-    \item Regla de integridad de identidad: Las llaves primarias no pueden ser nulas (\emph{null}).
-    \item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
+	\item Regla de integridad de identidad: Las llaves primarias no pueden ser nulas (\emph{null}).
+	\item Regla de integridad de referencia: No debe haber valores FK sin relación (si $B$ referencia a $A$, $A$ debe existir).
 \end{itemize}
 \begin{table}[H]\centering\begin{tabular}{rc|c|c|l}
-\cline{2-4}
-\multicolumn{1}{r}{$\text{Atributos}\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{l}{}\\
-\cline{2-4}
-\multirow{3}{*}{$\text{Tuplas}\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{|c|}{MX01}& 29-07-99&1&\multicolumn{1}{ l }{}\\
-\cline{2-4}
-&\multicolumn{1}{|c|}{MX02}&30-07-99&1&\multicolumn{1}{ l }{}\\
-\cline{2-4}
-&\multicolumn{1}{|c|}{MX03}&31-07-99&0&\multicolumn{1}{ l }{}\\
-\cline{2-4}
-\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
+		\cline{2-4}
+		\multicolumn{1}{r}{$\text{Atributos}\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{l}{}\\
+		\cline{2-4}
+		\multirow{3}{*}{$\text{Tuplas}\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{|c|}{MX01}& 29-07-99&1&\multicolumn{1}{ l }{}\\
+		\cline{2-4}
+		&\multicolumn{1}{|c|}{MX02}&30-07-99&1&\multicolumn{1}{ l }{}\\
+		\cline{2-4}
+		&\multicolumn{1}{|c|}{MX03}&31-07-99&0&\multicolumn{1}{ l }{}\\
+		\cline{2-4}
+	\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
+
+\subsubsection {Álgebra relacional}\label{subsch:algebra}
+Los cimientos del modelo relacional son el \emph{álgebra relacional}, las operaciones del álgebra producen nuevas relaciones, que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones pueden clasificar en dos grupos, operaciones de conjuntos*\notadhi{(así se llaman? checar libro en l'espagnol)``set operations''} de la teoría de conjuntos matemáticos refiere a la operaciones \emph{UNION}, \emph{INTERSECTION}, \emph{SET DIFFERENCE} (\emph{MINUS}) y \emph{CARTESIAN PRODUCT} (\emph{CROSS PRODUCT}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JOIN}, \emph{SELECT} y \emph{PROJECT}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
+
+SELECT elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
+\begin{equation}
+\sigma_\text{\textless condición de selección\textgreater}{\text{(R)}}
+\end{equation}
+donde $\sigma$ denota el operador SELECT, y la condición de selección es una expresión booleana especificada en los atributos de la relación $R$.
+
+PROJECT produce una nueva relación de atributos y tuplas*\notaihi{se explican hasta modelo rel, en los libros se explica primero} duplicadas
+\begin{equation}
+\pi_\text{\textless lista de atributos\textgreater}{\text{(R)}}
+\end{equation}
+donde $\pi$ es el denota el operador PROJECT y la lista de atributos es la sublista de atributos deseados de la relación $R$.
+
+Las operaciones con dos relaciones reciben el nombre de \emph{operaciones binarias}. Si las relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_n)$ son compatibles de unión (tienen el mismo grado $n$ y $dom(A_i)=dom(B_i)$ para $1\leq i\leq n$) podemos usarlas para definir las siguientes operaciones binarias:
+\begin{itemize}
+	\item UNION: El resultado de esta operación se denota $R \cup S$, es una relación que incluye todas las tuplas que están en $R$, $S$ o ambos, se eliminan duplicados.
+	\item INTERSECTION: El resultado de esta operación se denota $R \cap S$, es una relación que incluye todas las tuplas que están en ambos $R$ y $S$.
+	\item SET DIFFERENCE: El resultado de esta operación se denota $R - S$, es una relación que incluye todas las tuplas que están en ambos $R$ pero no en $S$.
+\end{itemize}
+
+El operador CARTESIAN PRODUCT, denotado $R \times S$ es la operación binaria que no requiere compatibilidad de unión y produce un nuevo elemento al combinar cada miembro (tupla) de cada relación conjunto) con cada otro miembro de la otra relación. El resultado de $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ es una relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden) de grado $n+m$. El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$.
+
+JOIN $\Join$, es el operador utilizado para combinar tuplas relacionadas de dos relaciones en una sola tupla. Pertinente para procesar relaciones entre relaciones. Si tenemos dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ podemos escribir la operación JOIN como
+\begin{equation}
+R\Join_\text{\textless condiciones de unión\textgreater}S
+\end{equation}
+el resultado de la unión es la relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden). El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$ que satisfacen las condiciones de unión.
