@@ -106,25 +106,25 @@ Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma proba
 		Número $n$ de ensayos de Bernoulli independientes con la misma probabilidad de éxito $p$, hasta obtener el primer éxito.
 		\begin{equation}
 		\begin{matrix}
-		f(x)=q^{x-1},
+		f(x)=q^{x-1},\\
 		x=1,2,\ldots,n;\\
 		E(X)=\frac{1}{p},\ Var(X)=\frac{q}{p^2}
 		\end{matrix}
 		\end{equation}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\textwidth}
-		\includegraphics[width=.95\linewidth]{negativabinominal.png}\caption{Negativa binominal}
-		blablabla
+		\includegraphics[width=.95\linewidth]{negativabinominal.png}\caption{Negativa binominal $Nb(rp)$}
+		Número $n$ de ensayos de Bernoulli independientes con la misma probabilidad de éxito $p$, hasta obtener resultado número $r$.
 		\begin{equation}
 		\begin{matrix}
-		x\\
-		y\\
-		z
+		f(x)=\binom{x-1}{r-1}p^rq^{x-r},\\
+		r=r,r+1,r+2,\ldots,n;\\
+		E(X)=\frac{r}{p},\ Var(X)=\frac{rq}{p^2}
 		\end{matrix}
 		\end{equation}
 	\end{subfigure}\ \ \ \ 
 \begin{subfigure}[t]{.5\textwidth}\centering
-		\includegraphics[width=.95\linewidth]{hyperg.png}\caption{Hipergeométrica}
+		\includegraphics[width=.95\linewidth]{hyperg.png}\caption{Hipergeométrica $h(n;a,b)$}
 		blablabla
 		\begin{equation}
 		\begin{matrix}
