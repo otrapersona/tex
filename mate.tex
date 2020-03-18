@@ -90,8 +90,8 @@ Para conocer la variabilidad de la distribución de cualquier v.a se utiliza la 
 %un coeficiente de relación $p = 0$ indica que no hay relación.\\
 Distribuciones mas importantes de acuerdo a Balakrisnan, Koutras y Politis\cite{bala20}
 \begin{figure}[H]
-	\begin{subfigure}{.4\textwidth}
-		\includegraphics[width=.9\linewidth]{binominal.png}
+	\begin{subfigure}{.5\textwidth}\raggedright
+		\includegraphics[width=.99\linewidth]{binominal.png}
 Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma probabilidad de éxito $p$.
 		\begin{equation}
 		\begin{matrix}
@@ -101,10 +101,17 @@ Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma proba
 		\end{matrix}
 		\end{equation}
 		\caption{Binominal}
-	\end{subfigure}
-
-	\begin{subfigure}{.4\textwidth}
-		\includegraphics[width=.9\linewidth]{geom.png}
+	\end{subfigure}\raggedleft
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=.99\linewidth]{geom.png}
+		Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma probabilidad de éxito $p$.
+		\begin{equation}
+		\begin{matrix}
+		f(X=k)=\binom{n}{x}p^xp^{n-x},\\
+		x=0,1,\ldots,n;\\
+		E(X)=np,\ Var(X)=npq
+		\end{matrix}
+		\end{equation}
 		\caption{Geométrica}
 	\end{subfigure}
 	
