@@ -1,0 +1,71 @@
+\subsection {distribuciones}\label{subsec:dd}
+\subsubsection {Distribución de Bernoulli y binominal}
+Una variable aleatoria tiene la \emph{distribución de Bernoulli} con un parámetro $p$ si $P(X=1)=p$ y $P(X=0=1-p)$, cuando $0<p<1$. Se escribe como $X \sim Bern(p)$, el símbolo $\sim$ significa ``distribuido como'' y la probabilidad $p$ es el \emph{parámetro}, que determina qué distribución de Bernoulli específica tenemos.
+
+Supóngase que se realizan $n$ ensayos Bernoulli independientes, cada uno con probabilidad $p$ de éxito. $X$ sea el número de éxitos, la distribución $X$ se llama \emph{distribución binominal} con parámetros $n$ y $p$; se escribe $X \sim Bin(p,n)$.
+$Bern(p)$ es la misma distribución que $Bin(1,p)$. Bernoulli es un caso especial de binominal, si $x \sim Bin(1,p)$, entonces la función de probabilidad de $X$ es
+\begin{equation}
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
+\end{equation}
+para $k=0,1,\ldots,n$ (y por otra parte $P(X=k)=0$).
+\subsubsection {Distribución de hipergeométrica}
+Si $X \sim HGeom(w,b,n)$, entonces la función de probabilidad de X es
+\begin{equation}
+P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}},
+\end{equation}
+para enteros $k$ satisfaciendo $0\leq k\leq w$ y $0\leq n-k\leq b$, y $P(X=k)=0$. La estructura esencial de la distribución hipergeométrica se basa en que objetos en su población están clasificados usando dos tipos de etiquetas, al menos una de estas siendo asignada al azar.
+Las distribuciones $HGeom(w,b,n)$ y $HGeom(n,w+b-n,1)$ son idénticas si $X$ y $Y$ tienen la misma distribución, podemos demostrarlo algebraicamente:
+\begin{equation}
+P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}
+\end{equation}
+\begin{equation}
+P(X=k)=\frac{\binom{n}{k}\binom{w+b-n}{w-k}}{\binom{w+b}{w}}=\frac{w!b!n!(w+b-n)!}{k!(w+b)!(w-k)!(n-k)!(b-n+k)!}.
+\end{equation}%if intro for bernolli and hyper neede, 3.4.6 has a bit a few useful lines
+\subsubsection {Distribución uniforme discreta}
+Teniendo $C$, un conjunto finito no vacío de números, se elige un número uniformemente al azar (o sea que todos los números tienen la misma posibilidad de ser elegidos), llámese $X$. Entonces se dice que $X$ una \emph{distribución uniforme discreta} con el parámetro $C$. Se dice entonces que la función de probabilidad de $X \sim DUNif(C)$ (la distribución uniforme discreta de $X$) es
+\begin{equation}
+P(X=x)=\frac{1}{|C|}
+\end{equation}
+para $x \in C$ (de lo contrario $0$) ya que la función de probabilidad debe sumar 1.
+\subsubsection {Binominal geométrica y negativa}
+Distribución geométrica: Se tiene una secuencia de ensayos independientes Bernoulli, cada uno con la misma probabilidad de éxito $p\in(0,1)$, con ensayos realizados hasta que se alcanza el éxito. $X$ es el número de \emph{fallas} antes de la primera prueba exitosa por lo que $X$ tiene una \emph{distribución geométrica} con un parámetro $p$; denotado $X\sim Geom(p)$. Con esto podemos llegar a los teoremas de \emph{distribución geométrica de la función de probabilidad}, cuando $X\sim Geom(p)$, entonces la función de probabilidad de $X$ será
+\begin{equation}
+P(X=k)=q^kp
+\end{equation}
+para $k=1,2,\ldots,$ cuando $q=1-p$; y el teoremas de \emph{distribución geométrica de la función de distribución acumulativa}, cuando $X\sim Geom(p)$, entonces la función de distribución acumulativa de $X$ será
+\begin{equation}
+F(x)=
+\begin{cases}
+1-q^{\lfloor x\rfloor+1}, \text{ si } x\geq 0;\\
+0, \text{ si }x < 0,
+\end{cases}
+\end{equation}
+cuando $q=1-q$ y $\lfloor x\rfloor$ es el mayor entero y menor o igual a $x$.
+
+El valor esperado geométrico de $X\sim Geom(p)$ es
+\begin{equation}
+E(X)=\sum_{k=0}^{\infty}kq^kp,
+\end{equation}
+cuando $q=1-p$. Aunque esta no es una serie geométrica, podemos llegar a ello
+\begin{equation}\begin{matrix}
+\sum_{k=0}^{\infty}q^k=\frac{1}{1-q}\\
+\\
+\sum_{k=0}^{\infty}kq^{k-1}=\frac{1}{{1-q}^2},
+\end{matrix}
+\end{equation}
+finalmente multiplicamos ambos lados por $pq$, recuperando la suma original que queríamos encontrar
+\begin{equation}
+E(X)=\sum_{k=0}^{\infty}kq^kp=pq\sum_{k=0}^{\infty}kq^{k-1}=pq\frac{1}{{(1-q)}^2}=\frac{q}{p}.
+\end{equation}
+Primer valor esperado de éxito \emph{FS}, podemos definir a $Y\sim FS(p)$ como $Y=X+1$ donde $X\sim Geom(p)$, por lo que tenemos
+\begin{equation}
+E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
+\end{equation}
+
+Las \emph{distribuciones binominales negativas} generalizan la distribución geométrica en lugar de esperar por un éxito, podemos esperar por cualquier número predeterminado $r$ de éxitos. En una secuencia de ensayos independientes Bernoulli con probabilidad de éxito $p$, si $X$ es el número de \emph{fallas} antes del éxito número $r$, entonces se dice que $X$tiene una distribución binominal negativa con parámetros $r$ y $p$, denotado $X\sim NBin(r,p)$.
+
+La distribución binominal cuenta el número de éxitos en un número fijo de ensayos, mientras que la binominal negativa cuenta el número de fallas hasta alcanzar cierto número de éxitos. Si $X\sim NBin(r,p)$, entonces la función de probabilidad de $X$ es
+\begin{equation}
+P(X=n)=\binom{n+r-1}{r-1}p^rq^n
+\end{equation}
+para $n=0,1,2\ldots,$ donde $q=1=p$.
