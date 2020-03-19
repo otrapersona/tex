@@ -30,7 +30,9 @@ El \emph{procesamiento de lenguaje natural (PLN)}, es el conjunto de métodos pa
 	\item Entrenar sistemas de principio a fin para que transmuten texto sin procesar en cualquier estructura deseada.
 	\item Transformar texto en una pila de estructuras lingüísticas de uso general que en teoría deben poder soportar cualquier aplicación.
 \end{itemize}
-Dos de los módulos básicos de NLP son \emph{búsqueda} y \emph{aprendizaje} con los que se puede resolver muchos problemas que podemos describir en la siguiente forma matemática
+En la actualidad no hay consenso y ambos tipos de sistemas se consideran viables, este proyecto se basará en el segundo paradigma. 
+
+Por lo general el PLN divide sus funciones en módulos para facilitar la reutilización de algoritmos genéricos en diversas tareas y modelos, dos de los módulos básicos son \emph{búsqueda} y \emph{aprendizaje} con los que se puede resolver muchos problemas describibles de la siguiente forma matemática
 \begin{equation}
 \begin{matrix}
 \hat{y}=argmax\Psi(x,y;0),\\
