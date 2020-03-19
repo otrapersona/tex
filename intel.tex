@@ -25,7 +25,7 @@ Tom Mitchell \cite{mich19} define aprendizaje maquinal como ``un programa de com
 
 A diferencia del paradigma clásico de programación donde los humanos introducen datos y órdenes para procesarlos, un sistema de aprendizaje maquinal no se programada explícitamente, se introducen muchos ejemplos relevantes a una tarea (datos y respuestas esperadas) con los que es entrenado y si encuentra una estructura estadística en ellos, genera una regla para automatizar la tarea.
 
-El \emph{procesamiento de lenguaje natural (PLN)}, es el conjunto de métodos para hacer accesible el lenguaje humano a las computadoras\cite{eise19}. Toma conocimientos de muchas tradiciones intelectuales, como lingüística y teoría formal del lenguaje, autómatas y otras áreas computación, inteligencia artificial, aprendizaje maquinal, estadística, teoría de la información, fonética y fonología, estas dos últimas áreas son de particular utilidad para procesamiento de voz. Existen dos posturas opuestas sobre lo que la tarea principal del PLN debe ser:
+El \emph{procesamiento de lenguaje natural (PLN)}, es el conjunto de métodos para hacer accesible el lenguaje humano a las computadoras\cite{eise19}. Toma conocimientos de muchas tradiciones intelectuales, como lingüística y teoría formal del lenguaje, autómatas y otras áreas computación, inteligencia artificial, aprendizaje maquinal y profundo, estadística, teoría de la información, fonética y fonología, estas dos últimas áreas son de particular utilidad para procesamiento de voz. Existen dos posturas opuestas sobre lo que la tarea principal del PLN debe ser:
 \begin{itemize}
 	\item Entrenar sistemas de principio a fin para que transmuten texto sin procesar en cualquier estructura deseada.
 	\item Transformar texto en una pila de estructuras lingüísticas de uso general que en teoría deben poder soportar cualquier aplicación.
@@ -49,4 +49,4 @@ donde,
 \end{itemize}
 El módulo de búsqueda se encarga de computar el $argmax$ de la función $\Psi$, es decir, encuentra el resultado $\hat{y}$ con la mejor puntuación con respecto a la entrada $x$. El módulo de aprendizaje encuentra los parámetros $\theta$ por medio del procesamiento de grandes conjuntos de datos de ejemplos etiquetados ${\{(x^i,y^i)\}}_{i=1}^{N}$.
 
-Un método lineal de clasificación de texto común es la \emph{bolsa de palabras}, comienza por asignar etiquetas $y\in Y$ donde $Y$ son todas las posibles etiquetas. Se utilizan vectores columna y la fórmula \ref{EQ:NLP1}. 
+Un método lineal de clasificación de texto común es la \emph{bolsa de palabras}, comienza por asignar etiquetas $y\in Y$ donde $Y$ son todas las posibles etiquetas. Se utilizan vectores columna y la fórmula \ref{EQ:NLP1} y puede modelarse con diversas distribuciones (figura \ref{FIG:DISTS}).
