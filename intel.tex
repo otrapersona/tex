@@ -37,7 +37,7 @@ Por lo general el PLN divide sus funciones en módulos para facilitar la reutili
 \begin{matrix}
 \hat{y}=argmax\Psi(x,y;0),\\
 y\in Y(x)
-\end{matrix}
+\end{matrix}\label{EQ:NLP1}
 \end{equation}
 donde,
 \begin{itemize}
@@ -48,3 +48,5 @@ donde,
 	\item $\hat{y}$ es el resultado previsto, que es elegido para maximizar la función de puntuación.
 \end{itemize}
 El módulo de búsqueda se encarga de computar el $argmax$ de la función $\Psi$, es decir, encuentra el resultado $\hat{y}$ con la mejor puntuación con respecto a la entrada $x$. El módulo de aprendizaje encuentra los parámetros $\theta$ por medio del procesamiento de grandes conjuntos de datos de ejemplos etiquetados ${\{(x^i,y^i)\}}_{i=1}^{N}$.
+
+Un método lineal de clasificación de texto común es la \emph{bolsa de palabras}, comienza por asignar etiquetas $y\in Y$ donde $Y$ son todas las posibles etiquetas. Se utilizan vectores columna y la fórmula \ref{EQ:NLP1}. 
