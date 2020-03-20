@@ -10,9 +10,9 @@ El \emph{modelo relacional de base de datos}, consiste en cinco componentes:
 \end{enumerate}
 Aunque tersa esta lista es útil para delimitar lo que el modelo relacional es y no es.
 
-Se debe comenzar definiendo los \emph{tipos}, ya que las relaciones se definen sobre ellos:
+Se debe comenzar definiendo los \emph{tipos}, ya que las relaciones se definen sobre ellos, \citeauthor{date12} (\citeyear{date12}) las define como
 \begin{displayquote}
-En esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica(\citeauthor{date12}, \citeyear{date12})
+en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica
 \end{displayquote}
 
 Los \emph{atributos} son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una \emph{tupla} es un par ordenado de atributos.
@@ -36,7 +36,11 @@ La \emph{restricción de integridad} (\emph{constraint}) es una expresión boole
 \end{itemize}
 Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}.
 
-Utilizando operaciones primitivas del álgebra se producen nuevas relaciones que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos.\cite{elma11} Estas operaciones se pueden clasificar en dos grupos, \emph{operaciones de conjuntos} de la teoría de conjuntos matemáticos: \emph{UNIÓN}, \emph{INTERSECCIÓN}, \emph{DIFERENCIA} y \emph{PRODUCTO CARTESIANO} (\emph{PRODUCTO CRUZADO}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JUNTAR}, \emph{SELECCIONAR} y \emph{PROYECTAR}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
+\begin{displayquote}
+	en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica(\citeauthor{date12}, \citeyear{date12})
+\end{displayquote}
+
+Utilizando operaciones primitivas del álgebra se producen nuevas relaciones que pueden manipularse también por medio de operaciones del álgebra mismo. Una secuencia de operaciones de álgebra relacional forma una \emph{expresión de álgebra relacional} cuyo resultado es una relación que representa el resultado de una consulta (o solicitud de consulta) de base de datos. Estas operaciones se pueden clasificar en dos grupos, \emph{operaciones de conjuntos} de la teoría de conjuntos matemáticos: \emph{UNIÓN}, \emph{INTERSECCIÓN}, \emph{DIFERENCIA} y \emph{PRODUCTO CARTESIANO} (\emph{PRODUCTO CRUZADO}). El otro grupo consiste en operaciones específicas para bases de datos relacionales: \emph{JUNTAR}, \emph{SELECCIONAR} y \emph{PROYECTAR}. Estas dos últimas, por operar con una sola relación, son también conocidas como \emph{operaciones unarias}.
 
 SELECCIONAR elige un subconjunto de tuplas de una relación que satisfacen la condición de selección
 \begin{equation}
@@ -61,6 +65,6 @@ PRODUCTO CARTESIANO denotado $R \times S$ es la operación binaria que no requie
 
 JUNTAR $\Join$, es el operador utilizado para combinar tuplas relacionadas de dos relaciones en una sola tupla. Pertinente para procesar relaciones entre relaciones. Si tenemos dos relaciones $R(A_1,A_2,\ldots,A_n)$ y $S(B_1,B_2,\ldots,B_m)$ podemos escribir la operación JUNTAR como
 \begin{equation}
-R\Join_\text{\textless condiciones de unión\textgreater}S
+R\Join_\text{\textless condiciones de unión\textgreater}S,
 \end{equation}
 el resultado es la relación $Q$ con atributos $Q(A_1,A_2,\ldots,A_n,B_1,B_2,\ldots,B_m)$ (en ese orden). El resultado $Q$ tiene una tupla por cada combinación de tuplas de $R$ y $S$ que satisfacen las condiciones de unión.\\
