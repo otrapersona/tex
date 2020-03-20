@@ -1,39 +1,37 @@
 \section {Marco teórico y estado del arte}\label{sec:marco}
-\subsection {Modelo relacional de base de datos}\label{subsec:rdb}
+\subsection {Bases de datos y álgebra relacional}\label{subsec:rdb}
 El \emph{modelo relacional de base de datos}, consiste en cinco componentes:
 \begin{enumerate}
-	\item Una colección de tipos escalares, pueden ser definidos por el sistema (INTEGER, CHAR, BOOLEAN, etc.) o por el usuario.
+	\item Una colección de tipos escalares, pueden ser definidos por el sistema o por el usuario.
 	\item Un generador de tipos de relaciones y un intérprete para las relaciones mismas.
 	\item Estructuras para definir variables relacionales de los tipos generados.
 	\item Un operador para asignar valores de relación a dichas variables.
-	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores relacionales genéricos.
+	\item Una colección relacionalmente completa para obtener valores relacionales de otros valores relacionales mediante operadores.
 \end{enumerate}
-Aunque tersa esta lista es útil para delimitar lo que el modelo relacional es y no es.
-
-Se debe comenzar definiendo los \emph{tipos}, ya que las relaciones se definen sobre ellos, \citeauthor{date12} (\citeyear{date12}) las define como
-\begin{displayquote}
-en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica
-\end{displayquote}
-
-Los \emph{atributos} son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una \emph{tupla} es un par ordenado de atributos.
-El modelo relacional también soporta varios tipos de \emph{llaves}, que poseen las propiedades de unicidad, ninguna contiene dos tuplas distintas con el mismo valor e irreductibilidad, ningún subconjunto suyo es tiene unicidad.
-%La llave foránea (\emph{FK}) es una combinación o set se atributos FK en una relación $r2$ tal que se requiere que cada valor FK sea igual a algún valor de alguna llave K en alguna relación $r1$ ($r1$ y $r2$ no son necesariamente distintos).
-\begin{table}[H]\centering\begin{tabular}{rc|c|c|l}
-		\cline{2-4}
-		\multicolumn{1}{r}{$\text{Atributos}\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{l}{}\\
-		\cline{2-4}
-		\multirow{3}{*}{$\text{Tuplas}\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{|c|}{MX01}& 29-07-99&1&\multicolumn{1}{ l }{}\\
-		\cline{2-4}
-		&\multicolumn{1}{|c|}{MX02}&30-07-99&1&\multicolumn{1}{ l }{}\\
-		\cline{2-4}
-		&\multicolumn{1}{|c|}{MX03}&31-07-99&0&\multicolumn{1}{ l }{}\\
-		\cline{2-4}
-	\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
-La \emph{restricción de integridad} (\emph{constraint}) es una expresión booleana que debe evaluarse como verdadera. Los \emph{constraints de tipo} definen los valores que constituyen un tipo dado y los \emph{constraints de base de datos} limitan los valores que pueden aparecer en cierta base de datos. Las bases de datos suelen tener múltiples constraints específicos, expresados en términos de sus relaciones, sin embargo, el modelo relacional incluye dos constraints genéricos, que aplican a cada base de datos:
-\begin{itemize}
-	\item Regla de integridad de identidad: Las \emph{llaves primarias} (\emph{PK}) deben ser no nulas.
-	\item Regla de integridad de referencia: Las \emph{llaves foráneas} (\emph{FK}) deben tener relación (si $B$ referencia a $A$, $A$ debe existir).
-\end{itemize}
+%Aunque tersa esta lista es útil para delimitar lo que el modelo relacional es y no es.
+%Se debe comenzar definiendo los \emph{tipos}, ya que las relaciones se definen sobre ellos, \citeauthor{date12} (\citeyear{date12}) las define como
+%\begin{displayquote}
+%en esencia un conjunto finito de valores nombrados\textemdash todos los valores posibles de alguna categoría específica
+%\end{displayquote}
+%Los \emph{atributos} son pares ordenados de combinaciones atributo-nombre/tipo-nombre y una \emph{tupla} es un par ordenado de atributos.
+%El modelo relacional también soporta varios tipos de \emph{llaves}, que poseen las propiedades de unicidad, ninguna contiene dos tuplas distintas con el mismo valor e irreductibilidad, ningún subconjunto suyo es tiene unicidad.
+%%La llave foránea (\emph{FK}) es una combinación o set se atributos FK en una relación $r2$ tal que se requiere que cada valor FK sea igual a algún valor de alguna llave K en alguna relación $r1$ ($r1$ y $r2$ no son necesariamente distintos).
+%\begin{table}[H]\centering\begin{tabular}{rc|c|c|l}
+%		\cline{2-4}
+%		\multicolumn{1}{r}{$\text{Atributos}\begin{cases}\ \end{cases}$}&\multicolumn{1}{|c|}{código}&\multicolumn{1}{c|}{fecha}&\multicolumn{1}{c|}{estado}&\multicolumn{1}{l}{}\\
+%		\cline{2-4}
+%		\multirow{3}{*}{$\text{Tuplas}\begin{cases}\\\\\end{cases}$}&\multicolumn{1}{|c|}{MX01}& 29-07-99&1&\multicolumn{1}{ l }{}\\
+%		\cline{2-4}
+%		&\multicolumn{1}{|c|}{MX02}&30-07-99&1&\multicolumn{1}{ l }{}\\
+%		\cline{2-4}
+%		&\multicolumn{1}{|c|}{MX03}&31-07-99&0&\multicolumn{1}{ l }{}\\
+%		\cline{2-4}
+%	\end{tabular}\caption{Representación de una tabla de una base en datos, la fila superior muestra tres atributos distintos y \emph{cada una} de las filas siguientes es una tupla.}\label{table:tupla}\end{table}
+%La \emph{restricción de integridad} (\emph{constraint}) es una expresión booleana que debe evaluarse como verdadera. Los \emph{constraints de tipo} definen los valores que constituyen un tipo dado y los \emph{constraints de base de datos} limitan los valores que pueden aparecer en cierta base de datos. Las bases de datos suelen tener múltiples constraints específicos, expresados en términos de sus relaciones, sin embargo, el modelo relacional incluye dos constraints genéricos, que aplican a cada base de datos:
+%\begin{itemize}
+%	\item Regla de integridad de identidad: Las \emph{llaves primarias} (\emph{PK}) deben ser no nulas.
+%	\item Regla de integridad de referencia: Las \emph{llaves foráneas} (\emph{FK}) deben tener relación (si $B$ referencia a $A$, $A$ debe existir).
+%\end{itemize}
 Las operaciones del modelo relacional están cimientadas en el \emph{álgebra relacional}.
 
 \begin{displayquote}
