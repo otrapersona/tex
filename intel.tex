@@ -13,52 +13,23 @@ La \emph{ingeligencia artificial es}
 el esfuerzo por automatizar tareas intelectuales normalmente realizadas por humanos(\citeauthor{cho18}, \citeyear{cho18})
 \end{displayquote}
 \begin{displayquote}
-``es una de las disciplinas más sofisticadas creadas por el ser humano (...) está permitiendo obtener resultados similares a los que observamos en las capacidades de la inteligencia humana: reconocimiento del entorno y percepción espacial, predicción y anticipación, entendimiento del lenguaje y capacidades de comunicación...''\end{displayquote}
-\#\#\#\#\#\#\#\#\#\#\\
-RECORDAR COMO CITAR UNA ENTREVISTA EN UNA PÁGINA\\
-www.apd.es/entrevista-gfi-estamos-asistiendo-al-auge-de-agentes-inteligentes-capaces-de-comunicarse-como-una-persona\\
-\#\#\#\#\#\#\#\#\#\#
-
+``es una de las disciplinas más sofisticadas creadas por el ser humano (...) está permitiendo obtener resultados similares a los que observamos en las capacidades de la inteligencia humana: reconocimiento del entorno y percepción espacial, predicción y anticipación, entendimiento del lenguaje y capacidades de comunicación...'' recordar cómo citar entrevistas en páginas web www.apd.es/ entrevista-gfi-estamos-asistiendo -al-auge-de -agentes-inteligentes-capaces-de-comunicarse -como-una-persona\end{displayquote}
 de este campo general se desprenden el \emph{aprendizaje maquinal} y el \emph{aprendizaje profundo}, figura (\ref{FIG:IA}).
 
 Dentro de los múltiples tipos de inteligencia artificial, los que son de nuestro interés para este proyecto se describen a continuación.\\
 
 Aprendizaje maquinal\\
-A diferencia del paradigma clásico de programación, donde los humanos introducen órdenes y datos para ser procesados de acuerdo con dichas reglas, en el aprendizaje maquinal el humano introduce datos y respuestas esperadas de estos datos, Burkov (\citeyear{burk19}) lo define como
+Burkov (\citeyear{burk19}) lo define como
 \begin{displayquote}
-preocupado con construir algoritmos que, para ser útiles dependen de una comección de ejemplos de algún fenómeno (...) el proceso de resolver problemas prácticos por 1) reunir un conjunto de datos y, 2) construir algorítmicamente un modelo estadístico basado en ese conjunto de datos
+preocupado con construir algoritmos que, para ser útiles dependen de una colección de ejemplos de algún fenómeno (...) el proceso de resolver problemas prácticos por 1) reunir un conjunto de datos y, 2) construir algorítmicamente un modelo estadístico basado en ese conjunto de datos
 \end{displayquote}
 
+A diferencia del paradigma clásico de programación, donde los humanos introducen órdenes y datos para ser procesados de acuerdo con dichas reglas, en el aprendizaje maquinal el humano introduce datos y respuestas esperadas de estos datos como ejemplos, el resultado es la generalización de ciertas respuestas a partir de dichos datos sin estructurar. Con ello, se induce al conocimiento por parte de la computadora.\\
 
 %Si un sistema no es programado explícitamente, entonces se puede considerar una modalidad de aprendizaje maquinal como entrenamiento, tal que se le presentan muchos ejemplos relevantes a una tarea, y si encuentra una estructura estadística en ellos, genera reglas para automatizar la tarea.
-xxxxxxxxxxxxxxxxxxxxxxxxx
 
-El \emph{procesamiento de lenguaje natural} (PLN), es el conjunto de métodos para hacer accesible el lenguaje humano a las computadoras(\citeauthor{eise19}, \citeyear{eise19}). Toma conocimientos de muchas tradiciones intelectuales, como lingüística y teoría formal del lenguaje, autómatas y otras áreas computación, inteligencia artificial, aprendizaje maquinal y profundo, estadística, teoría de la información, fonética y fonología, estas dos últimas áreas son de particular utilidad para procesamiento de voz. Existen dos posturas opuestas sobre lo que la tarea principal del PLN debe ser:
-\begin{itemize}
-	\item Entrenar sistemas de principio a fin para que transmuten texto sin procesar en cualquier estructura deseada.
-	\item Transformar texto en una pila de estructuras lingüísticas de uso general que en teoría deben poder soportar cualquier aplicación.
-\end{itemize}
-En la actualidad no hay consenso y ambos tipos de sistemas se consideran viables, este proyecto se basará en el segundo paradigma. 
+Lingüística computacional\\
+Es un campo multidisciplinario de la lingüística aplicada en la informática. Se sirve de los sistemas informáticos para el estudio y el tratamiento del lenguaje. Para ello, se intenta modelar de manera lógica el lenguaje natural desde un punto de vista programable.\\
 
-Por lo general el PLN divide sus funciones en módulos para facilitar la reutilización de algoritmos genéricos en diversas tareas y modelos, dos de los módulos básicos son \emph{búsqueda} y \emph{aprendizaje} con los que se puede resolver muchos problemas que tienen la forma matemática
-\begin{equation}
-\begin{matrix}
-\hat{y}=argmax\Psi(x,y;0),\\
-y\in Y(x)
-\end{matrix}\label{EQ:NLP1}
-\end{equation}
-donde,
-\begin{itemize}
-	\item $x$ es la entrada, un elemento de un conjunto $X$.
-	\item $y$ es el resultado, un elemento de un conjunto $Y$.
-	\item $\Psi$ es una función de puntuación (también conocida como \emph{modelo}), que va desde el conjunto $X\times Y$ hasta los números reales.
-	\item $\emptyset$ es el vector de parámetros para $\Psi$.
-	\item $\hat{y}$ es el resultado previsto, que es elegido para maximizar la función de puntuación.
-\end{itemize}
-El módulo de búsqueda se encarga de computar el $argmax$ de la función $\Psi$, es decir, encuentra el resultado $\hat{y}$ con la mejor puntuación con respecto a la entrada $x$. El módulo de aprendizaje encuentra los parámetros $\theta$ por medio del procesamiento de grandes conjuntos de datos de ejemplos etiquetados ${\{(x^i,y^i)\}}_{i=1}^{N}$.
-
-Un método lineal de clasificación de texto común es la \emph{bolsa de palabras}, comienza por asignar etiquetas $y\in Y$ donde $Y$ son todas las posibles etiquetas. Se utilizan vectores columna y la fórmula \ref{EQ:NLP1} y puede modelarse con diversas distribuciones (figura \ref{FIG:DISTS}).
-
-Para muchas tareas, las características léxicas (palabras) pierden sentido en aislamiento, por lo que históricamente el PLN se ha enfocado en la clasificación lineal, recientemente algunas tareas pueden resolverse con clasificadores no lineales, es decir, por medio de redes neuronales (aprendizaje profundo).
-
-El aprendizaje profundo sigue el paradigma del aprendizaje maquinal, sus entradas son datos y ejemplos de resultados esperados y se mide si el algoritmo está haciendo un buen trabajo mientras \emph{aprende}. A diferencia del aprendizaje maquinal, se hace énfasis en aprender en capas sucesivas de representaciones cada vez más sucesivas. ``Profundidad'' entonces refiere a cuántas capas contribuyen a un modelo.
+Procesamiento del lenguaje natural\\
+Es una disciplina de la rama de la ingeniería para la lingüística computacional. Se utiliza para la formulación e investigación de mecanismos de eficacia informática para servicios de comunicación entre las personas o entre ellas y las máquinas usando lenguajes naturales. Dos de los módulos básicos de procesamiento natural del lenguaje son búsqueda y aprendizaje con los que se pueden resolver muchos problemas con técnicas de optimización enfocadas en los diferentes parámetros involucrados.
