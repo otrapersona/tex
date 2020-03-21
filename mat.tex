@@ -1,14 +1,21 @@
 \subsection{Mate dos}
-La covarianza mide qué tanto o tan poco las dos variables aleatorias cuyos valores esperados existen y son positivos tienen dependencia lineal, denotada $cov(X,Y)$ la covarianza de $X$ y $Y$ es definida como
+Representamos la dependencia entre dos variables, en el que una aumenta o disminuye cuando la otra cambia con la \emph{covarianza}
 \begin{equation}
-cov(X,Y)=E[(X-EX)(Y-EY)]
+cov(X,Y)=E[(X-EX)(Y-EY)]
 \end{equation}
-Cuando no se tiene una referencia para usar la covarianza, tiene sentido escalarla de acuerdo a la desviación estándar de las variables\cite{mat17}
-\begin{equation}
-p(X,Y)=\frac{cov(X,Y)}{\sqrt{var(X)}\sqrt{var(Y)}}
-\end{equation}
-denotada $corr(X,Y)$ de esta es la \emph{correlación} de $X$ y $Y$. Un coeficiente de relación $p = 0$ indica que no hay relación.
-Representamos la dependencia entre dos variables, en el que una aumenta o disminuye cuando la otra cambia con el \emph{coeficiente de correlación} $p$
+
+
+ \emph{coeficiente de correlación} $p$
 \begin{equation}
 p=\frac{Cov(Y_1,Y_2)}{\sigma_1\sigma_2}
 \end{equation}
+
+La covarianza mide qué tanto o tan poco las dos variables aleatorias cuyos valores esperados existen y son positivos tienen dependencia lineal, denotada $cov(X,Y)$ la covarianza de $X$ y $Y$ es definida como
+\begin{equation}
+cov(X,Y)=E[(X-EX)(Y-EY)]
+\end{equation}
+Cuando no se tiene una referencia para usar la covarianza, tiene sentido escalarla de acuerdo a la desviación estándar de las variables\cite{mat17}
+\begin{equation}
+p(X,Y)=\frac{cov(X,Y)}{\sqrt{var(X)}\sqrt{var(Y)}}
+\end{equation}
+denotada $corr(X,Y)$ de esta es la \emph{correlación} de $X$ y $Y$. Un coeficiente de relación $p = 0$ indica que no hay relación.
