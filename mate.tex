@@ -134,3 +134,31 @@ Para conocer la variabilidad de la distribución de cualquier v.a se utiliza la 
 \begin{subfigure}[t]{.475\textwidth}\includegraphics[width=1\linewidth]{beta.png}\centering\\Beta $Be(\alpha,\beta)$
 \end{subfigure}
 \end{figure}
+
+\# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# \# PRUEBASSSSSSSSSSSSSSSSSSSS
+
+Pruebas en las que los conjuntos de hipótesis que contienen $\beta_1$, por ejemplo, $H_a\colon \beta_1 = 0$ contra $H_a\colon \beta_1 > 0$ $H_a\colon \beta_1 < 0$, así como $H_a\colon \beta_1 > 0$ contra $H_a\colon \beta_1 \neq 0$ pueden estar basadas en el estadístico
+\begin{equation}
+t=\frac{\hat{\beta_1}-0}{S/\sqrt{S{xx}}},
+\end{equation}
+
+Wackerly, Mendenhall III y Scheaffer consideran que \cite[``parecería lógico usar $r$ como estadístico de prueba para probar hipótesis más generales acerca de $\rho$, pero la distribución de probabilidad para $r$ es difícil de obtener."][]{wack09} Sin embargo, en muestras moderadamente grandes podemos probar la hipótesis $H_0\colon \rho_1=\rho_0$ con una prueba Z en la que
+\begin{equation}
+Z=\frac{(\frac{1}{2})\ln({\frac{1+r}{1-r})}-(\frac{1}{2})\ln(\frac{1+\rho}{1-\rho})}{\frac{1}{\sqrt{n-3}}}.
+\end{equation}
+
+Si $\alpha$ es la probabilidad deseada de cometer un error tipo I, la forma de la región de rechazo depende de la hipótesis alternativa. Las diversas alternativas de interés más frecuente y correspondientes regiones de rechazo son las siguientes:
+\begin{equation}  
+\begin{matrix}
+H_a\colon\rho>\rho0, &RR\colon z>z_\alpha\ \ \ \ \ \ \\
+H_a\colon\rho<\rho0, &RR\colon z<-z_\alpha\ \ \ \ \\
+H_a\colon\rho\neq\rho0, &RR\colon | z | >z_\alpha/2
+\end{matrix}
+\end{equation}
+
+La suma de los cuadrados del error \emph{SSE}, es es una alternativa para medie la variación en valores que permanecen sin explicación después de usar las $x$ para ajustar el modelo de regresión lineal simple, la razón $SSE/S_{yy}$ la proporción de la variación total en las $y_i$ que este modelo no explica. El coeficiente de determinación se puede escribir como
+\begin{equation}
+r^2=(\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}})^2=(\frac{S_{xy}}{S_{xx}})(\frac{S_{xy}}{S_{yy}})=(\frac{\hat{\beta_1}S_{xy}}{S_{yy}})=\frac{S_{yy}-SEE}{S_{yy}}=1-\frac{SSE}{S_{yy}}.
+\end{equation}
+
+Podemos interpretar a $r^2$ como la proporción de la variación total en las $y_i$  que es explicada por una variable $x$ en un modelo de regresión lineal simple.
