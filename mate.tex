@@ -1,5 +1,23 @@
 \subsection {Mate}
-Una \emph{variable aleatoria} (v.a.) es una función real $X: \Omega\mapsto\mathbb{R}$ tal que el conjunto $\{\omega\in\Omega:X(\omega)\in I\}$ es un evento de $\Omega$ para cada $I\subset\mathbb{R}$, en un espacio $\Omega$ hipotético. Se le considera \emph{variable aleatoria discreta} (v.a.d.) cuando su rango de valores $R_x$ es finito o contablemente infinito, mientras que una \emph{variable aleatoria continua} (v.a.c.) puede tomar cualquier valor real en un intervalo.
+Representamos la dependencia entre dos variables, en el que una aumenta o disminuye cuando la otra cambia con la \emph{covarianza}
+\begin{equation}
+cov(X,Y)=E[(X-EX)(Y-EY)],
+\end{equation}
+al referencia para la covarianza es conveniente escalarla de acuerdo a su desviación estándar, esto recibe el nombre de  \emph{coeficiente de correlación}
+\begin{equation}
+p=\frac{Cov(X,Y)}{\sigma_1\sigma_2}.
+\end{equation}
+
+Un modelo que relaciona $E(Y)$ como una función lineal únicamente de $\beta_0$ y $\beta_1$, es llamado modelo de regresión lineal \emph{simple}
+\begin{equation}
+E(Y)=\beta_0+\beta_1x\label{EQ:MRLS},
+\end{equation}
+cuando más de una variable independiente es de interés, por ejemplo $x_1,x_2,\ldots,x_n$, se utiliza una generalización de (\ref{EQ:MRLS}), denominada modelo de regresión lineal \emph{múltiple}
+\begin{equation}
+E(Y)=\beta_0+\beta_1x+\ldots+\beta_nx_n.
+\end{equation}
+
+La \emph{variable aleatoria} (v.a.) es una función real $X: \Omega\mapsto\mathbb{R}$ tal que el conjunto $\{\omega\in\Omega:X(\omega)\in I\}$ es un evento de $\Omega$ para cada $I\subset\mathbb{R}$, en un espacio $\Omega$ hipotético. Se le considera \emph{variable aleatoria discreta} (v.a.d.) cuando su rango de valores $R_x$ es finito o contablemente infinito, mientras que una \emph{variable aleatoria continua} (v.a.c.) puede tomar cualquier valor real en un intervalo.
 
 %Una \emph{variable aleatoria} es una función asignando un número real $\mathbb{R}$ a cada posible resultado de un experimento. Con una muestra en espacio $S$, una variable aleatoria $X$ asigna el valor numérico $X(s)$ a cada resultado posible $s$ del experimento. La aleatoriedad viene del hecho que tenemos un experimento aleatorio (con probabilidades descritas por la función de probabilidad $P$). Las variables aleatorias simplifican la notación y expanden la habilidad de cuantificar y resumir resultados de experimentos.
 
@@ -11,7 +29,7 @@ Una \emph{variable aleatoria} (v.a.) es una función real $X: \Omega\mapsto\math
 %P(X\in A)=\int_{A}f(x)dx
 %\end{equation}
 \begin{displayquote}
-La forma más natural de expresar la distribución de v.a.d.s es la \emph{función de probabilidad}(\citeauthor{blitz19}, \citeyear{blitz19}).
+``La forma más natural de expresar la distribución de v.a.d.s es la \emph{función de probabilidad}'' (\citeauthor{blitz19}, \citeyear{blitz19})
 \end{displayquote}
 Una v.a.d. $X$ con $R_x=\{x_1,x_2x_3,\ldots,x_n,\ldots\}$ tiene una función de distribución
 \begin{equation}
@@ -83,7 +101,7 @@ Para conocer la variabilidad de la distribución de cualquier v.a se utiliza la 
 \end{equation}
 
 
-\begin{figure}[H]\caption[Distribuciones]{Existe diversidad de distribuciones para modelar v.a.s, a continuación se muestran las mas importantes de acuerdo a \citeauthor{bala20} (\citeyear{bala20}). De las siguientes son aptas para v.a.d.s hasta la distribución Normal, mientras que las v.a.c.s pueden ser modeladas desde la distribución Uniforme.}\label{FIG:DISTS}
+\begin{figure}[H]\caption[Distribuciones]{Existe diversidad de distribuciones para modelar v.a.s, a continuación se muestran las mas importantes de acuerdo a \citeauthor{bala20} (\citeyear{bala20}).}\label{FIG:DISTS}
 \begin{subfigure}[t]{.475\textwidth}\includegraphics[width=1\linewidth]{binominal.png}
 Binominal $b(n,p)$. Número de éxitos en $n$ ensayos de Bernoulli independientes con la misma probabilidad de éxito $p$.
 \begin{equation}\begin{matrix}
