@@ -4,16 +4,14 @@ Representamos la dependencia entre dos variables, en el que una aumenta o dismin
 cov(X,Y)=E[(X-EX)(Y-EY)],
 \end{equation}
 al referencia para la covarianza es conveniente escalarla de acuerdo a su desviación estándar, esto recibe el nombre de  \emph{coeficiente de correlación}
-\begin{equation}\centering
+\begin{equation}
 \begin{matrix}
-p=\frac{cov(X,Y)}{\sigma_1\sigma_2}\\
-\qquad\qquad\qquad-1\leq p\geq 1\\
-\text{cuando }p=\begin{cases}
-0,\ \text{no hay correlación.}\\
-1,\ \text{correlación fuerte.}\\
--1,\ \text{correlación inversa fuerte.}\end{cases}\end{matrix}
+p=\frac{cov(X,Y)}{\sigma_1\sigma_2},\qquad-1\leq p\geq 1,\\\\
+\overunderset{\text{{\normalsize Aprendizaje}}{\text{Maquinal}}{}\begin{cases}
+p\approx0\ \text{débil};\qquad p=0;\ \text{no hay correlación},\\
+p=1,\ \text{correlación fuerte,}\\
+p=-1,\ \text{correlación inversa fuerte.}\end{cases}\end{matrix}
 \end{equation}
-
 
 Un modelo que relaciona $E(Y)$ como una función lineal únicamente de $\beta_0$ y $\beta_1$, es llamado modelo de regresión lineal \emph{simple}
 \begin{equation}
