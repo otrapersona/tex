@@ -1,0 +1,15 @@
+328	bin	prob	cumu
+340	geo	prob	cumu
+347	-bi	prob	cumu
+361	hge	prob	cumu
+375	poi	prob	cumu
+494	uni	dens	dist
+511	β	dens	dist
+512	nor	dens	dist
+533	exp	dens	dist
+546	Γ	dens	cumu
+
+prob	ˌ||ˌ	gaus discreto
+cumu	_.-·-._	medio sigmoide discreto
+dens	gaus
+dist	medio sigmoide
