@@ -10,6 +10,6 @@
 546	Γ	dens	cumu
 
 prob	ˌ||ˌ	gaus discreto
-cumu	_.-·-._	medio sigmoide discreto
+cumu	_.-·-._	sigmoide discreto
 dens	gaus
-dist	medio sigmoide
+dist	sigmoide
